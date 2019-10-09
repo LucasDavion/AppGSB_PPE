@@ -58,6 +58,12 @@
     <Compile Include="FormAjoutAssociation.Designer.cs">
       <DependentUpon>FormAjoutAssociation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChoixPays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChoixPays.Designer.cs">
+      <DependentUpon>FormChoixPays.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsultAssociation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAjoutAssociation.resx">
       <DependentUpon>FormAjoutAssociation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChoixPays.resx">
+      <DependentUpon>FormChoixPays.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultAssociation.resx">
       <DependentUpon>FormConsultAssociation.cs</DependentUpon>

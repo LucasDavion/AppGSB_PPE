@@ -31,7 +31,7 @@
             this.lblPays = new System.Windows.Forms.Label();
             this.pnlChoixPays = new System.Windows.Forms.Panel();
             this.btnValider = new System.Windows.Forms.Button();
-            this.txtChoixPays = new System.Windows.Forms.TextBox();
+            this.cbxChoixPays = new System.Windows.Forms.ComboBox();
             this.pnlChoixPays.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             // 
             // pnlChoixPays
             // 
-            this.pnlChoixPays.Controls.Add(this.txtChoixPays);
+            this.pnlChoixPays.Controls.Add(this.cbxChoixPays);
             this.pnlChoixPays.Controls.Add(this.btnValider);
             this.pnlChoixPays.Controls.Add(this.lblPays);
             this.pnlChoixPays.Location = new System.Drawing.Point(249, 134);
@@ -63,12 +63,13 @@
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
             // 
-            // txtChoixPays
+            // cbxChoixPays
             // 
-            this.txtChoixPays.Location = new System.Drawing.Point(58, 28);
-            this.txtChoixPays.Name = "txtChoixPays";
-            this.txtChoixPays.Size = new System.Drawing.Size(100, 20);
-            this.txtChoixPays.TabIndex = 2;
+            this.cbxChoixPays.FormattingEnabled = true;
+            this.cbxChoixPays.Location = new System.Drawing.Point(59, 31);
+            this.cbxChoixPays.Name = "cbxChoixPays";
+            this.cbxChoixPays.Size = new System.Drawing.Size(121, 21);
+            this.cbxChoixPays.TabIndex = 2;
             // 
             // FormChoixPays
             // 
@@ -88,7 +89,7 @@
 
         private System.Windows.Forms.Label lblPays;
         private System.Windows.Forms.Panel pnlChoixPays;
-        private System.Windows.Forms.TextBox txtChoixPays;
         private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.ComboBox cbxChoixPays;
     }
 }
