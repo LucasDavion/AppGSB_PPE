@@ -75,6 +75,12 @@
     <Compile Include="FormConsultAssociation.Designer.cs">
       <DependentUpon>FormConsultAssociation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMenuPartenariat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuPartenariat.Designer.cs">
+      <DependentUpon>FormMenuPartenariat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultAssociation.resx">
       <DependentUpon>FormConsultAssociation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuPartenariat.resx">
+      <DependentUpon>FormMenuPartenariat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
