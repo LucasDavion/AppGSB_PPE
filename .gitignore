@@ -13,3 +13,7 @@ GesMecenatBO\obj\Debug
 GesMecenatBLL\obj\Debug
 AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CoreCompileInputs.cache
 *.cache
+*.cache
+GesMecenatBO/obj/Debug/GesMecenatBO.csproj.CoreCompileInputs.cache
+GesMecenatDAL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+GesMecenatDAL/obj/Debug/GesMecenatDAL.csproj.CoreCompileInputs.cache
