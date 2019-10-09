@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GesMecenatDAL", "GesMecenatDAL\GesMecenatDAL.csproj", "{69B460EF-2948-406F-A309-2693C64F0C3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69B460EF-2948-406F-A309-2693C64F0C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B460EF-2948-406F-A309-2693C64F0C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B460EF-2948-406F-A309-2693C64F0C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B460EF-2948-406F-A309-2693C64F0C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D4B4001-DFBE-40E1-A7FB-D87DE8523F28}
+	EndGlobalSection
+EndGlobal
