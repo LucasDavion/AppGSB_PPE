@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GesMecenatBO
 {
-    class Association
+    public class Association
     {
         private string nomAssociation;
         private string mission;
