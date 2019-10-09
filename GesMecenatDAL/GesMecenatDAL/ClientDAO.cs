@@ -3,23 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//Ref aux bibliothèque des classe DAL et BO
-using GesMecenatBO;
-using GesMecenatDAL;
 
-namespace GesMecenatBLL
+namespace GesMecenatDAL
 {
-    public class UtilisateurManager
+    public class ClientDAO
     {
-        private static UtilisateurManager uneInstance;
+        private static ClientDAO uneInstance;
 
         //Méthode pour crée un objet de la classe ClientDAO si il n'existe pas sinon on retourne la réf à cet objet
 
-        public static UtilisateurManager GetInstance()
+        public static ClientDAO GetInstance()
         {
-            if (uneInstance == null)
+            if(uneInstance == null)
             {
-                uneInstance = new UtilisateurManager();
+                uneInstance = new ClientDAO();
             }
 
             return uneInstance;
@@ -27,7 +24,7 @@ namespace GesMecenatBLL
 
         //Constructeur privé par défaut donc impossible de crée un objet à l'ext de cette classe
 
-        private UtilisateurManager()
+        private ClientDAO()
         {
         }
 

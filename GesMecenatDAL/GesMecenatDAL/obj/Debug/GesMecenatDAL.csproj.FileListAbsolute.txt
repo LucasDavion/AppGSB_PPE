@@ -1,0 +1,6 @@
+Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.csprojAssemblyReference.cache
+Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CoreCompileInputs.cache
+Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\bin\Debug\GesMecenatDAL.dll
+Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\bin\Debug\GesMecenatDAL.pdb
+Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.dll
+Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.pdb

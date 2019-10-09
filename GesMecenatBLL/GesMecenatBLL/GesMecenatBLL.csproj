@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,6 +44,16 @@
   <ItemGroup>
     <Compile Include="UtilisateurManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GesMecenatBO\GesMecenatBO\GesMecenatBO.csproj">
+      <Project>{c5e53a9d-5578-4da4-b685-e75aaae31990}</Project>
+      <Name>GesMecenatBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GesMecenatDAL\GesMecenatDAL\GesMecenatDAL.csproj">
+      <Project>{69b460ef-2948-406f-a309-2693c64f0c3e}</Project>
+      <Name>GesMecenatDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
