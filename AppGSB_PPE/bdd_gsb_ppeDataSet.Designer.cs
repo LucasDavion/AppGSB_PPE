@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace GesMecenatDAL {
+namespace AppGSB_PPE {
     
     
     /// <summary>
@@ -5047,7 +5047,7 @@ namespace GesMecenatDAL {
         }
     }
 }
-namespace GesMecenatDAL.bdd_gsb_ppeDataSetTableAdapters {
+namespace AppGSB_PPE.bdd_gsb_ppeDataSetTableAdapters {
     
     
     /// <summary>
@@ -5203,7 +5203,7 @@ namespace GesMecenatDAL.bdd_gsb_ppeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5538,7 +5538,7 @@ SELECT id, libelle, nomResponsable, id_mission, id_pays FROM association WHERE (
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5889,7 +5889,7 @@ SELECT id_profilUtilisateur, id_fonctionnalite FROM droitFonctionnalite WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6188,7 +6188,7 @@ SELECT id_profilUtilisateur, id_fonctionnalite FROM droitFonctionnalite WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6506,7 +6506,7 @@ SELECT id_profilUtilisateur, id_fonctionnalite FROM droitFonctionnalite WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6841,7 +6841,7 @@ SELECT id, budget, coutReel, id_association, id_action FROM partenariat WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7174,7 +7174,7 @@ SELECT id, budget, coutReel, id_association, id_action FROM partenariat WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7494,7 +7494,7 @@ SELECT id, budget, coutReel, id_association, id_action FROM partenariat WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7793,7 +7793,7 @@ SELECT id, budget, coutReel, id_association, id_action FROM partenariat WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8111,7 +8111,7 @@ SELECT id, budget, coutReel, id_association, id_action FROM partenariat WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8452,7 +8452,7 @@ SELECT id, identifiant, nom, prenom, mdp, id_profilUtilisateur, id_service FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::GesMecenatDAL.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
+            this._connection.ConnectionString = global::AppGSB_PPE.Properties.Settings.Default.bdd_gsb_ppeConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
