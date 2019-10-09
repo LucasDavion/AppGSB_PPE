@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppGSB_PPE", "AppGSB_PPE\AppGSB_PPE.csproj", "{33D2D02F-076E-43BE-B823-C1EA80C17233}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GesMecenaGUI", "AppGSB_PPE\GesMecenaGUI.csproj", "{33D2D02F-076E-43BE-B823-C1EA80C17233}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
