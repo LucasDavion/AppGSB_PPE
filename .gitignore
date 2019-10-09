@@ -3,3 +3,8 @@ PPE_GSB/
 
 AppGSB_PPE\AppGSB_PPE\obj\Debug\GesMecenatGUI.csproj.CoreCompileInputs.cache
 AppGSB_PPE\obj\Debug\GesMecenatGUI.csproj.CoreCompileInputs.cache
+*.cache
+AppGSB_PPE\obj\Debug\GesMecenatGUI.csproj.CoreCompileInputs.cache
+GesMecenatBLL\obj\Debug\GesMecenatBLL.csproj.CoreCompileInputs.cache
+GesMecenatBO\obj\Debug\GesMecenatBO.csproj.CoreCompileInputs.cache
+GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CoreCompileInputs.cache
