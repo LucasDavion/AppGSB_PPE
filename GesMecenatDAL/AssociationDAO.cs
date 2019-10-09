@@ -21,7 +21,7 @@ namespace GesMecenatDAL
             Association uneAssociation;
             
             //On recupere l'objet responsable de la connection a la base
-            SqlConnection cnx = Connexion.GetObjConnexion();
+            SqlConnection cnx = connexion.GetObjConnexion();
 
             //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
             List<Association> lesAssos = new List<Association>();
@@ -42,14 +42,14 @@ namespace GesMecenatDAL
                 id = (int)monLecteur["id"];
                 nom = (string)monLecteur["nom"];
                 mission = (string)monLecteur["mission"];
-    
+                
                 uneAssociation = new Association(nom, mission, id);
                 lesAssos.Add(uneAssociation);
             }
             monLecteur.Close();
 
             //On ferme la connection
-            Connexion.CloseConnexion();
+            connexion.CloseConnexion();
 
 
             //On retourne la collection
@@ -58,7 +58,7 @@ namespace GesMecenatDAL
 
 
         //La methode ajoutClient ajoute un client a la base de donnée
-        public int AjoutClient(Association uneAssociation)
+        public int AjoutAssociation(Association uneAssociation)
         {
             int nbEnreg = 0;
 
@@ -68,12 +68,12 @@ namespace GesMecenatDAL
             try
             {
                 //On recupere l'objet responsable de la connection a la base
-                SqlConnection cnx = Connexion.GetObjConnexion();
+                SqlConnection cnx = connexion.GetObjConnexion();
                 sql = "insert into ";
                 SqlCommand maCommande = new SqlCommand(sql, cnx);
 
                 maCommande.Parameters.Add("nom", SqlDbType.VarChar);
-                maCommande.Parameters[1].Value = uneAssociation.Nom;
+                maCommande.Parameters[1].Value = uneAssociation.NomAssociation;
                 maCommande.Parameters.Add("prenom", SqlDbType.VarChar);
                 maCommande.Parameters[2].Value = uneAssociation.Mission;
                 
@@ -89,7 +89,7 @@ namespace GesMecenatDAL
                 msgErr += "Erreur grave " + err.Message;
             }
 
-            Connexion.CloseConnexion();
+            connexion.CloseConnexion();
             return nbEnreg;
         }
 
