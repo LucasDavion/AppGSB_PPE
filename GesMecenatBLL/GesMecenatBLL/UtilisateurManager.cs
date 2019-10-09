@@ -31,6 +31,14 @@ namespace GesMecenatBLL
         {
         }
 
-        //Méthode
+        //Appel couche DAL pour crée l'utilisateur
+
+        public int CreerUtilisateur(string sonNom, string sonPrenom)
+        {
+            string identification;
+            string mdp;
+            Utilisateur unUtilisateur;
+            unUtilisateur = unUtilisateur(sonNom, sonPrenom, identification, mdp);
+        }
     }
 }

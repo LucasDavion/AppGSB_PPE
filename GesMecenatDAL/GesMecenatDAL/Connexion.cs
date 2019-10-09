@@ -39,7 +39,7 @@ namespace GesMecenatDAL
 
         //Méthode CloseConnexion met l'objet instance de la classe SqlConnection dans un état "connexion fermé"
 
-        public static void CloseCOnnexion()
+        public static void CloseConnexion()
         {
 
             //Si la connexion est ouverte on la ferme

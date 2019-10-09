@@ -42,9 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientDAO.cs" />
+    <Compile Include="UtilisateurDAO.cs" />
     <Compile Include="Connexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GesMecenatBO\GesMecenatBO\GesMecenatBO.csproj">
+      <Project>{c5e53a9d-5578-4da4-b685-e75aaae31990}</Project>
+      <Name>GesMecenatBO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
