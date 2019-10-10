@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Association.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Mission.cs" />
     <Compile Include="Partenariat.cs" />
     <Compile Include="Pays.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
