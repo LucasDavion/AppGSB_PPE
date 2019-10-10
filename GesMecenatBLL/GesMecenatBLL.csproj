@@ -46,5 +46,15 @@
     <Compile Include="PartenariatManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GesMecenatBO\GesMecenatBO.csproj">
+      <Project>{65703e91-46fe-47ce-a93a-8046a880c0eb}</Project>
+      <Name>GesMecenatBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GesMecenatDAL\GesMecenatDAL.csproj">
+      <Project>{ab6a5c40-47e4-4170-b024-efaa408e534f}</Project>
+      <Name>GesMecenatDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
