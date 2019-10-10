@@ -69,13 +69,11 @@ namespace GesMecenatDAL
             {
                 //On recupere l'objet responsable de la connection a la base
                 SqlConnection cnx = Connexion.GetObjConnexion();
-                sql = "insert into ";
+                sql = "insert into mission (libelle) values(@libelle";
                 SqlCommand maCommande = new SqlCommand(sql, cnx);
 
-                maCommande.Parameters.Add("nom", SqlDbType.VarChar);
-                maCommande.Parameters[1].Value = uneAssociation.NomAssociation;
-                maCommande.Parameters.Add("prenom", SqlDbType.VarChar);
-                maCommande.Parameters[2].Value = uneAssociation.NomResponsable;
+                maCommande.Parameters.Add("libelle", SqlDbType.VarChar);
+                maCommande.Parameters[1].Value = uneMission.Libelle;
 
                 maCommande.CommandText = sql;
                 nbEnreg = maCommande.ExecuteNonQuery();

@@ -69,11 +69,11 @@ namespace GesMecenatDAL
 
                 uneAssoctiation = new Association(libelleAssociation, nomResponsable, idAssociation);
 
-                uneAction = new Action(idAction, libelleAction);
+                //uneAction = new Action(idAction, libelleAction);
 
-                unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
+                //unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
 
-                LesPartenariats.Add(unPartenariat);
+                //LesPartenariats.Add(unPartenariat);
             }
             //on ferme le DataReader
             monLecteur.Close();
@@ -84,9 +84,33 @@ namespace GesMecenatDAL
 
             //on retourne le collection
             return LesPartenariats;
+        }
+        public int AjoutPartenariat(Partenariat unPartenariat)
+        {
+            int nbEnregs = 0;
 
+            //connexion à la bdd
+            SqlConnection cnx = Connexion.GetObjConnexion();
 
+            //requete
+            string sqlr = "insert into partenariat values(@budget, @coutReel, @idAssociation, @idAction)";
 
+            SqlCommand maCommand = new SqlCommand(sqlr, cnx);
+            maCommand.CommandText = sqlr;
+            maCommand.Parameters.Add("budget", SqlDbType.Float);
+            maCommand.Parameters[0].Value = unPartenariat.Budget;
+            maCommand.Parameters.Add("coutReel", SqlDbType.Float);
+            maCommand.Parameters[1].Value = unPartenariat.CoutReel;
+            maCommand.Parameters.Add("idAssociation", SqlDbType.Int);
+            maCommand.Parameters[2].Value = unPartenariat.UneAssociation.Id;
+            maCommand.Parameters.Add("idAction", SqlDbType.Int);
+            //maCommand.Parameters[3].Value = unPartenariat.Action.Id;
+            nbEnregs = maCommand.ExecuteNonQuery();
+
+            //on ferme la connexion
+            Connexion.CloseConnexion();
+
+            return nbEnregs;
         }
     }
 }
