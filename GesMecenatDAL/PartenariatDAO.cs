@@ -104,7 +104,7 @@ namespace GesMecenatDAL
             maCommand.Parameters.Add("idAssociation", SqlDbType.Int);
             maCommand.Parameters[2].Value = unPartenariat.UneAssociation.Id;
             maCommand.Parameters.Add("idAction", SqlDbType.Int);
-            maCommand.Parameters[3].Value = unPartenariat.Action.Id;
+            //maCommand.Parameters[3].Value = unPartenariat.Action.Id;
             nbEnregs = maCommand.ExecuteNonQuery();
 
             //on ferme la connexion
