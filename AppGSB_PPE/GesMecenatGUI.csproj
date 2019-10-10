@@ -165,6 +165,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GesMecenatBLL\GesMecenatBLL.csproj">
+      <Project>{3ebfd6aa-a5dc-42fb-a6b8-7ac0c4300bfb}</Project>
+      <Name>GesMecenatBLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GesMecenatBO\GesMecenatBO.csproj">
       <Project>{65703E91-46FE-47CE-A93A-8046A880C0EB}</Project>
       <Name>GesMecenatBO</Name>

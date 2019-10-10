@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GesMecenatBLL
 {
-    class PaysManager
+    public class PaysManager
     {
         private static PaysManager uneInstance;
 
