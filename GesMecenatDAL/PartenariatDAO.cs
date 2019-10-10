@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 using GesMecenatBO;
 
 namespace GesMecenatDAL
@@ -30,10 +31,13 @@ namespace GesMecenatDAL
         {
             //déclaraion des variables
             int id;
-            string budgetPrevisionnel;
-            string coutReel;
+            float budgetPrevisionnel;
+            float coutReel;
             int idAssociation;
+            string libelleAssociation;
+            string nomResponsable;
             int idAction;
+            string libelleAction;
             Partenariat unPartenariat;
             Association uneAssoctiation;
             Action uneAction;
@@ -41,7 +45,7 @@ namespace GesMecenatDAL
 
             SqlConnection cnx = Connexion.GetObjConnexion();
             //déclaration de la liste LesClients
-            List<Client> LesClients = new List<Client>();
+            List<Partenariat> LesPartenariats = new List<Partenariat>();
             //requete
 
             string sqlr = "select * from Client join categSocioPro on idCateg=categSocioPro.id";
@@ -56,17 +60,20 @@ namespace GesMecenatDAL
             while (monLecteur.Read())
             {
                 id = (int)monLecteur["id"];
-                nom = (string)monLecteur["nom"];
-                prenom = (string)monLecteur["prenom"];
-                sexe = (string)monLecteur["sexe"];
-                idCateg = (int)monLecteur["idCateg"];
-                libelleCateg = (string)monLecteur["libelle"];
+                budgetPrevisionnel = (float)monLecteur["budget"];
+                coutReel = (float)monLecteur["coutReel"];
+                idAssociation = (int)monLecteur["id_association"];
+                libelleAssociation = (string)monLecteur["libelle"];
+                nomResponsable = (string)monLecteur["nomResponsable"];
+                idAction = (int)monLecteur["id_action"];
 
-                uneCateg = new Categorie(idCateg, libelleCateg);
+                uneAssoctiation = new Association(libelleAssociation, nomResponsable, idAssociation);
 
-                unClient = new Client(id, nom, prenom, sexe, uneCateg);
+                uneAction = new Action(idAction, libelleAction);
 
-                LesClients.Add(unClient);
+                unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
+
+                LesPartenariats.Add(unPartenariat);
             }
             //on ferme le DataReader
             monLecteur.Close();
@@ -76,10 +83,11 @@ namespace GesMecenatDAL
             Connexion.CloseConnexion();
 
             //on retourne le collection
-            return LesClients;
+            return LesPartenariats;
 
 
 
         }
     }
 }
+
