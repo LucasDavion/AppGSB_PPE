@@ -8,12 +8,23 @@ using System.Threading.Tasks;
 
 namespace GesMecenatDAL
 {
-    class PaysDAO
+    public class PaysDAO
     {
+        private static PaysDAO uneInstance;
+
+        public static PaysDAO GetInstance()
+        {
+            if (uneInstance == null)
+            {
+                uneInstance = new PaysDAO();
+            }
+            return uneInstance;
+        }
         public List<Pays> GetPays()
         {
-            //Declaration des variables de travail
-            int id;
+             
+        //Declaration des variables de travail
+        int id;
             string libelle;
             Pays unPays;
 

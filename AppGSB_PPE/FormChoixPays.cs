@@ -27,7 +27,7 @@ namespace AppGSB_PPE
             Pays unPays;
 
             //On recupere l'objet responsable de la connection a la base
-            SqlConnection cnx = connexion.GetObjConnexion();
+            SqlConnection cnx = Connexion.GetObjConnexion();
 
             //On cree la collection lesPays qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
             List<Pays> lesPays = new List<Pays>();
@@ -54,7 +54,7 @@ namespace AppGSB_PPE
             monLecteur.Close();
 
             //On ferme la connection
-            connexion.CloseConnexion();
+            Connexion.CloseConnexion();
 
             // la valeur affichée dans la liste sera la colonne NomEmploye de la collection
             this.cbxChoixPays.DisplayMember = "libelle";
