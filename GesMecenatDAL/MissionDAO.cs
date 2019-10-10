@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,20 +11,20 @@ namespace GesMecenatDAL
 {
     class MissionDAO
     {
-        public List<Mission> GetAssociation()
+        public List<Mission> GetMission()
         {
 
             //Declaration des variables de travail
             int id;
             string nom;
             string mission;
-            Mission uneAssociation;
+            Mission uneMission;
 
             //On recupere l'objet responsable de la connection a la base
             SqlConnection cnx = Connexion.GetObjConnexion();
 
             //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
-            List<Mission> lesAssos = new List<Mission>();
+            List<Mission> lesMissions = new List<Mission>();
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
             string sql;
@@ -40,10 +41,10 @@ namespace GesMecenatDAL
             {
                 id = (int)monLecteur["id"];
                 nom = (string)monLecteur["nom"];
-                mission = (string)monLecteur["mission"];
 
-                uneAssociation = new Mission(nom, mission, id);
-                lesAssos.Add(uneAssociation);
+
+                uneMission = new Mission(id, nom);
+                lesMissions.Add(uneMission);
             }
             monLecteur.Close();
 
@@ -52,12 +53,12 @@ namespace GesMecenatDAL
 
 
             //On retourne la collection
-            return lesAssos;
+            return lesMissions;
         }
 
 
         //La methode ajoutClient ajoute un client a la base de donnée
-        public int AjoutAssociation(Mission uneAssociation)
+        public int AjoutMission(Mission uneMission)
         {
             int nbEnreg = 0;
 
