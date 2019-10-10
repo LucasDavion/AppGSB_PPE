@@ -75,7 +75,7 @@ namespace GesMecenatDAL
                 maCommande.Parameters.Add("nom", SqlDbType.VarChar);
                 maCommande.Parameters[1].Value = uneAssociation.NomAssociation;
                 maCommande.Parameters.Add("prenom", SqlDbType.VarChar);
-                maCommande.Parameters[2].Value = uneAssociation.Mission;
+                maCommande.Parameters[2].Value = uneAssociation.NomResponsable;
                 
                 maCommande.CommandText = sql;
                 nbEnreg = maCommande.ExecuteNonQuery();
