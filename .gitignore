@@ -358,3 +358,5 @@ AppGSB_PPE/obj/Debug/GesMecenatGUI.csprojAssemblyReference.cache
 GesMecenatBLL/obj/Debug/GesMecenatBLL.csproj.CoreCompileInputs.cache
 GesMecenatBO/obj/Debug/GesMecenatBO.csproj.CoreCompileInputs.cache
 *.cache
+*.cache
+*.cache
