@@ -30,15 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuAjoutPartenariat = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlAjoutPartenariat = new System.Windows.Forms.Panel();
-            this.lblAjoutPartenariat = new System.Windows.Forms.Label();
-            this.lblSelectionAssociation = new System.Windows.Forms.Label();
-            this.lblSelectionAction = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtBudgetPrevisionnel = new System.Windows.Forms.TextBox();
-            this.cbxSelectionAssociation = new System.Windows.Forms.ComboBox();
-            this.cbxSelectionAction = new System.Windows.Forms.ComboBox();
             this.menuConsultationPartenariat = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlAjoutPartenariat = new System.Windows.Forms.Panel();
+            this.cbxSelectionAction = new System.Windows.Forms.ComboBox();
+            this.cbxSelectionAssociation = new System.Windows.Forms.ComboBox();
+            this.txtBudgetPrevisionnel = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblSelectionAction = new System.Windows.Forms.Label();
+            this.lblSelectionAssociation = new System.Windows.Forms.Label();
+            this.lblAjoutPartenariat = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlAjoutPartenariat.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,13 @@
             this.menuAjoutPartenariat.Name = "menuAjoutPartenariat";
             this.menuAjoutPartenariat.Size = new System.Drawing.Size(135, 20);
             this.menuAjoutPartenariat.Text = "Ajout d\'un partenariat";
+            this.menuAjoutPartenariat.Click += new System.EventHandler(this.menuAjoutPartenariat_Click);
+            // 
+            // menuConsultationPartenariat
+            // 
+            this.menuConsultationPartenariat.Name = "menuConsultationPartenariat";
+            this.menuConsultationPartenariat.Size = new System.Drawing.Size(173, 20);
+            this.menuConsultationPartenariat.Text = "Consultation des partenariats";
             // 
             // pnlAjoutPartenariat
             // 
@@ -73,33 +80,31 @@
             this.pnlAjoutPartenariat.Name = "pnlAjoutPartenariat";
             this.pnlAjoutPartenariat.Size = new System.Drawing.Size(708, 348);
             this.pnlAjoutPartenariat.TabIndex = 1;
+            this.pnlAjoutPartenariat.Visible = false;
             // 
-            // lblAjoutPartenariat
+            // cbxSelectionAction
             // 
-            this.lblAjoutPartenariat.AutoSize = true;
-            this.lblAjoutPartenariat.Location = new System.Drawing.Point(311, 18);
-            this.lblAjoutPartenariat.Name = "lblAjoutPartenariat";
-            this.lblAjoutPartenariat.Size = new System.Drawing.Size(107, 13);
-            this.lblAjoutPartenariat.TabIndex = 0;
-            this.lblAjoutPartenariat.Text = "Ajout d\'un partenariat";
+            this.cbxSelectionAction.FormattingEnabled = true;
+            this.cbxSelectionAction.Location = new System.Drawing.Point(215, 125);
+            this.cbxSelectionAction.Name = "cbxSelectionAction";
+            this.cbxSelectionAction.Size = new System.Drawing.Size(121, 21);
+            this.cbxSelectionAction.TabIndex = 6;
             // 
-            // lblSelectionAssociation
+            // cbxSelectionAssociation
             // 
-            this.lblSelectionAssociation.AutoSize = true;
-            this.lblSelectionAssociation.Location = new System.Drawing.Point(82, 83);
-            this.lblSelectionAssociation.Name = "lblSelectionAssociation";
-            this.lblSelectionAssociation.Size = new System.Drawing.Size(151, 13);
-            this.lblSelectionAssociation.TabIndex = 1;
-            this.lblSelectionAssociation.Text = "Selectionnez une association :";
+            this.cbxSelectionAssociation.FormattingEnabled = true;
+            this.cbxSelectionAssociation.Location = new System.Drawing.Point(239, 80);
+            this.cbxSelectionAssociation.Name = "cbxSelectionAssociation";
+            this.cbxSelectionAssociation.Size = new System.Drawing.Size(121, 21);
+            this.cbxSelectionAssociation.TabIndex = 5;
+            this.cbxSelectionAssociation.SelectedIndexChanged += new System.EventHandler(this.cbxSelectionAssociation_SelectedIndexChanged);
             // 
-            // lblSelectionAction
+            // txtBudgetPrevisionnel
             // 
-            this.lblSelectionAction.AutoSize = true;
-            this.lblSelectionAction.Location = new System.Drawing.Point(82, 128);
-            this.lblSelectionAction.Name = "lblSelectionAction";
-            this.lblSelectionAction.Size = new System.Drawing.Size(127, 13);
-            this.lblSelectionAction.TabIndex = 2;
-            this.lblSelectionAction.Text = "Selectionnez une action :";
+            this.txtBudgetPrevisionnel.Location = new System.Drawing.Point(267, 169);
+            this.txtBudgetPrevisionnel.Name = "txtBudgetPrevisionnel";
+            this.txtBudgetPrevisionnel.Size = new System.Drawing.Size(100, 20);
+            this.txtBudgetPrevisionnel.TabIndex = 4;
             // 
             // label3
             // 
@@ -110,34 +115,32 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Renseignez un budget prévisionnel :";
             // 
-            // txtBudgetPrevisionnel
+            // lblSelectionAction
             // 
-            this.txtBudgetPrevisionnel.Location = new System.Drawing.Point(267, 169);
-            this.txtBudgetPrevisionnel.Name = "txtBudgetPrevisionnel";
-            this.txtBudgetPrevisionnel.Size = new System.Drawing.Size(100, 20);
-            this.txtBudgetPrevisionnel.TabIndex = 4;
+            this.lblSelectionAction.AutoSize = true;
+            this.lblSelectionAction.Location = new System.Drawing.Point(82, 128);
+            this.lblSelectionAction.Name = "lblSelectionAction";
+            this.lblSelectionAction.Size = new System.Drawing.Size(127, 13);
+            this.lblSelectionAction.TabIndex = 2;
+            this.lblSelectionAction.Text = "Selectionnez une action :";
             // 
-            // cbxSelectionAssociation
+            // lblSelectionAssociation
             // 
-            this.cbxSelectionAssociation.FormattingEnabled = true;
-            this.cbxSelectionAssociation.Location = new System.Drawing.Point(239, 80);
-            this.cbxSelectionAssociation.Name = "cbxSelectionAssociation";
-            this.cbxSelectionAssociation.Size = new System.Drawing.Size(121, 21);
-            this.cbxSelectionAssociation.TabIndex = 5;
+            this.lblSelectionAssociation.AutoSize = true;
+            this.lblSelectionAssociation.Location = new System.Drawing.Point(82, 83);
+            this.lblSelectionAssociation.Name = "lblSelectionAssociation";
+            this.lblSelectionAssociation.Size = new System.Drawing.Size(151, 13);
+            this.lblSelectionAssociation.TabIndex = 1;
+            this.lblSelectionAssociation.Text = "Selectionnez une association :";
             // 
-            // cbxSelectionAction
+            // lblAjoutPartenariat
             // 
-            this.cbxSelectionAction.FormattingEnabled = true;
-            this.cbxSelectionAction.Location = new System.Drawing.Point(215, 125);
-            this.cbxSelectionAction.Name = "cbxSelectionAction";
-            this.cbxSelectionAction.Size = new System.Drawing.Size(121, 21);
-            this.cbxSelectionAction.TabIndex = 6;
-            // 
-            // menuConsultationPartenariat
-            // 
-            this.menuConsultationPartenariat.Name = "menuConsultationPartenariat";
-            this.menuConsultationPartenariat.Size = new System.Drawing.Size(173, 20);
-            this.menuConsultationPartenariat.Text = "Consultation des partenariats";
+            this.lblAjoutPartenariat.AutoSize = true;
+            this.lblAjoutPartenariat.Location = new System.Drawing.Point(311, 18);
+            this.lblAjoutPartenariat.Name = "lblAjoutPartenariat";
+            this.lblAjoutPartenariat.Size = new System.Drawing.Size(107, 13);
+            this.lblAjoutPartenariat.TabIndex = 0;
+            this.lblAjoutPartenariat.Text = "Ajout d\'un partenariat";
             // 
             // FormMenuPartenariat
             // 

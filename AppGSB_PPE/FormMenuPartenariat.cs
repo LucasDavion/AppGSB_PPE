@@ -16,5 +16,15 @@ namespace AppGSB_PPE
         {
             InitializeComponent();
         }
+
+        private void menuAjoutPartenariat_Click(object sender, EventArgs e)
+        {
+            pnlAjoutPartenariat.Visible = true;
+        }
+
+        private void cbxSelectionAssociation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
