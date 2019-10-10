@@ -31,7 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.choixDesPaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUneMissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajouterUneAssociationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUneAssociationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUneMissionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consulterLesAssociationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,8 +41,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.choixDesPaysToolStripMenuItem,
-            this.ajouterUneMissionToolStripMenuItem,
-            this.ajouterUneAssociationToolStripMenuItem});
+            this.ajouterUneMissionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -56,17 +57,32 @@
             // 
             // ajouterUneMissionToolStripMenuItem
             // 
+            this.ajouterUneMissionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterUneAssociationToolStripMenuItem1,
+            this.ajouterUneMissionToolStripMenuItem1,
+            this.consulterLesAssociationToolStripMenuItem});
             this.ajouterUneMissionToolStripMenuItem.Name = "ajouterUneMissionToolStripMenuItem";
-            this.ajouterUneMissionToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
-            this.ajouterUneMissionToolStripMenuItem.Text = "Ajouter une mission";
-            this.ajouterUneMissionToolStripMenuItem.Click += new System.EventHandler(this.ajouterUneMissionToolStripMenuItem_Click);
+            this.ajouterUneMissionToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.ajouterUneMissionToolStripMenuItem.Text = "Associations";
             // 
-            // ajouterUneAssociationToolStripMenuItem
+            // ajouterUneAssociationToolStripMenuItem1
             // 
-            this.ajouterUneAssociationToolStripMenuItem.Name = "ajouterUneAssociationToolStripMenuItem";
-            this.ajouterUneAssociationToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
-            this.ajouterUneAssociationToolStripMenuItem.Text = "Ajouter une association";
-            this.ajouterUneAssociationToolStripMenuItem.Click += new System.EventHandler(this.ajouterUneAssociationToolStripMenuItem_Click);
+            this.ajouterUneAssociationToolStripMenuItem1.Name = "ajouterUneAssociationToolStripMenuItem1";
+            this.ajouterUneAssociationToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
+            this.ajouterUneAssociationToolStripMenuItem1.Text = "Ajouter une association";
+            this.ajouterUneAssociationToolStripMenuItem1.Click += new System.EventHandler(this.ajouterUneAssociationToolStripMenuItem1_Click);
+            // 
+            // ajouterUneMissionToolStripMenuItem1
+            // 
+            this.ajouterUneMissionToolStripMenuItem1.Name = "ajouterUneMissionToolStripMenuItem1";
+            this.ajouterUneMissionToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
+            this.ajouterUneMissionToolStripMenuItem1.Text = "Ajouter une mission";
+            // 
+            // consulterLesAssociationToolStripMenuItem
+            // 
+            this.consulterLesAssociationToolStripMenuItem.Name = "consulterLesAssociationToolStripMenuItem";
+            this.consulterLesAssociationToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.consulterLesAssociationToolStripMenuItem.Text = "Consulter les association";
             // 
             // FormMenu
             // 
@@ -89,6 +105,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem choixDesPaysToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUneMissionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajouterUneAssociationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUneAssociationToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUneMissionToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consulterLesAssociationToolStripMenuItem;
     }
 }

@@ -39,5 +39,10 @@ namespace AppGSB_PPE
             lesAssociations = new FormAjoutAssociation();
             lesAssociations.Show();
         }
+
+        private void ajouterUneAssociationToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
