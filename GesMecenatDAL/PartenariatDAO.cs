@@ -9,7 +9,7 @@ using GesMecenatBO;
 
 namespace GesMecenatDAL
 {
-    class PartenariatDAO
+    public class PartenariatDAO
     {
         private static PartenariatDAO uneInstance;
 
@@ -27,7 +27,7 @@ namespace GesMecenatDAL
 
         }
 
-        public List<Partenariat> GetClients()
+        public List<Partenariat> GetPartenariat()
         {
             //déclaraion des variables
             int id;
