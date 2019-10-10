@@ -13,6 +13,13 @@ namespace GesMecenatBO
         private float coutReel;
         private Association uneAssociation;
 
+        public Partenariat(float budget, float coutReel, Association uneAssociation)
+        {
+            this.budget = budget;
+            this.coutReel = coutReel;
+            this.uneAssociation = uneAssociation;
+        }
+
         public Partenariat(int id, float budget, float coutReel, Association uneAssociation)
         {
             this.id = id;
