@@ -17,7 +17,7 @@ namespace GesMecenatDAL
             //Declaration des variables de travail
             int id;
             string nom;
-            string mission;
+            //string mission;
             Mission uneMission;
 
             //On recupere l'objet responsable de la connection a la base

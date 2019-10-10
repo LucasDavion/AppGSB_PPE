@@ -11,7 +11,7 @@ namespace GesMecenatBO
         private string nomAssociation;
         private string nomResponsable;
         private int id;
-        //private Mission uneMission;
+        
 
         public Association(string nomAssociation, string nomResponsable)
         {
