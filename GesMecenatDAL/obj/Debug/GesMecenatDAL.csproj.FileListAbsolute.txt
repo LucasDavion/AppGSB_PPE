@@ -1,0 +1,2 @@
+C:\Users\davion\source\repos\AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.csprojAssemblyReference.cache
+C:\Users\davion\source\repos\AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CoreCompileInputs.cache
