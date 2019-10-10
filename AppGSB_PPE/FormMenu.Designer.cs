@@ -30,13 +30,17 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.choixDesPaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUneMissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUneAssociationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.choixDesPaysToolStripMenuItem});
+            this.choixDesPaysToolStripMenuItem,
+            this.ajouterUneMissionToolStripMenuItem,
+            this.ajouterUneAssociationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -49,6 +53,20 @@
             this.choixDesPaysToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.choixDesPaysToolStripMenuItem.Text = "Choix des pays";
             this.choixDesPaysToolStripMenuItem.Click += new System.EventHandler(this.choixDesPaysToolStripMenuItem_Click);
+            // 
+            // ajouterUneMissionToolStripMenuItem
+            // 
+            this.ajouterUneMissionToolStripMenuItem.Name = "ajouterUneMissionToolStripMenuItem";
+            this.ajouterUneMissionToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
+            this.ajouterUneMissionToolStripMenuItem.Text = "Ajouter une mission";
+            this.ajouterUneMissionToolStripMenuItem.Click += new System.EventHandler(this.ajouterUneMissionToolStripMenuItem_Click);
+            // 
+            // ajouterUneAssociationToolStripMenuItem
+            // 
+            this.ajouterUneAssociationToolStripMenuItem.Name = "ajouterUneAssociationToolStripMenuItem";
+            this.ajouterUneAssociationToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
+            this.ajouterUneAssociationToolStripMenuItem.Text = "Ajouter une association";
+            this.ajouterUneAssociationToolStripMenuItem.Click += new System.EventHandler(this.ajouterUneAssociationToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
@@ -70,5 +88,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem choixDesPaysToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUneMissionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUneAssociationToolStripMenuItem;
     }
 }

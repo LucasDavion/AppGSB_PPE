@@ -25,5 +25,19 @@ namespace AppGSB_PPE
             monChoixPays = new FormChoixPays(lesPays);
             monChoixPays.Show();
         }
+
+        private void ajouterUneMissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAjoutMission lesMissions;
+            lesMissions = new FormAjoutMission();
+            lesMissions.Show();
+        }
+
+        private void ajouterUneAssociationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAjoutAssociation lesAssociations;
+            lesAssociations = new FormAjoutAssociation();
+            lesAssociations.Show();
+        }
     }
 }
