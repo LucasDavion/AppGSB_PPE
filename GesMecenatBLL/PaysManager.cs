@@ -29,11 +29,12 @@ namespace GesMecenatBLL
         {
         }
 
-        //Appel de la couche DAL pour récupérer une list de clients
+        //Appel de la couche DAL pour récupérer une liste de pays
 
         public List<Pays> GetPays()
         {
-            return PaysDAO.GetInstance().GetCliens();
+            return PaysDAO.GetInstance().GetPays();
         }
+        
     }
 }
