@@ -1,5 +1,6 @@
 ﻿using GesMecenatBO;
 using GesMecenatDAL;
+using GesMecenatBLL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,7 @@ namespace AppGSB_PPE
             //On recupere l'objet responsable de la connection a la base
             SqlConnection cnx = Connexion.GetObjConnexion();
 
-            //On cree la collection lesPays qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
+            //On cree la collection lesPays qui vas contenir toute les caracteristique des pays enregistrer dans la base de donnée 
             List<Pays> lesPays = new List<Pays>();
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
@@ -56,14 +57,14 @@ namespace AppGSB_PPE
             //On ferme la connection
             Connexion.CloseConnexion();
 
-            // la valeur affichée dans la liste sera la colonne NomEmploye de la collection
+            //on associe la collection à la Combobox
+            this.cbxChoixPays.DataSource = PaysManager.GetInstance().GetPays();
+            // la valeur affichée dans la liste sera la colonne libelle de la collection
             this.cbxChoixPays.DisplayMember = "libelle";
 
-            // la valeur affichée dans la liste sera la colonne NumEmploye de la collection
+            // la valeur affichée dans la liste sera la colonne id de la collection
             this.cbxChoixPays.ValueMember = "id";
-
-            //on associe la collection à la Combobox
-            this.cbxChoixPays.DataSource = lesPays;         
+         
         }
     }    
 }

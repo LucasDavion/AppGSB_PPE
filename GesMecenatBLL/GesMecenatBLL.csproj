@@ -44,7 +44,18 @@
     <Compile Include="Class1.cs" />
     <Compile Include="MissionManager.cs" />
     <Compile Include="PartenariatManager.cs" />
+    <Compile Include="PaysManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GesMecenatBO\GesMecenatBO.csproj">
+      <Project>{65703E91-46FE-47CE-A93A-8046A880C0EB}</Project>
+      <Name>GesMecenatBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GesMecenatDAL\GesMecenatDAL.csproj">
+      <Project>{AB6A5C40-47E4-4170-B024-EFAA408E534F}</Project>
+      <Name>GesMecenatDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

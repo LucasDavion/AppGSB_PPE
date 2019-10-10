@@ -24,14 +24,14 @@ namespace GesMecenatDAL
         {
              
         //Declaration des variables de travail
-        int id;
+            int id;
             string libelle;
             Pays unPays;
 
             //On recupere l'objet responsable de la connection a la base
             SqlConnection cnx = Connexion.GetObjConnexion();
 
-            //On cree la collection lesPays qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
+            //On cree la collection lesPays qui vas contenir toute les caracteristique des pays enregistrer dans la base de donnée 
             List<Pays> lesPays = new List<Pays>();
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
