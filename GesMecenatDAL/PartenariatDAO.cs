@@ -48,7 +48,7 @@ namespace GesMecenatDAL
             List<Partenariat> LesPartenariats = new List<Partenariat>();
             //requete
 
-            string sqlr = "select * from Client join categSocioPro on idCateg=categSocioPro.id";
+            string sqlr = "spselPartenariat";
 
 
             SqlCommand maCommand = new SqlCommand(sqlr, cnx);
