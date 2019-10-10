@@ -1,2 +1,10 @@
-C:\Users\davion\source\repos\AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.csprojAssemblyReference.cache
-C:\Users\davion\source\repos\AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CoreCompileInputs.cache
+
+C:\Users\abdoulhamide\source\repos\AppGSB_PPE\GesMecenatDAL\bin\Debug\GesMecenatDAL.dll
+C:\Users\abdoulhamide\source\repos\AppGSB_PPE\GesMecenatDAL\bin\Debug\GesMecenatDAL.pdb
+C:\Users\abdoulhamide\source\repos\AppGSB_PPE\GesMecenatDAL\bin\Debug\GesMecenatBO.dll
+C:\Users\abdoulhamide\source\repos\AppGSB_PPE\GesMecenatDAL\bin\Debug\GesMecenatBO.pdb
+C:\Users\abdoulhamide\source\repos\AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.csprojAssemblyReference.cache
+C:\Users\abdoulhamide\source\repos\AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CoreCompileInputs.cache
+C:\Users\abdoulhamide\source\repos\AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CopyComplete
+C:\Users\abdoulhamide\source\repos\AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.dll
+C:\Users\abdoulhamide\source\repos\AppGSB_PPE\GesMecenatDAL\obj\Debug\GesMecenatDAL.pdb
