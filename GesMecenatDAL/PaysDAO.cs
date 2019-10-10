@@ -20,7 +20,7 @@ namespace GesMecenatDAL
             //On recupere l'objet responsable de la connection a la base
             SqlConnection cnx = connexion.GetObjConnexion();
 
-            //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
+            //On cree la collection lesPays qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
             List<Pays> lesPays = new List<Pays>();
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
@@ -43,6 +43,12 @@ namespace GesMecenatDAL
                 lesPays.Add(unPays);
             }
             monLecteur.Close();
+
+            //On ferme la connection
+            connexion.CloseConnexion();
+
+            //On retourne la collection
+            return lesPays;
 
         }
     }
