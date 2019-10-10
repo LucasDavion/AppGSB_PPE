@@ -69,11 +69,11 @@ namespace GesMecenatDAL
 
                 uneAssoctiation = new Association(libelleAssociation, nomResponsable, idAssociation);
 
-                uneAction = new Action(idAction, libelleAction);
+                //uneAction = new Action(idAction, libelleAction);
 
-                unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
+                //unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
 
-                LesPartenariats.Add(unPartenariat);
+                //LesPartenariats.Add(unPartenariat);
             }
             //on ferme le DataReader
             monLecteur.Close();
