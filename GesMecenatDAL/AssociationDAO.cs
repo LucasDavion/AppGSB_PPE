@@ -21,7 +21,7 @@ namespace GesMecenatDAL
             Association uneAssociation;
             
             //On recupere l'objet responsable de la connection a la base
-            SqlConnection cnx = connexion.GetObjConnexion();
+            SqlConnection cnx = Connexion.GetObjConnexion();
 
             //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
             List<Association> lesAssos = new List<Association>();
@@ -49,7 +49,7 @@ namespace GesMecenatDAL
             monLecteur.Close();
 
             //On ferme la connection
-            connexion.CloseConnexion();
+            Connexion.CloseConnexion();
 
 
             //On retourne la collection
@@ -68,7 +68,7 @@ namespace GesMecenatDAL
             try
             {
                 //On recupere l'objet responsable de la connection a la base
-                SqlConnection cnx = connexion.GetObjConnexion();
+                SqlConnection cnx = Connexion.GetObjConnexion();
                 sql = "insert into ";
                 SqlCommand maCommande = new SqlCommand(sql, cnx);
 
@@ -89,7 +89,7 @@ namespace GesMecenatDAL
                 msgErr += "Erreur grave " + err.Message;
             }
 
-            connexion.CloseConnexion();
+            Connexion.CloseConnexion();
             return nbEnreg;
         }
 

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace GesMecenatDAL
 {
-    class connexion
+    class Connexion
     {
         static private SqlConnection objConnex;
 
-        static connexion()
+        static Connexion()
         {
             objConnex = new SqlConnection();
             objConnex.ConnectionString = ConfigurationManager.ConnectionStrings["AppGSB_PPE"].ConnectionString;
