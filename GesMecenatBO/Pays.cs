@@ -8,16 +8,16 @@ namespace GesMecenatBO
 {
     public class Pays
     {
-        private string id;
+        private int id;
         private string libelle;
 
-        public Pays(string id, string libelle)
+        public Pays(int id, string libelle)
         {
             this.Id = id;
             this.Libelle = libelle;
         }
 
-        public string Id { get => id; set => id = value; }
+        public int Id { get => id; set => id = value; }
         public string Libelle { get => libelle; set => libelle = value; }
     }
 }
