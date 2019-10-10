@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GesMecenatDAL
 {
-    class connexion
+    public class connexion
     {
         static private SqlConnection objConnex;
 
