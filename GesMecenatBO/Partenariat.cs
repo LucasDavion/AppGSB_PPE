@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GesMecenatBO
 {
-    class Partenariat
+    public class Partenariat
     {
         private int id;
         private float budget;

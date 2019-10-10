@@ -9,18 +9,24 @@ namespace GesMecenatBO
     public class Association
     {
         private string nomAssociation;
-        private string mission;
+        private string nomResponsable;
         private int id;
 
-        public Association(string nomAssociation, string mission, int id)
+        public Association(string nomAssociation, string nomResponsable)
         {
             this.nomAssociation = nomAssociation;
-            this.mission = mission;
+            this.nomResponsable = nomResponsable;
+        }
+
+        public Association(string nomAssociation, string nomResponsable, int id)
+        {
+            this.nomAssociation = nomAssociation;
+            this.nomResponsable = nomResponsable;
             this.id = id;
         }
 
         public string NomAssociation { get => nomAssociation; set => nomAssociation = value; }
-        public string Mission { get => mission; set => mission = value; }
+        public string NomResponsable { get => nomResponsable; set => nomResponsable = value; }
         public int Id { get => id; set => id = value; }
     }
 }
