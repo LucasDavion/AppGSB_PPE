@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography; //Ref pour utilisé le sha1
 using System.Text;
 using System.Threading.Tasks;
 //Ref aux bibliothèque des classe DAL et BO
@@ -35,10 +36,31 @@ namespace GesMecenatBLL
 
         public int CreerUtilisateur(string sonNom, string sonPrenom)
         {
-            string identification;
+
+            //Variable
+
+            string identifiant;
             string mdp;
+            string mdpCrypte;
+
+            //Création de l'identifiant avec la 1er lettre du nom et le prenom entier
+
+            identifiant = sonNom.Substring(0, 1) + sonPrenom;
+
+            //Création du mdp 
+
+            mdp = sonNom + sonPrenom;
+            byte[] DataBytes = System.Text.Encoding.UTF8.GetBytes(mdp);
+            SHA1Managed sha1 = new SHA1Managed();
+            byte[] hash = sha1.ComputeHash(DataBytes);
+            mdpCrypte = Convert.ToBase64String(hash);
+
+            //Création de l'objet utilisateur
+
             Utilisateur unUtilisateur;
-            unUtilisateur = unUtilisateur(sonNom, sonPrenom, identification, mdp);
+            unUtilisateur = new Utilisateur(sonNom, sonPrenom, identifiant, mdpCrypte);
+
+            return UtilisateurDAO.GetInstance().AjoutUtilisateur(unUtilisateur);
         }
     }
 }

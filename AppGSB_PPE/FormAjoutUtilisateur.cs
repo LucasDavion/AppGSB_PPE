@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//Ref à la BLL et BO
+using GesMecenatBLL;
+using GesMecenatBO;
 
 namespace AppGSB_PPE
 {
@@ -15,6 +18,11 @@ namespace AppGSB_PPE
         public FormAjoutUtilisateur()
         {
             InitializeComponent();
+        }
+
+        private void btnEnregistrer_Click(object sender, EventArgs e)
+        {
+            UtilisateurManager.GetInstance().CreerUtilisateur(txtNom.Text, txtPrenom.Text);
         }
     }
 }

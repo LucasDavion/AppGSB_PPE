@@ -27,13 +27,12 @@ namespace GesMecenatBO
 
         //Constructeur
 
-        Utilisateur(string nom, string prenom ,string identifiant, string mdp)
+        public Utilisateur(string nom, string prenom ,string identifiant, string mdp)
         {
             this.nom = nom;
             this.prenom = prenom;
             this.identifiant = identifiant;
             this.mdp = mdp;
         }
-
     }
 }

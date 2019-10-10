@@ -2,7 +2,6 @@ Z:\2019 - 2020\PPE GSB\AppGSB_PPE\bin\Debug\AppGSB_PPE.exe.config
 Z:\2019 - 2020\PPE GSB\AppGSB_PPE\bin\Debug\AppGSB_PPE.exe
 Z:\2019 - 2020\PPE GSB\AppGSB_PPE\bin\Debug\AppGSB_PPE.pdb
 Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\GesMecenatGUI.csprojAssemblyReference.cache
-Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\AppGSB_PPE.Form1.resources
 Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\AppGSB_PPE.FormAjoutAssociation.resources
 Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\AppGSB_PPE.FormConnexion.resources
 Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\AppGSB_PPE.FormConsultAssociation.resources
@@ -11,3 +10,11 @@ Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\GesMecenatGUI.csproj.GenerateResourc
 Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\GesMecenatGUI.csproj.CoreCompileInputs.cache
 Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\AppGSB_PPE.exe
 Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\AppGSB_PPE.pdb
+Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\AppGSB_PPE.FormAjoutUtilisateur.resources
+Z:\2019 - 2020\PPE GSB\AppGSB_PPE\bin\Debug\GesMecenatBLL.dll
+Z:\2019 - 2020\PPE GSB\AppGSB_PPE\bin\Debug\GesMecenatBO.dll
+Z:\2019 - 2020\PPE GSB\AppGSB_PPE\bin\Debug\GesMecenatDAL.dll
+Z:\2019 - 2020\PPE GSB\AppGSB_PPE\bin\Debug\GesMecenatBLL.pdb
+Z:\2019 - 2020\PPE GSB\AppGSB_PPE\bin\Debug\GesMecenatBO.pdb
+Z:\2019 - 2020\PPE GSB\AppGSB_PPE\bin\Debug\GesMecenatDAL.pdb
+Z:\2019 - 2020\PPE GSB\AppGSB_PPE\obj\Debug\GesMecenatGUI.csproj.CopyComplete
