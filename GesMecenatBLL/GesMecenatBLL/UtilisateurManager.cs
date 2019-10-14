@@ -34,7 +34,7 @@ namespace GesMecenatBLL
 
         //Appel couche DAL pour crée l'utilisateur
 
-        public int CreerUtilisateur(string sonNom, string sonPrenom)
+        public int CreerUtilisateur(string sonNom, string sonPrenom,out string msg)
         {
 
             //Variable
@@ -59,6 +59,7 @@ namespace GesMecenatBLL
 
             Utilisateur unUtilisateur;
             unUtilisateur = new Utilisateur(sonNom, sonPrenom, identifiant, mdpCrypte);
+            msg = "Un utilisateur a bien était crée";
 
             return UtilisateurDAO.GetInstance().AjoutUtilisateur(unUtilisateur);
         }

@@ -22,7 +22,9 @@ namespace AppGSB_PPE
 
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
-            UtilisateurManager.GetInstance().CreerUtilisateur(txtNom.Text, txtPrenom.Text);
+            string msg;
+            UtilisateurManager.GetInstance().CreerUtilisateur(txtNom.Text, txtPrenom.Text,out msg);
+            lblMsg.Text = msg;
         }
     }
 }

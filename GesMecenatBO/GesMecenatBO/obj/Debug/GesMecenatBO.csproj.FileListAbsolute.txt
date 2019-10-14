@@ -4,3 +4,9 @@ Z:\2019 - 2020\PPE GSB\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.csprojAs
 Z:\2019 - 2020\PPE GSB\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.csproj.CoreCompileInputs.cache
 Z:\2019 - 2020\PPE GSB\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.dll
 Z:\2019 - 2020\PPE GSB\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.pdb
+C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\bin\Debug\GesMecenatBO.dll
+C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\bin\Debug\GesMecenatBO.pdb
+C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.csprojAssemblyReference.cache
+C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.csproj.CoreCompileInputs.cache
+C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.dll
+C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.pdb
