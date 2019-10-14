@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GesMecenatDAL;
 using GesMecenatBO;
 using System.Data.SqlClient;
+using Action = GesMecenatBO.Action;
 
 namespace GesMecenatBLL
 {
@@ -35,7 +36,7 @@ namespace GesMecenatBLL
             msgerr = "";
             Partenariat unPartenariat;
             Association uneAssocation = new Association(sonLibelleAssociation, sonNomPresponsableAssociation, sonIdAssociation);
-            GesMecenatBO.Action uneAction = new GesMecenatBO.Action(sonLibelleAction);
+            Action uneAction = new Action(sonLibelleAction);
             unPartenariat = new Partenariat(sonBudget, sonCoutReel, uneAssocation, uneAction);
             try
             {

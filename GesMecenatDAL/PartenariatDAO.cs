@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using GesMecenatBO;
+using Action = GesMecenatBO.Action;
 
 namespace GesMecenatDAL
 {
@@ -40,7 +41,7 @@ namespace GesMecenatDAL
             string libelleAction;
             Partenariat unPartenariat;
             Association uneAssoctiation;
-            GesMecenatBO.Action uneAction;
+            Action uneAction;
             //ouverture de la connexion
 
             SqlConnection cnx = Connexion.GetObjConnexion();
@@ -70,7 +71,7 @@ namespace GesMecenatDAL
 
                 uneAssoctiation = new Association(libelleAssociation, nomResponsable, idAssociation);
 
-                uneAction = new GesMecenatBO.Action(idAction, libelleAction);
+                uneAction = new Action(idAction, libelleAction);
 
                 unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
 
