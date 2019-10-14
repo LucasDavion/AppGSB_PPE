@@ -102,6 +102,12 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMenuAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuAction.designer.cs">
+      <DependentUpon>FormMenuAction.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenuPartenariat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuAction.resx">
+      <DependentUpon>FormMenuAction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuPartenariat.resx">
       <DependentUpon>FormMenuPartenariat.cs</DependentUpon>
