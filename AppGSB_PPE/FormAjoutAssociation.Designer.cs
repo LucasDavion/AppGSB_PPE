@@ -75,7 +75,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
+            this.button1.Text = "Ajouter";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -85,7 +85,7 @@
             this.panel1.Controls.Add(this.lblNomAssociation);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(235, 136);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(329, 159);
             this.panel1.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(353, 185);
             this.Controls.Add(this.panel1);
             this.Name = "FormAjoutAssociation";
             this.Text = "FormAjoutAssociation";
