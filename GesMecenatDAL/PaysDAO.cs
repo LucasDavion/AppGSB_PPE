@@ -39,9 +39,10 @@ namespace GesMecenatDAL
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
             
             SqlCommand maCommande = new SqlCommand();
+            maCommande.Connection = cnx;
             maCommande.CommandType = CommandType.StoredProcedure;
             maCommande.CommandText = "obtenirpays";
-            
+
             //On execute la requette dataReader
             
             monLecteur = maCommande.ExecuteReader();
