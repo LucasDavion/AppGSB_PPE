@@ -40,4 +40,5 @@ C:\Users\abdoulhamide\source\repos\AppGSB_PPE\AppGSB_PPE\obj\Debug\GesMecenatGUI
 C:\Users\abdoulhamide\source\repos\AppGSB_PPE\AppGSB_PPE\obj\Debug\GesMecenatGUI.csproj.CopyComplete
 C:\Users\abdoulhamide\source\repos\AppGSB_PPE\AppGSB_PPE\obj\Debug\AppGSB_PPE.exe
 C:\Users\abdoulhamide\source\repos\AppGSB_PPE\AppGSB_PPE\obj\Debug\AppGSB_PPE.pdb
+
 C:\Users\abdoulhamide\source\repos\AppGSB_PPE\AppGSB_PPE\obj\Debug\Pierre_Mulot.FormMenuAction.resources

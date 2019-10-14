@@ -77,12 +77,14 @@
             this.ajouterUneMissionToolStripMenuItem1.Name = "ajouterUneMissionToolStripMenuItem1";
             this.ajouterUneMissionToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
             this.ajouterUneMissionToolStripMenuItem1.Text = "Ajouter une mission";
+            this.ajouterUneMissionToolStripMenuItem1.Click += new System.EventHandler(this.ajouterUneMissionToolStripMenuItem1_Click);
             // 
             // consulterLesAssociationToolStripMenuItem
             // 
             this.consulterLesAssociationToolStripMenuItem.Name = "consulterLesAssociationToolStripMenuItem";
             this.consulterLesAssociationToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.consulterLesAssociationToolStripMenuItem.Text = "Consulter les association";
+            this.consulterLesAssociationToolStripMenuItem.Click += new System.EventHandler(this.consulterLesAssociationToolStripMenuItem_Click);
             // 
             // FormMenu
             // 

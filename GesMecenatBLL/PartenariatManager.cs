@@ -35,11 +35,11 @@ namespace GesMecenatBLL
             msgerr = "";
             Partenariat unPartenariat;
             Association uneAssocation = new Association(sonLibelleAssociation, sonNomPresponsableAssociation, sonIdAssociation);
-            Action uneAction = new Action();
-            unPartenariat = new Partenariat(sonBudget, sonCoutReel, uneAssocation, uneAction);
+            //Action uneAction = new Action();
+            //unPartenariat = new Partenariat(sonBudget, sonCoutReel, uneAssocation, uneAction);
             try
             {
-                nbAjout = PartenariatDAO.GetInstance().AjoutPartenariat(unPartenariat);
+                //nbAjout = PartenariatDAO.GetInstance().AjoutPartenariat(unPartenariat);
             }
             catch (SqlException err)
             {
