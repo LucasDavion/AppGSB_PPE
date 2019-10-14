@@ -19,7 +19,7 @@ namespace AppGSB_PPE
         public FormChoixPays(List<Pays> laListe)
         {
             InitializeComponent();
-        
+
             //on associe la collection à la Combobox
             this.cbxChoixPays.DataSource = PaysManager.GetInstance().GetPays();
 
@@ -28,7 +28,6 @@ namespace AppGSB_PPE
 
             // la valeur affichée dans la liste sera la colonne id de la collection
             this.cbxChoixPays.ValueMember = "id";
-         
         }
     }    
 }
