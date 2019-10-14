@@ -16,7 +16,7 @@ namespace GesMecenatDAL
 
             //Declaration des variables de travail
             int id;
-            string nom;
+            string libelle;
             //string mission;
             Mission uneMission;
 
@@ -40,10 +40,10 @@ namespace GesMecenatDAL
             while (monLecteur.Read())
             {
                 id = (int)monLecteur["id"];
-                nom = (string)monLecteur["nom"];
+                libelle = (string)monLecteur["libelle"];
 
 
-                uneMission = new Mission(id, nom);
+                uneMission = new Mission(id, libelle);
                 lesMissions.Add(uneMission);
             }
             monLecteur.Close();
@@ -69,7 +69,7 @@ namespace GesMecenatDAL
             {
                 //On recupere l'objet responsable de la connection a la base
                 SqlConnection cnx = Connexion.GetObjConnexion();
-                sql = "insert into mission (libelle) values(@libelle";
+                sql = "insert into mission (libelle) values(@libelle)";
                 SqlCommand maCommande = new SqlCommand(sql, cnx);
 
                 maCommande.Parameters.Add("libelle", SqlDbType.VarChar);
