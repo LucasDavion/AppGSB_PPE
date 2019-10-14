@@ -26,5 +26,18 @@ namespace Pierre_Mulot
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pnlCrea.Visible = false;
+            pnlModifSupr.Visible = true;
+            txtModifAction.Enabled = true;
+        }
+
+        private void cbxCreation_CheckedChanged(object sender, EventArgs e)
+        {
+            txtModifAction.Enabled = true;
+            cbxChoixAction.Enabled = false;
+        }
     }
 }
