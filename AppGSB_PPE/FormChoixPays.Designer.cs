@@ -49,7 +49,7 @@
             this.pnlChoixPays.Controls.Add(this.cbxChoixPays);
             this.pnlChoixPays.Controls.Add(this.btnValider);
             this.pnlChoixPays.Controls.Add(this.lblPays);
-            this.pnlChoixPays.Location = new System.Drawing.Point(249, 134);
+            this.pnlChoixPays.Location = new System.Drawing.Point(43, 40);
             this.pnlChoixPays.Name = "pnlChoixPays";
             this.pnlChoixPays.Size = new System.Drawing.Size(200, 100);
             this.pnlChoixPays.TabIndex = 1;
@@ -75,7 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(285, 179);
             this.Controls.Add(this.pnlChoixPays);
             this.Name = "FormChoixPays";
             this.Text = "FormChoixPays";
