@@ -44,5 +44,26 @@ namespace AppGSB_PPE
         {
 
         }
+
+        private void btnAjoutPartenariat_Click(object sender, EventArgs e)
+        {
+            string msgerr;
+            int nbAjout;
+            int idAssociation = (int)cbxSelectionAssociation.SelectedValue;
+            int idAction = (int)cbxSelectionAction.SelectedValue;
+            nbAjout = PartenariatManager.GetInstance().CreerPartenariat(txtBudgetPrevisionnel.Text, idAssociation, idAction, out msgerr);
+            if (nbAjout == 0)
+            {
+                MessageBox.Show("0 enregistrement a été enregisté");
+            }
+            else
+            {
+                MessageBox.Show("Les enregistrements on bien été ajoutés, nombre d'enregistrements : " + nbAjout);
+            }
+            if (msgerr != "")
+            {
+                MessageBox.Show(msgerr);
+            }
+        }
     }
 }

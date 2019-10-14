@@ -32,6 +32,7 @@
             this.menuAjoutPartenariat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsultationPartenariat = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAjoutPartenariat = new System.Windows.Forms.Panel();
+            this.btnAjoutPartenariat = new System.Windows.Forms.Button();
             this.cbxSelectionAction = new System.Windows.Forms.ComboBox();
             this.cbxSelectionAssociation = new System.Windows.Forms.ComboBox();
             this.txtBudgetPrevisionnel = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.lblSelectionAction = new System.Windows.Forms.Label();
             this.lblSelectionAssociation = new System.Windows.Forms.Label();
             this.lblAjoutPartenariat = new System.Windows.Forms.Label();
-            this.btnAjoutPartenariat = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlAjoutPartenariat.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,16 @@
             this.pnlAjoutPartenariat.Size = new System.Drawing.Size(708, 348);
             this.pnlAjoutPartenariat.TabIndex = 1;
             this.pnlAjoutPartenariat.Visible = false;
+            // 
+            // btnAjoutPartenariat
+            // 
+            this.btnAjoutPartenariat.Location = new System.Drawing.Point(325, 223);
+            this.btnAjoutPartenariat.Name = "btnAjoutPartenariat";
+            this.btnAjoutPartenariat.Size = new System.Drawing.Size(75, 23);
+            this.btnAjoutPartenariat.TabIndex = 7;
+            this.btnAjoutPartenariat.Text = "Valider";
+            this.btnAjoutPartenariat.UseVisualStyleBackColor = true;
+            this.btnAjoutPartenariat.Click += new System.EventHandler(this.btnAjoutPartenariat_Click);
             // 
             // cbxSelectionAction
             // 
@@ -143,15 +153,6 @@
             this.lblAjoutPartenariat.Size = new System.Drawing.Size(107, 13);
             this.lblAjoutPartenariat.TabIndex = 0;
             this.lblAjoutPartenariat.Text = "Ajout d\'un partenariat";
-            // 
-            // btnAjoutPartenariat
-            // 
-            this.btnAjoutPartenariat.Location = new System.Drawing.Point(325, 223);
-            this.btnAjoutPartenariat.Name = "btnAjoutPartenariat";
-            this.btnAjoutPartenariat.Size = new System.Drawing.Size(75, 23);
-            this.btnAjoutPartenariat.TabIndex = 7;
-            this.btnAjoutPartenariat.Text = "Valider";
-            this.btnAjoutPartenariat.UseVisualStyleBackColor = true;
             // 
             // FormMenuPartenariat
             // 

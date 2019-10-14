@@ -30,14 +30,14 @@ namespace GesMecenatBLL
         {
             return PartenariatDAO.GetInstance().GetPartenariat();
         }
-        public int CreerPartenariat(float sonBudget, float sonCoutReel, string sonLibelleAssociation, string sonNomPresponsableAssociation, int sonIdAssociation, string sonLibelleAction, out string msgerr)
+        public int CreerPartenariat(float sonBudget, int sonIdAssociation, int sonIdAction, out string msgerr)
         {
             int nbAjout = 0;
             msgerr = "";
             Partenariat unPartenariat;
-            Association uneAssocation = new Association(sonLibelleAssociation, sonNomPresponsableAssociation, sonIdAssociation);
-            Action uneAction = new Action(sonLibelleAction);
-            unPartenariat = new Partenariat(sonBudget, sonCoutReel, uneAssocation, uneAction);
+            Association uneAssocation = new Association(sonIdAssociation);
+            Action uneAction = new Action(sonIdAction);
+            unPartenariat = new Partenariat(sonBudget, uneAssocation, uneAction);
             try
             {
                 nbAjout = PartenariatDAO.GetInstance().AjoutPartenariat(unPartenariat);
