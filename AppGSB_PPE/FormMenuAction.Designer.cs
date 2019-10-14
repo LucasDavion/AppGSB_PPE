@@ -33,13 +33,13 @@
             this.btnSupression = new System.Windows.Forms.Button();
             this.pnlCrea = new System.Windows.Forms.Panel();
             this.pnlModifSupr = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlChoixAction = new System.Windows.Forms.Panel();
             this.cbxCreation = new System.Windows.Forms.CheckBox();
             this.txtModifAction = new System.Windows.Forms.TextBox();
             this.cbxChoixAction = new System.Windows.Forms.ComboBox();
             this.pnlCrea.SuspendLayout();
             this.pnlModifSupr.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlChoixAction.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCreation
@@ -88,15 +88,15 @@
             this.pnlModifSupr.TabIndex = 4;
             this.pnlModifSupr.Visible = false;
             // 
-            // panel3
+            // pnlChoixAction
             // 
-            this.panel3.Controls.Add(this.cbxCreation);
-            this.panel3.Controls.Add(this.txtModifAction);
-            this.panel3.Controls.Add(this.cbxChoixAction);
-            this.panel3.Location = new System.Drawing.Point(12, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(213, 74);
-            this.panel3.TabIndex = 5;
+            this.pnlChoixAction.Controls.Add(this.cbxCreation);
+            this.pnlChoixAction.Controls.Add(this.txtModifAction);
+            this.pnlChoixAction.Controls.Add(this.cbxChoixAction);
+            this.pnlChoixAction.Location = new System.Drawing.Point(12, 12);
+            this.pnlChoixAction.Name = "pnlChoixAction";
+            this.pnlChoixAction.Size = new System.Drawing.Size(213, 74);
+            this.pnlChoixAction.TabIndex = 5;
             // 
             // cbxCreation
             // 
@@ -131,16 +131,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(237, 176);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlChoixAction);
             this.Controls.Add(this.pnlModifSupr);
             this.Controls.Add(this.pnlCrea);
             this.Name = "FormMenuAction";
-            this.Text = "Form1";
+            this.Text = "Gestion des action";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlCrea.ResumeLayout(false);
             this.pnlModifSupr.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlChoixAction.ResumeLayout(false);
+            this.pnlChoixAction.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -152,7 +152,7 @@
         private System.Windows.Forms.Button btnSupression;
         private System.Windows.Forms.Panel pnlCrea;
         private System.Windows.Forms.Panel pnlModifSupr;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlChoixAction;
         private System.Windows.Forms.CheckBox cbxCreation;
         private System.Windows.Forms.TextBox txtModifAction;
         private System.Windows.Forms.ComboBox cbxChoixAction;
