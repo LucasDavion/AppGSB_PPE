@@ -28,21 +28,33 @@ namespace AppGSB_PPE
 
         private void ajouterUneMissionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAjoutMission lesMissions;
-            lesMissions = new FormAjoutMission();
-            lesMissions.Show();
+            
         }
 
         private void ajouterUneAssociationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ajouterUneAssociationToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FormAjoutAssociation lesAssociations;
             lesAssociations = new FormAjoutAssociation();
             lesAssociations.Show();
         }
 
-        private void ajouterUneAssociationToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void ajouterUneMissionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            FormAjoutMission lesMissions;
+            lesMissions = new FormAjoutMission();
+            lesMissions.Show();
+        }
 
+        private void consulterLesAssociationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultAssociation lesAssociations;
+            lesAssociations = new FormConsultAssociation();
+            lesAssociations.Show();
         }
     }
 }
