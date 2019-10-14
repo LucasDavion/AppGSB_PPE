@@ -51,7 +51,9 @@ namespace AppGSB_PPE
             int nbAjout;
             int idAssociation = (int)cbxSelectionAssociation.SelectedValue;
             int idAction = (int)cbxSelectionAction.SelectedValue;
-            nbAjout = PartenariatManager.GetInstance().CreerPartenariat(txtBudgetPrevisionnel.Text, idAssociation, idAction, out msgerr);
+            float budgetPrevisionnel;
+            float.TryParse(txtBudgetPrevisionnel.Text, out budgetPrevisionnel);
+            nbAjout = PartenariatManager.GetInstance().CreerPartenariat(budgetPrevisionnel, idAssociation, idAction, out msgerr);
             if (nbAjout == 0)
             {
                 MessageBox.Show("0 enregistrement a été enregisté");
