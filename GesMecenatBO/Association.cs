@@ -11,7 +11,11 @@ namespace GesMecenatBO
         private string nomAssociation;
         private string nomResponsable;
         private int id;
-        
+
+        public Association(int id)
+        {
+            this.id = id;
+        }
 
         public Association(string nomAssociation, string nomResponsable)
         {

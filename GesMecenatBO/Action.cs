@@ -16,6 +16,11 @@ namespace GesMecenatBO
             this.libelle = libelle;
         }
 
+        public Action(int id)
+        {
+            this.id = id;
+        }
+
         public Action(int id, string libelle)
         {
             this.id = id;
