@@ -55,9 +55,7 @@ namespace GesMecenatDAL
             return lesAction;
         }
 
-        public void ModifAction(id, libelle)
-        {
-            
-        }
+
+
     }
 }

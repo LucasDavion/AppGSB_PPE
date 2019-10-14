@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pierre_Mulot
+namespace AppGSB_PPE
 {
     public partial class FormMenuAction : Form
     {
@@ -36,8 +36,17 @@ namespace Pierre_Mulot
 
         private void cbxCreation_CheckedChanged(object sender, EventArgs e)
         {
-            txtModifAction.Enabled = true;
-            cbxChoixAction.Enabled = false;
+            if (txtModifAction.Enabled == false)
+            {
+                txtModifAction.Enabled = true;
+                cbxChoixAction.Enabled = false;
+            }
+            else
+            {
+                txtModifAction.Enabled = false;
+                cbxChoixAction.Enabled = true;
+            }
+            
         }
     }
 }

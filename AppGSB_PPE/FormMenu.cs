@@ -56,5 +56,12 @@ namespace AppGSB_PPE
             lesAssociations = new FormConsultAssociation();
             lesAssociations.Show();
         }
+
+        private void actionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                FormMenuAction monChoixPays;
+                monChoixPays = new FormMenuAction();
+                monChoixPays.Show();
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Pierre_Mulot
+﻿namespace AppGSB_PPE
 {
     partial class FormMenuAction
     {
