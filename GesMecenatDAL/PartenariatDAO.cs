@@ -40,7 +40,7 @@ namespace GesMecenatDAL
             string libelleAction;
             Partenariat unPartenariat;
             Association uneAssoctiation;
-            Action uneAction;
+            GesMecenatBO.Action uneAction;
             //ouverture de la connexion
 
             SqlConnection cnx = Connexion.GetObjConnexion();
@@ -66,14 +66,15 @@ namespace GesMecenatDAL
                 libelleAssociation = (string)monLecteur["libelle"];
                 nomResponsable = (string)monLecteur["nomResponsable"];
                 idAction = (int)monLecteur["id_action"];
+                libelleAction = (string)monLecteur["libelle"];
 
                 uneAssoctiation = new Association(libelleAssociation, nomResponsable, idAssociation);
 
-                //uneAction = new Action(idAction, libelleAction);
+                uneAction = new GesMecenatBO.Action(idAction, libelleAction);
 
-                //unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
+                unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
 
-                //LesPartenariats.Add(unPartenariat);
+                LesPartenariats.Add(unPartenariat);
             }
             //on ferme le DataReader
             monLecteur.Close();
