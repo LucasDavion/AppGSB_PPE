@@ -39,6 +39,7 @@
             this.lblSelectionAction = new System.Windows.Forms.Label();
             this.lblSelectionAssociation = new System.Windows.Forms.Label();
             this.lblAjoutPartenariat = new System.Windows.Forms.Label();
+            this.btnAjoutPartenariat = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlAjoutPartenariat.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +70,7 @@
             // 
             // pnlAjoutPartenariat
             // 
+            this.pnlAjoutPartenariat.Controls.Add(this.btnAjoutPartenariat);
             this.pnlAjoutPartenariat.Controls.Add(this.cbxSelectionAction);
             this.pnlAjoutPartenariat.Controls.Add(this.cbxSelectionAssociation);
             this.pnlAjoutPartenariat.Controls.Add(this.txtBudgetPrevisionnel);
@@ -142,6 +144,15 @@
             this.lblAjoutPartenariat.TabIndex = 0;
             this.lblAjoutPartenariat.Text = "Ajout d\'un partenariat";
             // 
+            // btnAjoutPartenariat
+            // 
+            this.btnAjoutPartenariat.Location = new System.Drawing.Point(325, 223);
+            this.btnAjoutPartenariat.Name = "btnAjoutPartenariat";
+            this.btnAjoutPartenariat.Size = new System.Drawing.Size(75, 23);
+            this.btnAjoutPartenariat.TabIndex = 7;
+            this.btnAjoutPartenariat.Text = "Valider";
+            this.btnAjoutPartenariat.UseVisualStyleBackColor = true;
+            // 
             // FormMenuPartenariat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,5 +185,6 @@
         private System.Windows.Forms.Label lblSelectionAction;
         private System.Windows.Forms.Label lblSelectionAssociation;
         private System.Windows.Forms.Label lblAjoutPartenariat;
+        private System.Windows.Forms.Button btnAjoutPartenariat;
     }
 }

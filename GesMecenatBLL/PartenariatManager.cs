@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GesMecenatDAL;
 using GesMecenatBO;
 using System.Data.SqlClient;
+using Action = GesMecenatBO.Action;
 
 namespace GesMecenatBLL
 {
@@ -29,17 +30,17 @@ namespace GesMecenatBLL
         {
             return PartenariatDAO.GetInstance().GetPartenariat();
         }
-        public int CreerPartenariat(float sonBudget, float sonCoutReel, string sonLibelleAssociation, string sonNomPresponsableAssociation, int sonIdAssociation, out string msgerr)
+        public int CreerPartenariat(float sonBudget, float sonCoutReel, string sonLibelleAssociation, string sonNomPresponsableAssociation, int sonIdAssociation, string sonLibelleAction, out string msgerr)
         {
             int nbAjout = 0;
             msgerr = "";
             Partenariat unPartenariat;
             Association uneAssocation = new Association(sonLibelleAssociation, sonNomPresponsableAssociation, sonIdAssociation);
-            //Action uneAction = new Action();
-            //unPartenariat = new Partenariat(sonBudget, sonCoutReel, uneAssocation, uneAction);
+            Action uneAction = new Action(sonLibelleAction);
+            unPartenariat = new Partenariat(sonBudget, sonCoutReel, uneAssocation, uneAction);
             try
             {
-                //nbAjout = PartenariatDAO.GetInstance().AjoutPartenariat(unPartenariat);
+                nbAjout = PartenariatDAO.GetInstance().AjoutPartenariat(unPartenariat);
             }
             catch (SqlException err)
             {

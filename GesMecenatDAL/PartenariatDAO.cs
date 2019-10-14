@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using GesMecenatBO;
+using Action = GesMecenatBO.Action;
 
 namespace GesMecenatDAL
 {
@@ -66,14 +67,15 @@ namespace GesMecenatDAL
                 libelleAssociation = (string)monLecteur["libelle"];
                 nomResponsable = (string)monLecteur["nomResponsable"];
                 idAction = (int)monLecteur["id_action"];
+                libelleAction = (string)monLecteur["libelle"];
 
                 uneAssoctiation = new Association(libelleAssociation, nomResponsable, idAssociation);
 
-                //uneAction = new Action(idAction, libelleAction);
+                uneAction = new Action(idAction, libelleAction);
 
-                //unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
+                unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
 
-                //LesPartenariats.Add(unPartenariat);
+                LesPartenariats.Add(unPartenariat);
             }
             //on ferme le DataReader
             monLecteur.Close();
