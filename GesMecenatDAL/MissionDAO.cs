@@ -9,7 +9,7 @@ using GesMecenatBO;
 
 namespace GesMecenatDAL
 {
-    class MissionDAO
+    public class MissionDAO
     {
         public List<Mission> GetMission()
         {
@@ -73,7 +73,7 @@ namespace GesMecenatDAL
                 SqlCommand maCommande = new SqlCommand(sql, cnx);
 
                 maCommande.Parameters.Add("libelle", SqlDbType.VarChar);
-                maCommande.Parameters[1].Value = uneMission.Libelle;
+                maCommande.Parameters[0].Value = uneMission.Libelle;
 
                 maCommande.CommandText = sql;
                 nbEnreg = maCommande.ExecuteNonQuery();
