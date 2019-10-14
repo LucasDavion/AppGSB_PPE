@@ -35,13 +35,13 @@ namespace GesMecenatBLL
         {
             int nbAjout = 0;
             msgerr = "";
-            Mission unPartenariat;
+            
             Mission uneMission = new Mission(mission);
-            //Action uneAction = new Action();
-            //unPartenariat = new Partenariat(sonBudget, sonCoutReel, uneAssocation, uneAction);
+
+            
             try
             {
-                //nbAjout = PartenariatDAO.GetInstance().AjoutPartenariat(unPartenariat);
+                nbAjout = MissionDAO.GetInstance().AjoutMission(uneMission);
             }
             catch (SqlException err)
             {

@@ -22,7 +22,7 @@ namespace AppGSB_PPE
         private void btnValiderMission_Click(object sender, EventArgs e)
         {
             string msgErreur;
-            int nbAjout;
+            
             string mission = (string)txtMission.Text;
 
            

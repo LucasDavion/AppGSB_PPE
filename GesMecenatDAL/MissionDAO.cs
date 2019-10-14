@@ -11,6 +11,22 @@ namespace GesMecenatDAL
 {
     public class MissionDAO
     {
+        private static MissionDAO uneInstance;
+
+        public static MissionDAO GetInstance()
+        {
+            if (uneInstance == null)
+            {
+                uneInstance = new MissionDAO();
+            }
+            return uneInstance;
+        }
+
+        private MissionDAO()
+        {
+
+        }
+
         public List<Mission> GetMission()
         {
 
