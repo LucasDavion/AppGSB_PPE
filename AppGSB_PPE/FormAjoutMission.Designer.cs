@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnValiderMission = new System.Windows.Forms.Button();
             this.txtMission = new System.Windows.Forms.TextBox();
+            this.btnValiderMission = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,14 +45,12 @@
             this.panel1.Size = new System.Drawing.Size(369, 77);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // txtMission
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mission :";
+            this.txtMission.Location = new System.Drawing.Point(66, 16);
+            this.txtMission.Name = "txtMission";
+            this.txtMission.Size = new System.Drawing.Size(283, 20);
+            this.txtMission.TabIndex = 2;
             // 
             // btnValiderMission
             // 
@@ -62,13 +60,16 @@
             this.btnValiderMission.TabIndex = 1;
             this.btnValiderMission.Text = "Valider";
             this.btnValiderMission.UseVisualStyleBackColor = true;
+            this.btnValiderMission.Click += new System.EventHandler(this.btnValiderMission_Click);
             // 
-            // txtMission
+            // label1
             // 
-            this.txtMission.Location = new System.Drawing.Point(66, 16);
-            this.txtMission.Name = "txtMission";
-            this.txtMission.Size = new System.Drawing.Size(283, 20);
-            this.txtMission.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mission :";
             // 
             // FormAjoutMission
             // 
