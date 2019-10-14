@@ -49,10 +49,11 @@ namespace GesMecenatDAL
             List<Partenariat> LesPartenariats = new List<Partenariat>();
             //requete
 
-            string sqlr = "spselPartenariat";
+            string sqlr = "spCnsPartenariat";
 
 
             SqlCommand maCommand = new SqlCommand(sqlr, cnx);
+            maCommand.CommandType = CommandType.StoredProcedure;
             maCommand.CommandText = sqlr;
 
             SqlDataReader monLecteur;
@@ -95,9 +96,10 @@ namespace GesMecenatDAL
             SqlConnection cnx = Connexion.GetObjConnexion();
 
             //requete
-            string sqlr = "insert into partenariat values(@budget, @coutReel, @idAssociation, @idAction)";
+            string sqlr = "spInsPartenariat(@budget, @idAssociation, @idAction)";
 
             SqlCommand maCommand = new SqlCommand(sqlr, cnx);
+            maCommand.CommandType = CommandType.StoredProcedure;
             maCommand.CommandText = sqlr;
             maCommand.Parameters.Add("budget", SqlDbType.Float);
             maCommand.Parameters[0].Value = unPartenariat.Budget;
