@@ -83,5 +83,10 @@ namespace AppGSB_PPE
             pnlModifPartenariat.Visible = true;
             pnlAjoutPartenariat.Visible = false;
         }
+
+        private void cbxSelectionAssociationModif_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

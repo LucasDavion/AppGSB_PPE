@@ -188,6 +188,7 @@
             this.cbxSelectionAssociationModif.Name = "cbxSelectionAssociationModif";
             this.cbxSelectionAssociationModif.Size = new System.Drawing.Size(121, 21);
             this.cbxSelectionAssociationModif.TabIndex = 1;
+            this.cbxSelectionAssociationModif.SelectedIndexChanged += new System.EventHandler(this.cbxSelectionAssociationModif_SelectedIndexChanged);
             // 
             // lblSelectAssociationConsult
             // 
