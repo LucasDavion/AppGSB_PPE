@@ -32,6 +32,8 @@
             this.menuAjoutPartenariat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsultationPartenariat = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAjoutPartenariat = new System.Windows.Forms.Panel();
+            this.pnlModifPartenariat = new System.Windows.Forms.Panel();
+            this.dtgConsultPartenariat = new System.Windows.Forms.DataGridView();
             this.btnAjoutPartenariat = new System.Windows.Forms.Button();
             this.cbxSelectionAction = new System.Windows.Forms.ComboBox();
             this.cbxSelectionAssociation = new System.Windows.Forms.ComboBox();
@@ -40,12 +42,10 @@
             this.lblSelectionAction = new System.Windows.Forms.Label();
             this.lblSelectionAssociation = new System.Windows.Forms.Label();
             this.lblAjoutPartenariat = new System.Windows.Forms.Label();
-            this.pnlModifPartenariat = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.pnlAjoutPartenariat.SuspendLayout();
             this.pnlModifPartenariat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultPartenariat)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -89,6 +89,23 @@
             this.pnlAjoutPartenariat.Size = new System.Drawing.Size(708, 348);
             this.pnlAjoutPartenariat.TabIndex = 1;
             this.pnlAjoutPartenariat.Visible = false;
+            // 
+            // pnlModifPartenariat
+            // 
+            this.pnlModifPartenariat.Controls.Add(this.dtgConsultPartenariat);
+            this.pnlModifPartenariat.Location = new System.Drawing.Point(0, 0);
+            this.pnlModifPartenariat.Name = "pnlModifPartenariat";
+            this.pnlModifPartenariat.Size = new System.Drawing.Size(708, 348);
+            this.pnlModifPartenariat.TabIndex = 8;
+            this.pnlModifPartenariat.Visible = false;
+            // 
+            // dtgConsultPartenariat
+            // 
+            this.dtgConsultPartenariat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgConsultPartenariat.Location = new System.Drawing.Point(28, 83);
+            this.dtgConsultPartenariat.Name = "dtgConsultPartenariat";
+            this.dtgConsultPartenariat.Size = new System.Drawing.Size(654, 249);
+            this.dtgConsultPartenariat.TabIndex = 0;
             // 
             // btnAjoutPartenariat
             // 
@@ -160,23 +177,6 @@
             this.lblAjoutPartenariat.TabIndex = 0;
             this.lblAjoutPartenariat.Text = "Ajout d\'un partenariat";
             // 
-            // pnlModifPartenariat
-            // 
-            this.pnlModifPartenariat.Controls.Add(this.dataGridView1);
-            this.pnlModifPartenariat.Location = new System.Drawing.Point(0, 0);
-            this.pnlModifPartenariat.Name = "pnlModifPartenariat";
-            this.pnlModifPartenariat.Size = new System.Drawing.Size(708, 348);
-            this.pnlModifPartenariat.TabIndex = 8;
-            this.pnlModifPartenariat.Visible = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(654, 249);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // FormMenuPartenariat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,7 +192,7 @@
             this.pnlAjoutPartenariat.ResumeLayout(false);
             this.pnlAjoutPartenariat.PerformLayout();
             this.pnlModifPartenariat.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultPartenariat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,6 +213,6 @@
         private System.Windows.Forms.Label lblAjoutPartenariat;
         private System.Windows.Forms.Button btnAjoutPartenariat;
         private System.Windows.Forms.Panel pnlModifPartenariat;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgConsultPartenariat;
     }
 }

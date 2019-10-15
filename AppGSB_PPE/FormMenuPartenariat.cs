@@ -20,19 +20,21 @@ namespace AppGSB_PPE
             InitializeComponent();
             List<Association> lesAssociations;
             //lesAssociations = AssociationManager.GetInstance().GetAssociation();
-
             this.cbxSelectionAssociation.DisplayMember = "Libelle";
             this.cbxSelectionAssociation.ValueMember = "Id";
-
             //this.cbxSelectionAssociation.DataSource = lesAssociations;
 
             List<Action> lesActions;
             //lesActions = ActionManager.GetInstance().GetAction();
-
             this.cbxSelectionAction.DisplayMember = "Libelle";
             this.cbxSelectionAction.ValueMember = "Id";
-
             //this.cbxSelectionAction.DataSource = lesActions;
+
+            List<Partenariat> lesPartenariats;
+            lesPartenariats = PartenariatManager.GetInstance().GetPartenariat();
+            dtgConsultPartenariat.DataSource = null;
+            dtgConsultPartenariat.DataSource = lesPartenariats;
+            dtgConsultPartenariat.Columns["id"].Visible = false;
         }
 
         private void menuAjoutPartenariat_Click(object sender, EventArgs e)
