@@ -28,6 +28,15 @@ namespace AppGSB_PPE
 
             // la valeur affichée dans la liste sera la colonne id de la collection
             this.cbxChoixPays.ValueMember = "id";
+
+            // 
+        }
+
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            string msgErr;
+            int nbAjout;
+            string pays = (string)cbxChoixPays.SelectedValue;
         }
     }    
 }
