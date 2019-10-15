@@ -34,10 +34,10 @@ namespace AppGSB_PPE
 
         private void btnValider_Click(object sender, EventArgs e)
         {
-            string msgErr;
+            /*string msgErr;
             int nbAjout;
             string pays = (string)cbxChoixPays.SelectedValue;
-            nbAjout = PaysManager.GetInstance().CreerPays(pays, txtAnnee.Text, out msgErr);
+            nbAjout = PaysManager.GetInstance().AjoutPays(pays, txtAnnee.Text, out msgErr);
             if (nbAjout == 0)
             {
                 MessageBox.Show("0 enregistrement a été enregistré");
@@ -49,7 +49,7 @@ namespace AppGSB_PPE
             if (msgErr != "")
             {
                 MessageBox.Show(msgErr);
-            }
+            }*/
         }
     }    
 }
