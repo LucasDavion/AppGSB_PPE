@@ -11,17 +11,17 @@ namespace GesMecenatDAL
 {
     public class ActionDAO
     {
-        private static PaysDAO uneInstance;
+        private static ActionDAO uneInstance;
 
-        public static PaysDAO GetInstance()
+        public static ActionDAO GetInstance()
         {
             if (uneInstance == null)
             {
-                uneInstance = new PaysDAO();
+                uneInstance = new ActionDAO();
             }
             return uneInstance;
         }
-        public List<Action> GetAction()
+        public List<Action> GetActions()
         {
 
             //Declaration des variables de travail
@@ -33,7 +33,7 @@ namespace GesMecenatDAL
             SqlConnection cnx = Connexion.GetObjConnexion();
 
             //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
-            List<Action> lesAction = new List<Action>();
+            List<Action> lesActions = new List<Action>();
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
             string sql;
@@ -52,7 +52,7 @@ namespace GesMecenatDAL
                 libelle = (string)monLecteur["libelle"];
 
                 uneAction = new Action(id, libelle);
-                lesAction.Add(uneAction);
+                lesActions.Add(uneAction);
             }
             monLecteur.Close();
 
@@ -61,7 +61,7 @@ namespace GesMecenatDAL
 
 
             //On retourne la collection
-            return lesAction;
+            return lesActions;
         }
 
         public List<Action> CreaAction()
@@ -74,7 +74,7 @@ namespace GesMecenatDAL
             SqlConnection cnx = Connexion.GetObjConnexion();
 
             //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
-            List<Action> lesAction = new List<Action>();
+            List<Action> lesActions = new List<Action>();
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
             string sql;
@@ -92,7 +92,7 @@ namespace GesMecenatDAL
                 libelle = (string)monLecteur["libelle"];
 
                 uneAction = new Action(libelle);
-                lesAction.Add(uneAction);
+                lesActions.Add(uneAction);
             }
             monLecteur.Close();
 
@@ -101,7 +101,7 @@ namespace GesMecenatDAL
 
 
             //On retourne la collection
-            return lesAction;
+            return lesActions;
         }
 
 

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GesMecenatDAL;
+using GesMecenatBO;
+using Action = GesMecenatBO.Action;
 
 namespace GesMecenatBLL
 {
@@ -28,11 +30,11 @@ namespace GesMecenatBLL
         {
         }
 
-        //Appel de la couche DAL pour récupérer une liste de pays
+        //Appel de la couche DAL pour récupérer une liste de Action
 
-        public List<Action> GetAction()
+        public List<Action> GetActions()
         {
-            return ActionDAO.GetInstance().GetAction();
+            return ActionDAO.GetInstance().GetActions();
         }
     }
 }
