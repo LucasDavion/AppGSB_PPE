@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppGSB_PPE
 {
-    public partial class FormConsultAssociation : Form
+    public partial class FormConsultAssociationMission : Form
     {
-        public FormConsultAssociation()
+        public FormConsultAssociationMission()
         {
             InitializeComponent();
         }
