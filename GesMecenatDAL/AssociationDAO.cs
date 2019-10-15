@@ -34,6 +34,8 @@ namespace GesMecenatDAL
             int id;
             string nom;
             string mission;
+            string pays;
+            string libelle;
             Association uneAssociation;
             
             //On recupere l'objet responsable de la connection a la base
@@ -44,7 +46,7 @@ namespace GesMecenatDAL
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
             string sql;
-            sql = "";
+            sql = "Select association.id, association.libelle, nomResponsable, pays.nom_fr_fr, mission.libelle from association join mission on id_mission = mission.id join pays on id_pays = pays.id";
             SqlCommand maCommande = new SqlCommand(sql, cnx);
             maCommande.CommandText = sql;
 
@@ -55,11 +57,13 @@ namespace GesMecenatDAL
             //Pour chaque enregistrement du dateReader on cree les eregistrements 
             while (monLecteur.Read())
             {
-                id = (int)monLecteur["id"];
-                nom = (string)monLecteur["nom"];
-                mission = (string)monLecteur["mission"];
-                
-                uneAssociation = new Association(nom, mission, id);
+                id = (int)monLecteur["association.id"];
+                libelle = (string)monLecteur["association.libelle"];
+                nom = (string)monLecteur["nomResponsable"];
+                mission = (string)monLecteur["mission.libelle"];
+                pays = (string)monLecteur["pays.nom_fr_fr"];
+
+                uneAssociation = new Association(id, libelle, nom, mission, pays);
                 lesAssos.Add(uneAssociation);
             }
             monLecteur.Close();
