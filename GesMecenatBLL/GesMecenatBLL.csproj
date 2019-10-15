@@ -45,6 +45,7 @@
     <Compile Include="AssociationManager.cs" />
     <Compile Include="MissionManager.cs" />
     <Compile Include="PartenariatManager.cs" />
+    <Compile Include="PaysChoisiPartenariatManager.cs" />
     <Compile Include="PaysManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

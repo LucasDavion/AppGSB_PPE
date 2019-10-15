@@ -34,7 +34,7 @@ namespace AppGSB_PPE
 
         private void btnValider_Click(object sender, EventArgs e)
         {
-            /*string msgErr;
+            string msgErr;
             int nbAjout;
             string pays = (string)cbxChoixPays.SelectedValue;
             nbAjout = PaysManager.GetInstance().AjoutPays(pays, txtAnnee.Text, out msgErr);
@@ -49,7 +49,7 @@ namespace AppGSB_PPE
             if (msgErr != "")
             {
                 MessageBox.Show(msgErr);
-            }*/
+            }
         }
     }    
 }
