@@ -35,6 +35,8 @@ namespace GesMecenatBLL
         {
             return PaysDAO.GetInstance().GetPays();
         }
-        
+
+       
+
     }
 }
