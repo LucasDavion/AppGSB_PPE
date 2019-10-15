@@ -24,6 +24,11 @@ namespace AppGSB_PPE
             this.cbxSelectionAssociation.ValueMember = "Id";
             //this.cbxSelectionAssociation.DataSource = lesAssociations;
 
+            //lesAssociations = AssociationManager.GetInstance().GetAssociation();
+            this.cbxSelectionAssociationModif.DisplayMember = "Libelle";
+            this.cbxSelectionAssociationModif.ValueMember = "Id";
+            //this.cbxSelectionAssociation.DataSource = lesAssociations;
+
             List<Action> lesActions;
             //lesActions = ActionManager.GetInstance().GetAction();
             this.cbxSelectionAction.DisplayMember = "Libelle";
@@ -35,6 +40,8 @@ namespace AppGSB_PPE
             dtgConsultPartenariat.DataSource = null;
             dtgConsultPartenariat.DataSource = lesPartenariats;
             dtgConsultPartenariat.Columns["id"].Visible = false;
+            dtgConsultPartenariat.Columns["uneAssociation"].Visible = false;
+            dtgConsultPartenariat.Columns["uneAction"].Visible = false;
         }
 
         private void menuAjoutPartenariat_Click(object sender, EventArgs e)
