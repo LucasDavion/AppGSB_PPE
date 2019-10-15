@@ -9,8 +9,24 @@ using GesMecenatBO;
 
 namespace GesMecenatDAL
 {
-    class AssociationDAO
+    public class AssociationDAO
     {
+
+        private static AssociationDAO uneInstance;
+
+        public static AssociationDAO GetInstance()
+        {
+            if (uneInstance == null)
+            {
+                uneInstance = new AssociationDAO();
+            }
+            return uneInstance;
+        }
+
+        private AssociationDAO()
+        {
+
+        }
         public List<Association> GetAssociation()
         {
 
