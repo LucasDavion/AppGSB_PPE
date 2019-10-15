@@ -35,6 +35,8 @@ namespace AppGSB_PPE
             dtgConsultPartenariat.DataSource = null;
             dtgConsultPartenariat.DataSource = lesPartenariats;
             dtgConsultPartenariat.Columns["id"].Visible = false;
+            dtgConsultPartenariat.Columns["uneAssociation"].Visible = false;
+            dtgConsultPartenariat.Columns["uneAction"].Visible = false;
         }
 
         private void menuAjoutPartenariat_Click(object sender, EventArgs e)

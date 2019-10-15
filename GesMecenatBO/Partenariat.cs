@@ -40,5 +40,7 @@ namespace GesMecenatBO
         public float CoutReel { get => coutReel; set => coutReel = value; }
         public Association UneAssociation { get => uneAssociation; set => uneAssociation = value; }
         public Action UneAction { get => uneAction; set => uneAction = value; }
+        public string LibelleAssociation { get => uneAssociation.NomAssociation; }
+        public string LibelleAction { get => uneAction.Libelle; }
     }
 }
