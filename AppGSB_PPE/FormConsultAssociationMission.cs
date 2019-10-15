@@ -23,7 +23,7 @@ namespace AppGSB_PPE
 
             List<Association> lesAssociations;
             InitializeComponent();
-            lesAssociations = AssociationManager.GetInstance().GetMission();
+            lesAssociations = AssociationManager.GetInstance().GetAssociations();
 
 
             dtgConsultAssociation.DataSource = lesAssociations;
@@ -32,9 +32,7 @@ namespace AppGSB_PPE
           
 
 
-            dtgInfoClient.Columns["Id"].Visible = false;
-            dtgInfoClient.Columns["LaCateg"].Visible = false;
-            dtgInfoClient.Columns["identifiantCateg"].Visible = false;
+            
         }
 
         private void btnMissions_Click(object sender, EventArgs e)
