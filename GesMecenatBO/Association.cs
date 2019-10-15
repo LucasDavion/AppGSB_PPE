@@ -8,9 +8,14 @@ namespace GesMecenatBO
 {
     public class Association
     {
+        
+        private int id;
         private string nomAssociation;
         private string nomResponsable;
-        private int id;
+        private string nomMission;
+        private string pays;
+
+   
         private string association;
 
         public Association(int id)
@@ -34,6 +39,15 @@ namespace GesMecenatBO
             this.nomAssociation = nomAssociation;
             this.nomResponsable = nomResponsable;
             this.id = id;
+        }
+
+        public Association(int id, string nomAssociation, string nomResponsable, string nomMission, string pays)
+        {
+            this.id = id;
+            this.nomAssociation = nomAssociation;
+            this.nomResponsable = nomResponsable;
+            this.nomMission = nomMission;
+            this.pays = pays;
         }
 
         public string NomAssociation { get => nomAssociation; set => nomAssociation = value; }

@@ -29,10 +29,7 @@ namespace AppGSB_PPE
             dtgConsultAssociation.DataSource = lesAssociations;
             dtgMission.DataSource = lesMissions;
 
-          
-
-
-            
+         
         }
 
         private void btnMissions_Click(object sender, EventArgs e)
