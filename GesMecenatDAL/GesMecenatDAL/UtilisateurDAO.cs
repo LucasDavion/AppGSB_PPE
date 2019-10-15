@@ -75,9 +75,9 @@ namespace GesMecenatDAL
 
                 //Création de l'objet utilisateur
 
-                unUtilisateur = new Utilisateur(nomUtilisateur, prenomUtilisateur, identifiantUtilisateur, mdpUtilisateur);
+                //unUtilisateur = new Utilisateur(nomUtilisateur, prenomUtilisateur, identifiantUtilisateur, mdpUtilisateur);
 
-                lesUtilisateurs.Add(unUtilisateur);
+                //lesUtilisateurs.Add(unUtilisateur);
             }
 
             //Fermeture des lecteur et connexion

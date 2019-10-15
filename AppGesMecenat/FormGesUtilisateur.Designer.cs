@@ -37,6 +37,8 @@
             this.txtPrenom = new System.Windows.Forms.TextBox();
             this.cbxService = new System.Windows.Forms.ComboBox();
             this.lblService = new System.Windows.Forms.Label();
+            this.btnEnregistrer = new System.Windows.Forms.Button();
+            this.lblMsg = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlAjouterUtilisateur.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +62,8 @@
             // 
             // pnlAjouterUtilisateur
             // 
+            this.pnlAjouterUtilisateur.Controls.Add(this.lblMsg);
+            this.pnlAjouterUtilisateur.Controls.Add(this.btnEnregistrer);
             this.pnlAjouterUtilisateur.Controls.Add(this.lblService);
             this.pnlAjouterUtilisateur.Controls.Add(this.cbxService);
             this.pnlAjouterUtilisateur.Controls.Add(this.txtPrenom);
@@ -121,6 +125,24 @@
             this.lblService.TabIndex = 5;
             this.lblService.Text = "Service :";
             // 
+            // btnEnregistrer
+            // 
+            this.btnEnregistrer.Location = new System.Drawing.Point(110, 304);
+            this.btnEnregistrer.Name = "btnEnregistrer";
+            this.btnEnregistrer.Size = new System.Drawing.Size(75, 23);
+            this.btnEnregistrer.TabIndex = 6;
+            this.btnEnregistrer.Text = "Enregistrer";
+            this.btnEnregistrer.UseVisualStyleBackColor = true;
+            this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
+            // 
+            // lblMsg
+            // 
+            this.lblMsg.AutoSize = true;
+            this.lblMsg.Location = new System.Drawing.Point(120, 334);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(0, 13);
+            this.lblMsg.TabIndex = 7;
+            // 
             // FormGesUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,5 +173,7 @@
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblService;
         private System.Windows.Forms.ComboBox cbxService;
+        private System.Windows.Forms.Button btnEnregistrer;
+        private System.Windows.Forms.Label lblMsg;
     }
 }

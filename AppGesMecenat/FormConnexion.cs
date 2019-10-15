@@ -22,8 +22,7 @@ namespace AppGesMecenat
 
         private void btnConnexion_Click(object sender, EventArgs e)
         {
-            UtilisateurManager.GetInstance().CreerUtilisateur(txtIdentifiant.Text, txtMdp.Text, out string msg);
-            lblMsg.Text = msg;
+
         }
     }
 }

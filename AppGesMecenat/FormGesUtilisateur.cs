@@ -28,5 +28,11 @@ namespace AppGesMecenat
         {
             pnlAjouterUtilisateur.Visible = true;
         }
+
+        private void btnEnregistrer_Click(object sender, EventArgs e)
+        {
+            UtilisateurManager.GetInstance().CreerUtilisateur(txtNom.Text, txtPrenom.Text, cbxService.SelectedIndex, cbxService.SelectedText, out string msg);
+            lblMsg.Text = msg;
+        }
     }
 }

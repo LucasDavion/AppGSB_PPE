@@ -16,6 +16,7 @@ namespace GesMecenatBO
         private string prenom;
         private string mdp;
         private string identifiant;
+        private Service unService;
 
         //Propriété
 
@@ -24,15 +25,17 @@ namespace GesMecenatBO
         public string Prenom { get => prenom; set => prenom = value; }
         public string Mdp { get => mdp; set => mdp = value; }
         public string Identifiant { get => identifiant; set => identifiant = value; }
+        public Service UnService { get => unService; set => unService = value; }
 
         //Constructeur
 
-        public Utilisateur(string nom, string prenom ,string identifiant, string mdp)
+        public Utilisateur(string nom, string prenom ,string identifiant, string mdp, Service unService)
         {
             this.nom = nom;
             this.prenom = prenom;
             this.identifiant = identifiant;
             this.mdp = mdp;
+            this.unService = unService;
         }
     }
 }
