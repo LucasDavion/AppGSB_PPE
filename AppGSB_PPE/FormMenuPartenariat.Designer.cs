@@ -40,8 +40,12 @@
             this.lblSelectionAction = new System.Windows.Forms.Label();
             this.lblSelectionAssociation = new System.Windows.Forms.Label();
             this.lblAjoutPartenariat = new System.Windows.Forms.Label();
+            this.pnlModifPartenariat = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.pnlAjoutPartenariat.SuspendLayout();
+            this.pnlModifPartenariat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -67,9 +71,11 @@
             this.menuConsultationPartenariat.Name = "menuConsultationPartenariat";
             this.menuConsultationPartenariat.Size = new System.Drawing.Size(173, 20);
             this.menuConsultationPartenariat.Text = "Consultation des partenariats";
+            this.menuConsultationPartenariat.Click += new System.EventHandler(this.menuConsultationPartenariat_Click);
             // 
             // pnlAjoutPartenariat
             // 
+            this.pnlAjoutPartenariat.Controls.Add(this.pnlModifPartenariat);
             this.pnlAjoutPartenariat.Controls.Add(this.btnAjoutPartenariat);
             this.pnlAjoutPartenariat.Controls.Add(this.cbxSelectionAction);
             this.pnlAjoutPartenariat.Controls.Add(this.cbxSelectionAssociation);
@@ -154,6 +160,23 @@
             this.lblAjoutPartenariat.TabIndex = 0;
             this.lblAjoutPartenariat.Text = "Ajout d\'un partenariat";
             // 
+            // pnlModifPartenariat
+            // 
+            this.pnlModifPartenariat.Controls.Add(this.dataGridView1);
+            this.pnlModifPartenariat.Location = new System.Drawing.Point(0, 0);
+            this.pnlModifPartenariat.Name = "pnlModifPartenariat";
+            this.pnlModifPartenariat.Size = new System.Drawing.Size(708, 348);
+            this.pnlModifPartenariat.TabIndex = 8;
+            this.pnlModifPartenariat.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(28, 83);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(654, 249);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // FormMenuPartenariat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,6 +191,8 @@
             this.menuStrip1.PerformLayout();
             this.pnlAjoutPartenariat.ResumeLayout(false);
             this.pnlAjoutPartenariat.PerformLayout();
+            this.pnlModifPartenariat.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +212,7 @@
         private System.Windows.Forms.Label lblSelectionAssociation;
         private System.Windows.Forms.Label lblAjoutPartenariat;
         private System.Windows.Forms.Button btnAjoutPartenariat;
+        private System.Windows.Forms.Panel pnlModifPartenariat;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

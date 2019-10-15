@@ -38,6 +38,7 @@ namespace AppGSB_PPE
         private void menuAjoutPartenariat_Click(object sender, EventArgs e)
         {
             pnlAjoutPartenariat.Visible = true;
+            pnlModifPartenariat.Visible = false;
         }
 
         private void cbxSelectionAssociation_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,6 +67,12 @@ namespace AppGSB_PPE
             {
                 MessageBox.Show(msgerr);
             }
+        }
+
+        private void menuConsultationPartenariat_Click(object sender, EventArgs e)
+        {
+            pnlModifPartenariat.Visible = true;
+            pnlAjoutPartenariat.Visible = false;
         }
     }
 }
