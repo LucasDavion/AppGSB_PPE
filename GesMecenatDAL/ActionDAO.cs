@@ -37,7 +37,7 @@ namespace GesMecenatDAL
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
             string sql;
-            sql = "select * from action";
+            sql = "select * from action order by id";
             SqlCommand maCommande = new SqlCommand(sql, cnx);
             maCommande.CommandText = sql;
 
