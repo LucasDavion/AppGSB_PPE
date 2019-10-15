@@ -1,6 +1,6 @@
 ﻿namespace AppGSB_PPE
 {
-    partial class FormConsultAssociation
+    partial class FormConsultAssociationMission
     {
         /// <summary>
         /// Required designer variable.
