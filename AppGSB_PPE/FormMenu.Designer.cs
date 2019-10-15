@@ -36,6 +36,7 @@
             this.ajouterUneMissionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consulterLesAssociationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.partenariatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -47,7 +48,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.choixDesPaysToolStripMenuItem,
             this.ajouterUneMissionToolStripMenuItem,
-            this.actionToolStripMenuItem});
+            this.actionToolStripMenuItem,
+            this.partenariatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -74,14 +76,14 @@
             // ajouterUneAssociationToolStripMenuItem1
             // 
             this.ajouterUneAssociationToolStripMenuItem1.Name = "ajouterUneAssociationToolStripMenuItem1";
-            this.ajouterUneAssociationToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
+            this.ajouterUneAssociationToolStripMenuItem1.Size = new System.Drawing.Size(288, 22);
             this.ajouterUneAssociationToolStripMenuItem1.Text = "Ajouter une association";
             this.ajouterUneAssociationToolStripMenuItem1.Click += new System.EventHandler(this.ajouterUneAssociationToolStripMenuItem1_Click);
             // 
             // ajouterUneMissionToolStripMenuItem1
             // 
             this.ajouterUneMissionToolStripMenuItem1.Name = "ajouterUneMissionToolStripMenuItem1";
-            this.ajouterUneMissionToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
+            this.ajouterUneMissionToolStripMenuItem1.Size = new System.Drawing.Size(288, 22);
             this.ajouterUneMissionToolStripMenuItem1.Text = "Ajouter une mission";
             this.ajouterUneMissionToolStripMenuItem1.Click += new System.EventHandler(this.ajouterUneMissionToolStripMenuItem1_Click);
             // 
@@ -98,6 +100,13 @@
             this.actionToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.actionToolStripMenuItem.Text = "Action";
             this.actionToolStripMenuItem.Click += new System.EventHandler(this.actionToolStripMenuItem_Click);
+            // 
+            // partenariatToolStripMenuItem
+            // 
+            this.partenariatToolStripMenuItem.Name = "partenariatToolStripMenuItem";
+            this.partenariatToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.partenariatToolStripMenuItem.Text = "Partenariat";
+            this.partenariatToolStripMenuItem.Click += new System.EventHandler(this.partenariatToolStripMenuItem_Click);
             // 
             // printPreviewDialog1
             // 
@@ -147,5 +156,6 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem partenariatToolStripMenuItem;
     }
 }
