@@ -35,6 +35,11 @@ namespace GesMecenatBLL
         {
             return PaysDAO.GetInstance().GetPays();
         }
-        
+
+       public int AjoutPays(string sonNom, int sonAnnee, out string msgErr)
+        {
+
+        }
+
     }
 }

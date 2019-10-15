@@ -17,22 +17,20 @@ namespace AppGSB_PPE
     {
         public FormConsultAssociationMission()
         {
-            List<Mission> lesMissions;
             InitializeComponent();
-            lesMissions = MissionManager.GetInstance().GetMission();
+            List<Mission> lesMissions;
+            
+            //lesMissions = MissionManager.GetInstance().GetMission();
 
             List<Association> lesAssociations;
-            InitializeComponent();
+            
             lesAssociations = AssociationManager.GetInstance().GetAssociations();
 
 
             dtgConsultAssociation.DataSource = lesAssociations;
-            dtgMission.DataSource = lesMissions;
+            //dtgMission.DataSource = lesMissions;
 
-          
-
-
-            
+         
         }
 
         private void btnMissions_Click(object sender, EventArgs e)

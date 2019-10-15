@@ -63,5 +63,12 @@ namespace AppGSB_PPE
                 monChoixPays = new FormMenuAction();
                 monChoixPays.Show();
         }
+
+        private void partenariatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMenuPartenariat lesPartenariats;
+            lesPartenariats = new FormMenuPartenariat();
+            lesPartenariats.Show();
+        }
     }
 }
