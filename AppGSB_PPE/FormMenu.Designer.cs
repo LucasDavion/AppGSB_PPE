@@ -35,9 +35,9 @@
             this.ajouterUneAssociationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUneMissionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consulterLesAssociationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,9 +88,16 @@
             // consulterLesAssociationToolStripMenuItem
             // 
             this.consulterLesAssociationToolStripMenuItem.Name = "consulterLesAssociationToolStripMenuItem";
-            this.consulterLesAssociationToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.consulterLesAssociationToolStripMenuItem.Text = "Consulter les association";
+            this.consulterLesAssociationToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
+            this.consulterLesAssociationToolStripMenuItem.Text = "Consulter les associations et les missions";
             this.consulterLesAssociationToolStripMenuItem.Click += new System.EventHandler(this.consulterLesAssociationToolStripMenuItem_Click);
+            // 
+            // actionToolStripMenuItem
+            // 
+            this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
+            this.actionToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.actionToolStripMenuItem.Text = "Action";
+            this.actionToolStripMenuItem.Click += new System.EventHandler(this.actionToolStripMenuItem_Click);
             // 
             // printPreviewDialog1
             // 
@@ -110,13 +117,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(216, 245);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // actionToolStripMenuItem
-            // 
-            this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
-            this.actionToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.actionToolStripMenuItem.Text = "Action";
-            this.actionToolStripMenuItem.Click += new System.EventHandler(this.actionToolStripMenuItem_Click);
             // 
             // FormMenu
             // 
