@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="ActionDAO.cs" />
     <Compile Include="AssociationDAO.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Connexion.cs" />
     <Compile Include="MissionDAO.cs" />
     <Compile Include="PartenariatDAO.cs" />
