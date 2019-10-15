@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace GesMecenatBO
 {
-    public class Service
+    public class ProfilUtilisateur
     {
 
-        //Atributs
+        //Attribut
 
         private int id;
         private string libelle;
 
-        //Propriété
+        //Propriétés
 
         public int Id { get => id; set => id = value; }
         public string Libelle { get => libelle; set => libelle = value; }
 
         //Constructeur
 
-        public Service(int id, string libelle)
+        public ProfilUtilisateur(int id, string libelle)
         {
-            this.id = id;
+            this.Id = id;
             this.libelle = libelle;
         }
     }

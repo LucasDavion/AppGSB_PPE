@@ -32,7 +32,7 @@ namespace GesMecenatBLL
         {
         }
 
-        //M%éthode pour recup les profilUtilisateurs
+        //Méthode pour recup les profilUtilisateurs
 
         public List<ProfilUtilisateur> GetProfilUtilisateurs()
         {

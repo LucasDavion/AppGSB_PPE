@@ -97,7 +97,7 @@
             this.Controls.Add(this.lblMdp);
             this.Controls.Add(this.lblIdentifiant);
             this.Name = "FormConnexion";
-            this.Text = "Form1";
+            this.Text = "Connexion";
             this.ResumeLayout(false);
             this.PerformLayout();
 

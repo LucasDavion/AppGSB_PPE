@@ -40,6 +40,7 @@ namespace GesMecenatDAL
 
             ProfilUtilisateur unProfilUtilisateur;
             string libelleProfilUtilisateur;
+            int idProfilUtilisateur;
 
             //List qui sera retourné
 
@@ -67,11 +68,12 @@ namespace GesMecenatDAL
 
                 //recup donnée utilisateur
 
+                idProfilUtilisateur = (int)monLecteur["id"];
                 libelleProfilUtilisateur = (string)monLecteur["libelle"];
 
                 //Création de l'objet utilisateur
 
-                unProfilUtilisateur = new ProfilUtilisateur(libelleProfilUtilisateur);
+                unProfilUtilisateur = new ProfilUtilisateur(idProfilUtilisateur,libelleProfilUtilisateur);
 
                 lesProfilsUtilisateurs.Add(unProfilUtilisateur);
             }

@@ -34,7 +34,7 @@ namespace GesMecenatBLL
 
         //Appel couche DAL pour crée l'utilisateur
 
-        public int CreerUtilisateur(string sonNom, string sonPrenom, int idService, string libelleService ,out string msg)
+        public int CreerUtilisateur(string sonNom, string sonPrenom, int idService, string libelleService, int idProfilUtilisateur, string libelleProfilUtilisateur ,out string msg)
         {
 
             //Variable
@@ -43,8 +43,7 @@ namespace GesMecenatBLL
             string mdp;
             string mdpCrypte;
             Service unService;
-
-            idService++;
+            ProfilUtilisateur unProfilUtilisateur;
 
             //Création de l'identifiant avec la 1er lettre du nom et le prenom entier
 
@@ -64,10 +63,16 @@ namespace GesMecenatBLL
 
             //Trouvé dans la list le service qui correspond
 
+            //Création de l'objet ProfilUtilisateur depuis l'id et le libelle selectionné depuis la combobox
+
+            unProfilUtilisateur = new ProfilUtilisateur(idProfilUtilisateur, libelleProfilUtilisateur);
+
+            //Trouvé dans la list le profilUtilisateur qui correspond
+
             //Création de l'objet utilisateur
 
             Utilisateur unUtilisateur;
-            unUtilisateur = new Utilisateur(sonNom, sonPrenom, identifiant, mdpCrypte, unService);
+            unUtilisateur = new Utilisateur(sonNom, sonPrenom, identifiant, mdpCrypte, unService, unProfilUtilisateur);
             msg = "Un utilisateur a bien était crée";
 
             return UtilisateurDAO.GetInstance().AjoutUtilisateur(unUtilisateur);

@@ -18,10 +18,20 @@ namespace AppGesMecenat
         public FormGesUtilisateur()
         {
             InitializeComponent();
+
+            //Valorisation de la combobox pour les services
+
             this.cbxService.DataSource = ServiceManager.GetInstance().GetServices();
-            cbxService.DisplayMember = "Libelle";
-            cbxService.ValueMember = "Id";
-            cbxService.SelectedIndex = -1;
+            this.cbxService.DisplayMember = "Libelle";
+            this.cbxService.ValueMember = "Id";
+            this.cbxService.SelectedIndex = -1;
+
+            //Valorisation de la combobox pour les profilUtilisateurs
+
+            this.cbxProfilUtilisateur.DataSource = ProfilUtilisateurManager.GetInstance().GetProfilUtilisateurs();
+            this.cbxProfilUtilisateur.DisplayMember = "Libelle";
+            this.cbxProfilUtilisateur.ValueMember = "Id";
+            this.cbxProfilUtilisateur.SelectedIndex = -1;
         }
 
         private void ajouterUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -31,7 +41,9 @@ namespace AppGesMecenat
 
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
-            UtilisateurManager.GetInstance().CreerUtilisateur(txtNom.Text, txtPrenom.Text, cbxService.SelectedIndex, cbxService.SelectedText, out string msg);
+            int idService = (int)cbxService.SelectedValue;
+            int idProfilUtilisateur = (int)cbxProfilUtilisateur.SelectedValue;
+            UtilisateurManager.GetInstance().CreerUtilisateur(txtNom.Text, txtPrenom.Text, idService, cbxService.Text, idProfilUtilisateur, cbxProfilUtilisateur.Text, out string msg);
             lblMsg.Text = msg;
         }
     }
