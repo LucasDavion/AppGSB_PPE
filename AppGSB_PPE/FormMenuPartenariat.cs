@@ -24,10 +24,10 @@ namespace AppGSB_PPE
             this.cbxSelectionAssociation.ValueMember = "Id";
             this.cbxSelectionAssociation.DataSource = lesAssociations;
 
-            //lesAssociations = AssociationManager.GetInstance().GetAssociation();
-            this.cbxSelectionAssociationModif.DisplayMember = "Libelle";
-            this.cbxSelectionAssociationModif.ValueMember = "Id";
-            //this.cbxSelectionAssociationModif.DataSource = lesAssociations;
+            lesAssociations = AssociationManager.GetInstance().GetAssociations();
+            this.cbxSelectionAssociationConsult.DisplayMember = "Libelle";
+            this.cbxSelectionAssociationConsult.ValueMember = "Id";
+            this.cbxSelectionAssociationConsult.DataSource = lesAssociations;
 
             List<Action> lesActions;
             //lesActions = ActionManager.GetInstance().GetAction();
@@ -86,7 +86,17 @@ namespace AppGSB_PPE
 
         private void cbxSelectionAssociationModif_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            List<Partenariat> lesPartenariats;
+            lesPartenariats = PartenariatManager.GetInstance().GetPartenariat();
+            List<Partenariat> LesPartenariatsAssociations= new List<Partenariat>();
+            foreach(Partenariat unPartenariat in lesPartenariats)
+            {
+                if (unPartenariat.LibelleAssociation == cbxSelectionAssociation.Text)
+                {
+                    LesPartenariatsAssociations.Add(unPartenariat);
+                }
+            }
+            dtgConsultPartenariat.DataSource = LesPartenariatsAssociations;
         }
     }
 }
