@@ -15,28 +15,25 @@ namespace AppGSB_PPE
 {
     public partial class FormMenuPartenariat : Form
     {
+        List<Partenariat> lesPartenariats=PartenariatManager.GetInstance().GetPartenariat();
         public FormMenuPartenariat()
         {
             InitializeComponent();
-            List<Association> lesAssociations;
-            lesAssociations = AssociationManager.GetInstance().GetAssociations();
+            List<Association> lesAssociations= AssociationManager.GetInstance().GetAssociations();
             this.cbxSelectionAssociation.DisplayMember = "Libelle";
             this.cbxSelectionAssociation.ValueMember = "Id";
             this.cbxSelectionAssociation.DataSource = lesAssociations;
 
-            lesAssociations = AssociationManager.GetInstance().GetAssociations();
             this.cbxSelectionAssociationConsult.DisplayMember = "Libelle";
             this.cbxSelectionAssociationConsult.ValueMember = "Id";
             this.cbxSelectionAssociationConsult.DataSource = lesAssociations;
 
-            List<Action> lesActions;
-            //lesActions = ActionManager.GetInstance().GetAction();
+            //List<Action> lesActions= ActionManager.GetInstance().GetAction();
             this.cbxSelectionAction.DisplayMember = "Libelle";
             this.cbxSelectionAction.ValueMember = "Id";
             //this.cbxSelectionAction.DataSource = lesActions;
 
-            List<Partenariat> lesPartenariats;
-            lesPartenariats = PartenariatManager.GetInstance().GetPartenariat();
+            
             dtgConsultPartenariat.DataSource = null;
             dtgConsultPartenariat.DataSource = lesPartenariats;
             dtgConsultPartenariat.Columns["id"].Visible = false;
@@ -86,8 +83,6 @@ namespace AppGSB_PPE
 
         private void cbxSelectionAssociationModif_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<Partenariat> lesPartenariats;
-            lesPartenariats = PartenariatManager.GetInstance().GetPartenariat();
             List<Partenariat> LesPartenariatsAssociations= new List<Partenariat>();
             foreach(Partenariat unPartenariat in lesPartenariats)
             {
