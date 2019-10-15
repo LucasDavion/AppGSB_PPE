@@ -14,7 +14,7 @@ namespace GesMecenatBLL
 
         private static ServiceManager uneInstance;
 
-        //Méthode pour crée un objet de la classe ClientDAO si il n'existe pas sinon on retourne la réf à cet objet
+        //Méthode pour crée un objet de la classe ServiceManager si il n'existe pas sinon on retourne la réf à cet objet
 
         public static ServiceManager GetInstance()
         {
