@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace GesMecenatBLL
 {
-    class AssociationManager
+    public class AssociationManager
     {
 
         private static AssociationManager uneInstance;
