@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//Ref à la DAL
+using GesMecenatDAL;
+using GesMecenatBO;
 
 namespace GesMecenatBLL
 {
@@ -28,6 +31,13 @@ namespace GesMecenatBLL
 
         private ServiceManager()
         {
+        }
+
+        //Méthode pour recup les Services
+
+        public List<Service> GetServices()
+        {
+            return ServiceDAO.GetInstance().GetServices();
         }
     }
 }

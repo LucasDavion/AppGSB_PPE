@@ -7,3 +7,13 @@ Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.pdb
 Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\bin\Debug\GesMecenatBO.dll
 Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\bin\Debug\GesMecenatBO.pdb
 Z:\2019 - 2020\PPE GSB\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CopyComplete
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\bin\Debug\GesMecenatDAL.dll.config
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\bin\Debug\GesMecenatDAL.dll
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\bin\Debug\GesMecenatDAL.pdb
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\bin\Debug\GesMecenatBO.dll
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\bin\Debug\GesMecenatBO.pdb
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.csprojAssemblyReference.cache
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CoreCompileInputs.cache
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.csproj.CopyComplete
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.dll
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatDAL\GesMecenatDAL\obj\Debug\GesMecenatDAL.pdb

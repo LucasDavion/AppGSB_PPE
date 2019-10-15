@@ -18,5 +18,17 @@ namespace GesMecenatBO
 
         public int Id { get => id; set => id = value; }
         public string Libelle { get => libelle; set => libelle = value; }
+
+        //Constructeur
+
+        public Service(string libelle)
+        {
+            this.libelle = libelle;
+        }
+        public Service(int id, string libelle)
+        {
+            this.id = id;
+            this.libelle = libelle;
+        }
     }
 }

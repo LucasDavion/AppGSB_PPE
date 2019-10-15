@@ -10,3 +10,9 @@ C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\obj
 C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.csproj.CoreCompileInputs.cache
 C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.dll
 C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.pdb
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBO\GesMecenatBO\bin\Debug\GesMecenatBO.dll
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBO\GesMecenatBO\bin\Debug\GesMecenatBO.pdb
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.csprojAssemblyReference.cache
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.csproj.CoreCompileInputs.cache
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.dll
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBO\GesMecenatBO\obj\Debug\GesMecenatBO.pdb

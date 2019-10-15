@@ -21,3 +21,15 @@ C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBLL\GesMecenatBLL\o
 C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBLL\GesMecenatBLL\obj\Debug\GesMecenatBLL.dll
 C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBLL\GesMecenatBLL\obj\Debug\GesMecenatBLL.pdb
 C:\Users\dubief\Desktop\AppGSB_PPE-Branche-de-secu\GesMecenatBLL\GesMecenatBLL\bin\Debug\GesMecenatDAL.dll.config
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\bin\Debug\GesMecenatBLL.dll
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\bin\Debug\GesMecenatBLL.pdb
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\bin\Debug\GesMecenatBO.dll
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\bin\Debug\GesMecenatDAL.dll
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\bin\Debug\GesMecenatBO.pdb
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\bin\Debug\GesMecenatDAL.pdb
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\bin\Debug\GesMecenatDAL.dll.config
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\obj\Debug\GesMecenatBLL.csprojAssemblyReference.cache
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\obj\Debug\GesMecenatBLL.csproj.CoreCompileInputs.cache
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\obj\Debug\GesMecenatBLL.csproj.CopyComplete
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\obj\Debug\GesMecenatBLL.dll
+C:\Users\dubief\Desktop\AppGesMecenat\GesMecenatBLL\GesMecenatBLL\obj\Debug\GesMecenatBLL.pdb
