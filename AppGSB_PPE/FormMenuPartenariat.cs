@@ -24,6 +24,11 @@ namespace AppGSB_PPE
             this.cbxSelectionAssociation.ValueMember = "Id";
             //this.cbxSelectionAssociation.DataSource = lesAssociations;
 
+            //lesAssociations = AssociationManager.GetInstance().GetAssociation();
+            this.cbxSelectionAssociationModif.DisplayMember = "Libelle";
+            this.cbxSelectionAssociationModif.ValueMember = "Id";
+            //this.cbxSelectionAssociation.DataSource = lesAssociations;
+
             List<Action> lesActions;
             //lesActions = ActionManager.GetInstance().GetAction();
             this.cbxSelectionAction.DisplayMember = "Libelle";
