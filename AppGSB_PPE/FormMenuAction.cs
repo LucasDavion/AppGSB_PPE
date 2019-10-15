@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GesMecenatDAL;
 
 namespace AppGSB_PPE
 {
@@ -32,6 +33,8 @@ namespace AppGSB_PPE
             pnlCrea.Visible = false;
             pnlModifSupr.Visible = true;
             txtModifAction.Enabled = true;
+
+            
         }
 
         private void cbxCreation_CheckedChanged(object sender, EventArgs e)
