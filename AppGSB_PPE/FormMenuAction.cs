@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GesMecenatDAL;
+using GesMecenatBLL;
 
 namespace AppGSB_PPE
 {
@@ -17,39 +18,21 @@ namespace AppGSB_PPE
         {
             InitializeComponent();
         }
-         
-        private void Form1_Load(object sender, EventArgs e)
+        
+        private void FormMenuAction_Load(object sender, EventArgs e)
         {
+            this.cbxChoixAction.DisplayMember    = "libelle";
+            this.cbxChoixAction.ValueMember      = "id";
+            this.cbxChoixAction.DataSource   = ActionManager.GetInstance().GetActions();
+            this.cbxChoixAction.SelectedIndex = -1;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbxChoixAction_SelectionChangeCommitted(object sender, EventArgs e)
         {
             pnlCrea.Visible = false;
             pnlModifSupr.Visible = true;
-            txtModifAction.Enabled = true;
-
-            
         }
 
-        private void cbxCreation_CheckedChanged(object sender, EventArgs e)
-        {
-            if (txtModifAction.Enabled == false)
-            {
-                txtModifAction.Enabled = true;
-                cbxChoixAction.Enabled = false;
-            }
-            else
-            {
-                txtModifAction.Enabled = false;
-                cbxChoixAction.Enabled = true;
-            }
-            
-        }
     }
 }

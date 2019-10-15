@@ -9,7 +9,7 @@ using Action = GesMecenatBO.Action;
 
 namespace GesMecenatBLL
 {
-    class ActionManager
+    public class ActionManager
     {
         private static ActionManager uneInstance;
 
