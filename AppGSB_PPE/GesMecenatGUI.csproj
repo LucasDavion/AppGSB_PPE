@@ -90,11 +90,11 @@
     <Compile Include="FormChoixPays.Designer.cs">
       <DependentUpon>FormChoixPays.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormConsultAssociation.cs">
+    <Compile Include="FormConsultAssociationMission.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormConsultAssociation.Designer.cs">
-      <DependentUpon>FormConsultAssociation.cs</DependentUpon>
+    <Compile Include="FormConsultAssociationMission.Designer.cs">
+      <DependentUpon>FormConsultAssociationMission.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
@@ -128,8 +128,8 @@
     <EmbeddedResource Include="FormChoixPays.resx">
       <DependentUpon>FormChoixPays.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormConsultAssociation.resx">
-      <DependentUpon>FormConsultAssociation.cs</DependentUpon>
+    <EmbeddedResource Include="FormConsultAssociationMission.resx">
+      <DependentUpon>FormConsultAssociationMission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>

@@ -52,8 +52,8 @@ namespace AppGSB_PPE
 
         private void consulterLesAssociationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormConsultAssociation lesAssociations;
-            lesAssociations = new FormConsultAssociation();
+            FormConsultAssociationMission lesAssociations;
+            lesAssociations = new FormConsultAssociationMission();
             lesAssociations.Show();
         }
 
