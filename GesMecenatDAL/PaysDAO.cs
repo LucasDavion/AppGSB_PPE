@@ -41,7 +41,7 @@ namespace GesMecenatDAL
             SqlCommand maCommande = new SqlCommand();
             maCommande.Connection = cnx;
             maCommande.CommandType = CommandType.StoredProcedure;
-            maCommande.CommandText = "obtenirpays";
+            maCommande.CommandText = "spCnsPays";
 
             //On execute la requette dataReader
             
