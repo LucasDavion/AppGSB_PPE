@@ -43,7 +43,7 @@ namespace GesMecenatDAL
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
             string sql;
-            sql = "SELECT * from mission";
+            sql = "spCnsMission";
             SqlCommand maCommande = new SqlCommand(sql, cnx);
             maCommande.CommandText = sql;
 
@@ -84,7 +84,7 @@ namespace GesMecenatDAL
             {
                 //On recupere l'objet responsable de la connection a la base
                 SqlConnection cnx = Connexion.GetObjConnexion();
-                sql = "insert into mission (libelle) values(@libelle)";
+                sql = "spInsMission";
                 SqlCommand maCommande = new SqlCommand(sql, cnx);
 
                 maCommande.Parameters.Add("libelle", SqlDbType.VarChar);
