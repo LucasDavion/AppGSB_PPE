@@ -12,6 +12,7 @@ namespace GesMecenatDAL
 {
     public class PartenariatDAO
     {
+        //Creation d'une instance
         private static PartenariatDAO uneInstance;
 
         public static PartenariatDAO GetInstance()
@@ -23,14 +24,15 @@ namespace GesMecenatDAL
             return uneInstance;
         }
 
+        //Constructeur de PartenariatDAO
         private PartenariatDAO()
         {
 
         }
 
-        public List<Partenariat> GetPartenariat()
+        public List<Partenariat> GetPartenariats()
         {
-            //déclaraion des variables
+            //Déclaraion des variables
             int idPartenariat;
             float budgetPrevisionnel;
             float coutReel;
@@ -41,27 +43,29 @@ namespace GesMecenatDAL
             Partenariat unPartenariat;
             Association uneAssoctiation;
             Action uneAction;
-            //ouverture de la connexion
+            //Ouverture de la connexion
 
             SqlConnection cnx = Connexion.GetObjConnexion();
-            //déclaration de la liste LesClients
-            List<Partenariat> LesPartenariats = new List<Partenariat>();
-            //requete
-
+            //Déclaration de la liste lesPartenariats
+            List<Partenariat> lesPartenariats = new List<Partenariat>();
+            
+            //Requête
             string sqlr = "spCnsPartenariat";
 
-
             SqlCommand maCommand = new SqlCommand(sqlr, cnx);
+            //Procédure
             maCommand.CommandType = CommandType.StoredProcedure;
             maCommand.CommandText = sqlr;
-
+            //Déclaration du lecteur
             SqlDataReader monLecteur;
             monLecteur = maCommand.ExecuteReader();
 
             while (monLecteur.Read())
             {
+                //Récuperation des enregistrements récuperés dans la BDD
                 idPartenariat = (int)monLecteur["idPartenariat"];
                 budgetPrevisionnel = (float)(double)monLecteur["budget"];
+                //Si le cout réel n'a pas encore été enregistré
                 if (monLecteur["coutReel"]== DBNull.Value)
                 {
                     coutReel = 0;
@@ -74,38 +78,41 @@ namespace GesMecenatDAL
                 libelleAssoaction = (string)monLecteur["libelleAssociation"];
                 libelleAction = (string)monLecteur["libelleAction"];
                 idAction = (int)monLecteur["id_action"];
-
+                //Création d'un objet Association
                 uneAssoctiation = new Association(idAssociation, libelleAssoaction);
-
+                //Création d'un objet Action
                 uneAction = new Action(idAction, libelleAction);
-
+                //Création d'un objet Partenariat
                 unPartenariat = new Partenariat(idPartenariat, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
-
-                LesPartenariats.Add(unPartenariat);
+                //Ajout de l'objet unPartenariat dans la collection lesPartenariats
+                lesPartenariats.Add(unPartenariat);
             }
-            //on ferme le DataReader
+            //On ferme le Lecteur
             monLecteur.Close();
 
 
-            //on ferme la connexion
+            //On ferme la connexion
             Connexion.CloseConnexion();
 
-            //on retourne le collection
-            return LesPartenariats;
+            //On retourne le collection
+            return lesPartenariats;
         }
         public int AjoutPartenariat(Partenariat unPartenariat)
         {
+            //Déclaration d'une variable pour récuperer le nombre d'enregistrement
             int nbEnregs = 0;
 
-            //connexion à la bdd
+            //Connexion à la bdd
             SqlConnection cnx = Connexion.GetObjConnexion();
 
-            //requete
+            //Requête
             string sqlr = "spInsPartenariat";
 
             SqlCommand maCommand = new SqlCommand(sqlr, cnx);
+            //Procédure
             maCommand.CommandType = CommandType.StoredProcedure;
             maCommand.CommandText = sqlr;
+            //Paramètres de la requête
             maCommand.Parameters.Add("budget", SqlDbType.Float);
             maCommand.Parameters[0].Value = unPartenariat.Budget;
             maCommand.Parameters.Add("idAssociation", SqlDbType.Int);
@@ -114,9 +121,10 @@ namespace GesMecenatDAL
             maCommand.Parameters[2].Value = unPartenariat.UneAction.Id;
             nbEnregs = maCommand.ExecuteNonQuery();
 
-            //on ferme la connexion
+            //On ferme la connexion
             Connexion.CloseConnexion();
 
+            //Retourne le nombre d'enregistrement
             return nbEnregs;
         }
     }
