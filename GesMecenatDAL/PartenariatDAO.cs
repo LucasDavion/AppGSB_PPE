@@ -101,7 +101,7 @@ namespace GesMecenatDAL
             SqlConnection cnx = Connexion.GetObjConnexion();
 
             //requete
-            string sqlr = "spInsPartenariat(@budget, @idAssociation, @idAction)";
+            string sqlr = "spInsPartenariat";
 
             SqlCommand maCommand = new SqlCommand(sqlr, cnx);
             maCommand.CommandType = CommandType.StoredProcedure;
