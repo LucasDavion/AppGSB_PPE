@@ -12,8 +12,8 @@ namespace GesMecenatBO
         private int id;
         private string nomAssociation;
         private string nomResponsable;
-        private int mission;
-        private int pays;
+        private Mission uneMission;
+        private Pays unPays;
 
         public Association(int id)
         {
@@ -26,26 +26,26 @@ namespace GesMecenatBO
             this.nomAssociation = nomAssociation;
         }
 
-        public Association(string nomAssociation, string nomResponsable, int mission, int pays)
+        public Association(string nomAssociation, string nomResponsable, Mission uneMission, Pays unPays)
         {
             this.nomAssociation = nomAssociation;
             this.nomResponsable = nomResponsable;
-            this.mission = mission;
-            this.pays = pays;
+            this.uneMission = uneMission;
+            this.unPays = unPays;
         }
 
-        public Association(int id, string nomAssociation, string nomResponsable, int mission, int pays)
+        public Association(int id, string nomAssociation, string nomResponsable, Mission uneMission, Pays unPays)
         {
             this.id = id;
             this.nomAssociation = nomAssociation;
             this.nomResponsable = nomResponsable;
-            this.mission = mission;
-            this.pays = pays;
+            this.uneMission = uneMission;
+            this.unPays = unPays;
         }
 
         public string NomAssociation { get => nomAssociation; set => nomAssociation = value; }
         public string NomResponsable { get => nomResponsable; set => nomResponsable = value; }
-        public int Mission1 { get => mission; set => mission = value; }
-        public int Pays { get => pays; set => pays = value; }
+        public Mission UneMission { get => uneMission; set => uneMission = value; }
+        public Pays UnPays { get => unPays; set => unPays = value; }
     }
 }

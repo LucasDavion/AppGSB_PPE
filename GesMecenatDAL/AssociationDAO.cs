@@ -63,7 +63,7 @@ namespace GesMecenatDAL
                 mission = (string)monLecteur["libelleMission"];
                 pays = (string)monLecteur["nomPaysFr"];
 
-                uneAssociation = new Association(id, libelle, nom, mission, pays);
+                uneAssociation = new Association(libelle, nom, mission, pays);
                 lesAssos.Add(uneAssociation);
             }
             monLecteur.Close();
