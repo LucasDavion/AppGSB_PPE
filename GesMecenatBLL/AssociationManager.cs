@@ -31,7 +31,7 @@ namespace GesMecenatBLL
         {
             return AssociationDAO.GetInstance().GetAssociation();
         }
-        public int CreerAssociation(int id, string libelle, string nom, string mission, string pays, out string msgerr)
+        public int CreerAssociation(int id, string libelle, string nom, int mission, int pays, out string msgerr)
         {
             int nbAjout = 0;
             msgerr = "";
