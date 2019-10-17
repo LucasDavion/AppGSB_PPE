@@ -154,14 +154,14 @@
             this.dtgConsultAction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgConsultAction.Location = new System.Drawing.Point(235, 12);
             this.dtgConsultAction.Name = "dtgConsultAction";
-            this.dtgConsultAction.Size = new System.Drawing.Size(217, 160);
+            this.dtgConsultAction.Size = new System.Drawing.Size(269, 160);
             this.dtgConsultAction.TabIndex = 6;
             // 
             // FormMenuAction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 184);
+            this.ClientSize = new System.Drawing.Size(516, 184);
             this.Controls.Add(this.dtgConsultAction);
             this.Controls.Add(this.pnlChoixAction);
             this.Controls.Add(this.pnlCrea);
