@@ -42,6 +42,7 @@
             this.dtgConsult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgConsult.Location = new System.Drawing.Point(12, 157);
             this.dtgConsult.Name = "dtgConsult";
+            this.dtgConsult.ReadOnly = true;
             this.dtgConsult.Size = new System.Drawing.Size(776, 281);
             this.dtgConsult.TabIndex = 0;
             // 

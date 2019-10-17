@@ -18,6 +18,21 @@ namespace AppGSB_PPE
         public FormAjoutAssociation()
         {
             InitializeComponent();
+            List<Pays> lesPays = PaysManager.GetInstance().GetPays();
+            List<Mission> lesMissions = MissionManager.GetInstance().GetMission();
+
+            cbxMission.DisplayMember = "Libelle";
+            cbxMission.ValueMember = "Id";
+            cbxMission.DataSource = lesMissions;
+
+            cbxPays.DisplayMember = "Libelle";
+            cbxPays.ValueMember = "Id";
+            cbxPays.DataSource = lesPays;
+
+
+
+
+
         }
 
         private void btnAjouter_Click(object sender, EventArgs e)
@@ -26,8 +41,8 @@ namespace AppGSB_PPE
             
             string libelle = (string)txtAsso.Text;
             string nomResponsable = (string)txtNomResponsable.Text;
-            int idMission = (int)cbxMission.SelectedIndex;
-            int idPays = (int)cbxPays.SelectedIndex;
+            int idMission = (int)cbxMission.SelectedValue;
+            int idPays = (int)cbxPays.SelectedValue;
 
             AssociationManager.GetInstance().CreerAssociation(libelle,nomResponsable,idMission,idPays, out msgErreur);
 
