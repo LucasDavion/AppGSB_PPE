@@ -41,6 +41,7 @@ namespace GesMecenatDAL
 
             Service unService;
             string libelleService;
+            int idService;
 
             //List qui sera retourné
 
@@ -68,11 +69,12 @@ namespace GesMecenatDAL
 
                 //recup donnée utilisateur
 
+                idService = (int)monLecteur["id"];
                 libelleService = (string)monLecteur["libelle"];
 
                 //Création de l'objet utilisateur
 
-                unService = new Service(libelleService);
+                unService = new Service(idService,libelleService);
 
                 lesServices.Add(unService);
             }
