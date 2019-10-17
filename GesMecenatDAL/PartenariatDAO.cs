@@ -35,7 +35,9 @@ namespace GesMecenatDAL
             float budgetPrevisionnel;
             float coutReel;
             int idAssociation;
+            string libelleAssoaction;
             int idAction;
+            string libelleAction;
             Partenariat unPartenariat;
             Association uneAssoctiation;
             Action uneAction;
@@ -59,14 +61,23 @@ namespace GesMecenatDAL
             while (monLecteur.Read())
             {
                 id = (int)monLecteur["id"];
-                budgetPrevisionnel = (float)monLecteur["budget"];
-                coutReel = (float)monLecteur["coutReel"];
+                budgetPrevisionnel = (float)(double)monLecteur["budget"];
+                if (monLecteur["coutReel"]== DBNull.Value)
+                {
+                    coutReel = 0;
+                }
+                else
+                {
+                    coutReel = (float)(double)monLecteur["coutReel"];
+                }
                 idAssociation = (int)monLecteur["id_association"];
+                libelleAssoaction = (string)monLecteur["libelleAssociation"];
+                libelleAction = (string)monLecteur["libelleAction"];
                 idAction = (int)monLecteur["id_action"];
 
-                uneAssoctiation = new Association(idAssociation);
+                uneAssoctiation = new Association(idAssociation, libelleAssoaction);
 
-                uneAction = new Action(idAction);
+                uneAction = new Action(idAction, libelleAction);
 
                 unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
 
@@ -97,12 +108,10 @@ namespace GesMecenatDAL
             maCommand.CommandText = sqlr;
             maCommand.Parameters.Add("budget", SqlDbType.Float);
             maCommand.Parameters[0].Value = unPartenariat.Budget;
-            maCommand.Parameters.Add("coutReel", SqlDbType.Float);
-            maCommand.Parameters[1].Value = unPartenariat.CoutReel;
             maCommand.Parameters.Add("idAssociation", SqlDbType.Int);
-            maCommand.Parameters[2].Value = unPartenariat.UneAssociation.Id;
+            maCommand.Parameters[1].Value = unPartenariat.UneAssociation.Id;
             maCommand.Parameters.Add("idAction", SqlDbType.Int);
-            maCommand.Parameters[3].Value = unPartenariat.UneAction.Id;
+            maCommand.Parameters[2].Value = unPartenariat.UneAction.Id;
             nbEnregs = maCommand.ExecuteNonQuery();
 
             //on ferme la connexion
