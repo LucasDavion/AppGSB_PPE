@@ -34,9 +34,11 @@
             this.pnlCrea = new System.Windows.Forms.Panel();
             this.pnlModifSupr = new System.Windows.Forms.Panel();
             this.pnlChoixAction = new System.Windows.Forms.Panel();
-            this.lblNomAction = new System.Windows.Forms.Label();
+            this.lblChoixAction = new System.Windows.Forms.Label();
+            this.lblNomNouvAction = new System.Windows.Forms.Label();
             this.txtModifAction = new System.Windows.Forms.TextBox();
             this.cbxChoixAction = new System.Windows.Forms.ComboBox();
+            this.lblNomActionModif = new System.Windows.Forms.Label();
             this.pnlCrea.SuspendLayout();
             this.pnlModifSupr.SuspendLayout();
             this.pnlChoixAction.SuspendLayout();
@@ -72,7 +74,7 @@
             // pnlCrea
             // 
             this.pnlCrea.Controls.Add(this.btnCreation);
-            this.pnlCrea.Location = new System.Drawing.Point(231, 122);
+            this.pnlCrea.Location = new System.Drawing.Point(0, 0);
             this.pnlCrea.Name = "pnlCrea";
             this.pnlCrea.Size = new System.Drawing.Size(213, 39);
             this.pnlCrea.TabIndex = 3;
@@ -81,6 +83,7 @@
             // 
             this.pnlModifSupr.Controls.Add(this.btnModification);
             this.pnlModifSupr.Controls.Add(this.btnSupression);
+            this.pnlModifSupr.Controls.Add(this.pnlCrea);
             this.pnlModifSupr.Location = new System.Drawing.Point(12, 122);
             this.pnlModifSupr.Name = "pnlModifSupr";
             this.pnlModifSupr.Size = new System.Drawing.Size(213, 39);
@@ -89,26 +92,37 @@
             // 
             // pnlChoixAction
             // 
-            this.pnlChoixAction.Controls.Add(this.lblNomAction);
+            this.pnlChoixAction.Controls.Add(this.lblNomActionModif);
+            this.pnlChoixAction.Controls.Add(this.lblChoixAction);
+            this.pnlChoixAction.Controls.Add(this.lblNomNouvAction);
             this.pnlChoixAction.Controls.Add(this.txtModifAction);
             this.pnlChoixAction.Controls.Add(this.cbxChoixAction);
-            this.pnlChoixAction.Location = new System.Drawing.Point(12, 12);
+            this.pnlChoixAction.Location = new System.Drawing.Point(15, 24);
             this.pnlChoixAction.Name = "pnlChoixAction";
-            this.pnlChoixAction.Size = new System.Drawing.Size(213, 74);
+            this.pnlChoixAction.Size = new System.Drawing.Size(213, 92);
             this.pnlChoixAction.TabIndex = 5;
             // 
-            // lblNomAction
+            // lblChoixAction
             // 
-            this.lblNomAction.AutoSize = true;
-            this.lblNomAction.Location = new System.Drawing.Point(3, 35);
-            this.lblNomAction.Name = "lblNomAction";
-            this.lblNomAction.Size = new System.Drawing.Size(160, 13);
-            this.lblNomAction.TabIndex = 2;
-            this.lblNomAction.Text = "Choisir le nom d\'action souhaitez";
+            this.lblChoixAction.AutoSize = true;
+            this.lblChoixAction.Location = new System.Drawing.Point(3, 6);
+            this.lblChoixAction.Name = "lblChoixAction";
+            this.lblChoixAction.Size = new System.Drawing.Size(212, 13);
+            this.lblChoixAction.TabIndex = 6;
+            this.lblChoixAction.Text = "Choisisser une action a modifier ou suprimer";
+            // 
+            // lblNomNouvAction
+            // 
+            this.lblNomNouvAction.AutoSize = true;
+            this.lblNomNouvAction.Location = new System.Drawing.Point(3, 53);
+            this.lblNomNouvAction.Name = "lblNomNouvAction";
+            this.lblNomNouvAction.Size = new System.Drawing.Size(176, 13);
+            this.lblNomNouvAction.TabIndex = 2;
+            this.lblNomNouvAction.Text = "Choisisser le nom d\'action souhaitez";
             // 
             // txtModifAction
             // 
-            this.txtModifAction.Location = new System.Drawing.Point(3, 51);
+            this.txtModifAction.Location = new System.Drawing.Point(3, 69);
             this.txtModifAction.Name = "txtModifAction";
             this.txtModifAction.Size = new System.Drawing.Size(206, 20);
             this.txtModifAction.TabIndex = 1;
@@ -116,11 +130,21 @@
             // cbxChoixAction
             // 
             this.cbxChoixAction.FormattingEnabled = true;
-            this.cbxChoixAction.Location = new System.Drawing.Point(3, 4);
+            this.cbxChoixAction.Location = new System.Drawing.Point(3, 22);
             this.cbxChoixAction.Name = "cbxChoixAction";
             this.cbxChoixAction.Size = new System.Drawing.Size(207, 21);
             this.cbxChoixAction.TabIndex = 0;
             this.cbxChoixAction.SelectionChangeCommitted += new System.EventHandler(this.cbxChoixAction_SelectionChangeCommitted);
+            // 
+            // lblNomActionModif
+            // 
+            this.lblNomActionModif.AutoSize = true;
+            this.lblNomActionModif.Location = new System.Drawing.Point(3, 53);
+            this.lblNomActionModif.Name = "lblNomActionModif";
+            this.lblNomActionModif.Size = new System.Drawing.Size(170, 13);
+            this.lblNomActionModif.TabIndex = 6;
+            this.lblNomActionModif.Text = "Ecriver le nouveau nom de l\'action";
+            this.lblNomActionModif.Visible = false;
             // 
             // FormMenuAction
             // 
@@ -129,7 +153,6 @@
             this.ClientSize = new System.Drawing.Size(986, 176);
             this.Controls.Add(this.pnlChoixAction);
             this.Controls.Add(this.pnlModifSupr);
-            this.Controls.Add(this.pnlCrea);
             this.Name = "FormMenuAction";
             this.Text = "Gestion des action";
             this.Load += new System.EventHandler(this.FormMenuAction_Load);
@@ -151,7 +174,9 @@
         private System.Windows.Forms.Panel pnlChoixAction;
         private System.Windows.Forms.TextBox txtModifAction;
         private System.Windows.Forms.ComboBox cbxChoixAction;
-        private System.Windows.Forms.Label lblNomAction;
+        private System.Windows.Forms.Label lblNomNouvAction;
+        private System.Windows.Forms.Label lblChoixAction;
+        private System.Windows.Forms.Label lblNomActionModif;
     }
 }
 

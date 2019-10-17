@@ -21,17 +21,19 @@ namespace AppGSB_PPE
         
         private void FormMenuAction_Load(object sender, EventArgs e)
         {
-            this.cbxChoixAction.DisplayMember    = "libelle";
-            this.cbxChoixAction.ValueMember      = "id";
-            this.cbxChoixAction.DataSource   = ActionManager.GetInstance().GetActions();
-            this.cbxChoixAction.SelectedIndex = -1;
+            this.cbxChoixAction.DisplayMember   = "libelle";
+            this.cbxChoixAction.ValueMember     = "id";
+            this.cbxChoixAction.DataSource      = ActionManager.GetInstance().GetActions();
+            this.cbxChoixAction.SelectedIndex   = -1;
 
         }
 
         private void cbxChoixAction_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            pnlCrea.Visible = false;
-            pnlModifSupr.Visible = true;
+            pnlCrea.Visible             = false;
+            lblNomNouvAction.Visible    = false;
+            pnlModifSupr.Visible        = true;
+            lblNomActionModif.Visible   = true;
         }
 
     }
