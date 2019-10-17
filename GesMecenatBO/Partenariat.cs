@@ -8,12 +8,14 @@ namespace GesMecenatBO
 {
     public class Partenariat
     {
+        //Déclaration des variables
         private int id;
         private float budget;
         private float coutReel;
         private Association uneAssociation;
         private Action uneAction;
 
+        //Constructeurs
         public Partenariat(float coutReel)
         {
             this.coutReel = coutReel;
@@ -35,6 +37,7 @@ namespace GesMecenatBO
             this.uneAction = uneAction;
         }
 
+        //Getter et Setter
         public int Id { get => id; set => id = value; }
         public float Budget { get => budget; set => budget = value; }
         public float CoutReel { get => coutReel; set => coutReel = value; }
