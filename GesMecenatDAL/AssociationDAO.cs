@@ -106,9 +106,9 @@ namespace GesMecenatDAL
                 maCommande.Parameters.Add("nomRespon", SqlDbType.VarChar);
                 maCommande.Parameters[1].Value = uneAssociation.NomResponsable;
                 maCommande.Parameters.Add("idMission", SqlDbType.Int);
-                maCommande.Parameters[2].Value = uneAssociation.Mission1;
+                maCommande.Parameters[2].Value = uneAssociation.UneMission.Id;
                 maCommande.Parameters.Add("idPays", SqlDbType.Int);
-                maCommande.Parameters[3].Value = uneAssociation.Pays;
+                maCommande.Parameters[3].Value = uneAssociation.UnPays.Id;
 
                 maCommande.CommandText = sql;
                 nbEnreg = maCommande.ExecuteNonQuery();

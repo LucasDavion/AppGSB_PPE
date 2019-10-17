@@ -26,6 +26,13 @@ namespace GesMecenatBO
             this.nomAssociation = nomAssociation;
         }
 
+        public Association(int id, string nomAssociation, string nomResponsable)
+        {
+            this.id = id;
+            this.nomAssociation = nomAssociation;
+            this.nomResponsable = nomResponsable;
+        }
+
         public Association(string nomAssociation, string nomResponsable, Mission uneMission, Pays unPays)
         {
             this.nomAssociation = nomAssociation;
