@@ -35,10 +35,7 @@ namespace GesMecenatDAL
             float budgetPrevisionnel;
             float coutReel;
             int idAssociation;
-            string libelleAssociation;
-            string nomResponsable;
             int idAction;
-            string libelleAction;
             Partenariat unPartenariat;
             Association uneAssoctiation;
             Action uneAction;
@@ -65,14 +62,11 @@ namespace GesMecenatDAL
                 budgetPrevisionnel = (float)monLecteur["budget"];
                 coutReel = (float)monLecteur["coutReel"];
                 idAssociation = (int)monLecteur["id_association"];
-                libelleAssociation = (string)monLecteur["libelle"];
-                nomResponsable = (string)monLecteur["nomResponsable"];
                 idAction = (int)monLecteur["id_action"];
-                libelleAction = (string)monLecteur["libelle"];
 
-                uneAssoctiation = new Association(libelleAssociation, nomResponsable, idAssociation);
+                uneAssoctiation = new Association(idAssociation);
 
-                uneAction = new Action(idAction, libelleAction);
+                uneAction = new Action(idAction);
 
                 unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
 
@@ -108,7 +102,7 @@ namespace GesMecenatDAL
             maCommand.Parameters.Add("idAssociation", SqlDbType.Int);
             maCommand.Parameters[2].Value = unPartenariat.UneAssociation.Id;
             maCommand.Parameters.Add("idAction", SqlDbType.Int);
-            //maCommand.Parameters[3].Value = unPartenariat.Action.Id;
+            maCommand.Parameters[3].Value = unPartenariat.UneAction.Id;
             nbEnregs = maCommand.ExecuteNonQuery();
 
             //on ferme la connexion
