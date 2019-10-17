@@ -31,7 +31,7 @@ namespace AppGSB_PPE
             List<Action> lesActions= ActionManager.GetInstance().GetActions();
             this.cbxSelectionAction.DisplayMember = "Libelle";
             this.cbxSelectionAction.ValueMember = "Id";
-            //this.cbxSelectionAction.DataSource = lesActions;
+            this.cbxSelectionAction.DataSource = lesActions;
 
             
             dtgConsultPartenariat.DataSource = null;
