@@ -64,7 +64,7 @@ namespace GesMecenatDAL
             return lesActions;
         }
 
-        static public List<Action> CreaAction(string nouvAction)
+         public List<Action> CreaAction(Action nouvAction)
         {
 
             //On recupere l'objet responsable de la connection a la base
@@ -73,23 +73,20 @@ namespace GesMecenatDAL
             //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
             List<Action> lesActions = new List<Action>();
 
-            //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
+           
+
+            //on récupèe l'objet responsable de la connexion à la base
+            SqlCommand maCommande;
+            maCommande = new SqlCommand();
+            maCommande.Parameters.Clear();
+            maCommande.Connection = Connexion.GetObjConnexion();
+
+            //on crée l'objet qui va contenir la requête SQL d'insert qui sera exécutée
+            maCommande.CommandText = "INSERT INTO action (libelle) VALUES (@nomAction)";
 
 
-
-            String sql = "INSERT INTO dbo.action (libelle) VALUES (@nomAction)";
-
-            
-
-            SqlCommand maCommande = new SqlCommand(sql, cnx);
-            maCommande.Parameters.AddWithValue("@nomAction", nouvAction);
-            maCommande.CommandText = sql;
-
-            //On execute la requette dataReader
-            SqlDataReader monLecteur;
-            monLecteur = maCommande.ExecuteReader();
-
-            monLecteur.Close();
+            maCommande.Parameters.Add("nomAction", nouvAction);
+            maCommande.Parameters[0].Value = uneEntreprise.Nom;
 
 
             //On ferme la connection

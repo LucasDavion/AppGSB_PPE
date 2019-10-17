@@ -134,7 +134,7 @@
             // 
             // txtModifAction
             // 
-            this.txtModifAction.Location = new System.Drawing.Point(0, 82);
+            this.txtModifAction.Location = new System.Drawing.Point(3, 82);
             this.txtModifAction.Name = "txtModifAction";
             this.txtModifAction.Size = new System.Drawing.Size(211, 20);
             this.txtModifAction.TabIndex = 1;
