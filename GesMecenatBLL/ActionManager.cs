@@ -36,5 +36,10 @@ namespace GesMecenatBLL
         {
             return ActionDAO.GetInstance().GetActions();
         }
+
+        public List<Action> CreaAction()
+        {
+            return ActionDAO.GetInstance().CreaAction();
+        }
     }
 }

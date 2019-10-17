@@ -50,7 +50,7 @@
             // 
             this.btnCreation.Location = new System.Drawing.Point(3, 3);
             this.btnCreation.Name = "btnCreation";
-            this.btnCreation.Size = new System.Drawing.Size(211, 33);
+            this.btnCreation.Size = new System.Drawing.Size(211, 114);
             this.btnCreation.TabIndex = 0;
             this.btnCreation.Text = "Creation d\'une nouvelle action";
             this.btnCreation.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@
             // 
             this.btnModification.Location = new System.Drawing.Point(3, 3);
             this.btnModification.Name = "btnModification";
-            this.btnModification.Size = new System.Drawing.Size(101, 33);
+            this.btnModification.Size = new System.Drawing.Size(101, 114);
             this.btnModification.TabIndex = 1;
             this.btnModification.Text = "Modification";
             this.btnModification.UseVisualStyleBackColor = true;
@@ -69,27 +69,26 @@
             // 
             this.btnSupression.Location = new System.Drawing.Point(113, 3);
             this.btnSupression.Name = "btnSupression";
-            this.btnSupression.Size = new System.Drawing.Size(101, 33);
+            this.btnSupression.Size = new System.Drawing.Size(101, 114);
             this.btnSupression.TabIndex = 2;
             this.btnSupression.Text = "Supression";
             this.btnSupression.UseVisualStyleBackColor = true;
             // 
             // pnlCrea
             // 
-            this.pnlCrea.Controls.Add(this.pnlModifSupr);
             this.pnlCrea.Controls.Add(this.btnCreation);
-            this.pnlCrea.Location = new System.Drawing.Point(12, 133);
+            this.pnlCrea.Location = new System.Drawing.Point(12, 136);
             this.pnlCrea.Name = "pnlCrea";
-            this.pnlCrea.Size = new System.Drawing.Size(217, 39);
+            this.pnlCrea.Size = new System.Drawing.Size(217, 120);
             this.pnlCrea.TabIndex = 3;
             // 
             // pnlModifSupr
             // 
             this.pnlModifSupr.Controls.Add(this.btnModification);
             this.pnlModifSupr.Controls.Add(this.btnSupression);
-            this.pnlModifSupr.Location = new System.Drawing.Point(0, 0);
+            this.pnlModifSupr.Location = new System.Drawing.Point(12, 136);
             this.pnlModifSupr.Name = "pnlModifSupr";
-            this.pnlModifSupr.Size = new System.Drawing.Size(217, 39);
+            this.pnlModifSupr.Size = new System.Drawing.Size(217, 120);
             this.pnlModifSupr.TabIndex = 4;
             this.pnlModifSupr.Visible = false;
             // 
@@ -108,7 +107,7 @@
             // lblNomActionModif
             // 
             this.lblNomActionModif.AutoSize = true;
-            this.lblNomActionModif.Location = new System.Drawing.Point(3, 53);
+            this.lblNomActionModif.Location = new System.Drawing.Point(3, 66);
             this.lblNomActionModif.Name = "lblNomActionModif";
             this.lblNomActionModif.Size = new System.Drawing.Size(170, 13);
             this.lblNomActionModif.TabIndex = 6;
@@ -118,7 +117,7 @@
             // lblChoixAction
             // 
             this.lblChoixAction.AutoSize = true;
-            this.lblChoixAction.Location = new System.Drawing.Point(3, 6);
+            this.lblChoixAction.Location = new System.Drawing.Point(2, 10);
             this.lblChoixAction.Name = "lblChoixAction";
             this.lblChoixAction.Size = new System.Drawing.Size(212, 13);
             this.lblChoixAction.TabIndex = 6;
@@ -127,7 +126,7 @@
             // lblNomNouvAction
             // 
             this.lblNomNouvAction.AutoSize = true;
-            this.lblNomNouvAction.Location = new System.Drawing.Point(3, 53);
+            this.lblNomNouvAction.Location = new System.Drawing.Point(3, 66);
             this.lblNomNouvAction.Name = "lblNomNouvAction";
             this.lblNomNouvAction.Size = new System.Drawing.Size(164, 13);
             this.lblNomNouvAction.TabIndex = 2;
@@ -135,7 +134,7 @@
             // 
             // txtModifAction
             // 
-            this.txtModifAction.Location = new System.Drawing.Point(3, 69);
+            this.txtModifAction.Location = new System.Drawing.Point(0, 82);
             this.txtModifAction.Name = "txtModifAction";
             this.txtModifAction.Size = new System.Drawing.Size(211, 20);
             this.txtModifAction.TabIndex = 1;
@@ -143,7 +142,7 @@
             // cbxChoixAction
             // 
             this.cbxChoixAction.FormattingEnabled = true;
-            this.cbxChoixAction.Location = new System.Drawing.Point(3, 22);
+            this.cbxChoixAction.Location = new System.Drawing.Point(3, 26);
             this.cbxChoixAction.Name = "cbxChoixAction";
             this.cbxChoixAction.Size = new System.Drawing.Size(211, 21);
             this.cbxChoixAction.TabIndex = 0;
@@ -154,14 +153,16 @@
             this.dtgConsultAction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgConsultAction.Location = new System.Drawing.Point(235, 12);
             this.dtgConsultAction.Name = "dtgConsultAction";
-            this.dtgConsultAction.Size = new System.Drawing.Size(269, 160);
+            this.dtgConsultAction.ReadOnly = true;
+            this.dtgConsultAction.Size = new System.Drawing.Size(256, 244);
             this.dtgConsultAction.TabIndex = 6;
             // 
             // FormMenuAction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 184);
+            this.ClientSize = new System.Drawing.Size(501, 268);
+            this.Controls.Add(this.pnlModifSupr);
             this.Controls.Add(this.dtgConsultAction);
             this.Controls.Add(this.pnlChoixAction);
             this.Controls.Add(this.pnlCrea);

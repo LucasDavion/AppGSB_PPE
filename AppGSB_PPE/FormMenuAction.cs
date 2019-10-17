@@ -43,7 +43,7 @@ namespace AppGSB_PPE
 
             if (nouvNomAction != "")
             {
-                ActionDAO.CreaAction(nouvNomAction);
+                ActionManager.CreaAction(nouvNomAction);
                 MessageBox.Show("La création de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
             }
