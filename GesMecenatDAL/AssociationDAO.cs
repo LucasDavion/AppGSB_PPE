@@ -37,6 +37,9 @@ namespace GesMecenatDAL
             string pays;
             string libelle;
             Association uneAssociation;
+            Mission uneMission;
+            Pays unPays;
+
             
             //On recupere l'objet responsable de la connection a la base
             SqlConnection cnx = Connexion.GetObjConnexion();
@@ -46,7 +49,7 @@ namespace GesMecenatDAL
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
             string sql;
-            sql = "Select association.id as idAssociation, association.libelle as libelleAssociation, nomResponsable, pays.nom_fr_fr as nomPaysFr, mission.libelle as libelleMission from association join mission on id_mission = mission.id join pays on id_pays = pays.id";
+            sql = "Select association.id as idAssociation, association.libelle as libelleAssociation, nomResponsable, pays.id as idPays,pays.nom_fr_fr as nomPaysFr, mission.id as idMission,mission.libelle as libelleMission from association join mission on id_mission = mission.id join pays on id_pays = pays.id";
             SqlCommand maCommande = new SqlCommand(sql, cnx);
             maCommande.CommandText = sql;
 
@@ -60,10 +63,16 @@ namespace GesMecenatDAL
                 id = (int)monLecteur["idAssociation"];
                 libelle = (string)monLecteur["libelleAssociation"];
                 nom = (string)monLecteur["nomResponsable"];
+
+                int idMission = (int)monLecteur["idPays"];
                 mission = (string)monLecteur["libelleMission"];
+
+                int idPays = (int)monLecteur["idMission"];
                 pays = (string)monLecteur["nomPaysFr"];
 
-                uneAssociation = new Association(libelle, nom, mission, pays);
+                uneAssociation = new Association(id, libelle, nom);
+                uneMission = new Mission(idMission, mission);
+                unPays = new Pays(idPays, pays);
                 lesAssos.Add(uneAssociation);
             }
             monLecteur.Close();
