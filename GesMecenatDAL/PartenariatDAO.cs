@@ -60,7 +60,7 @@ namespace GesMecenatDAL
 
             while (monLecteur.Read())
             {
-                id = (int)monLecteur["id"];
+                id = (int)monLecteur["idPartenariat"];
                 budgetPrevisionnel = (float)(double)monLecteur["budget"];
                 if (monLecteur["coutReel"]== DBNull.Value)
                 {
