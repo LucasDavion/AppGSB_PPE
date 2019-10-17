@@ -99,26 +99,69 @@ namespace GesMecenatDAL
 
             int nbAjout = 0;
 
-            //Récup l'objet de la co à la BD
+            //Récup l'objet de la co à la BD et qu'on va appeler une procédure stockée avec la création de l'objet pour la requete SQL
 
             SqlConnection cnx = Connexion.GetObjConnexion();
+            SqlCommand maCommand = new SqlCommand();
+            maCommand.Connection = cnx;
+            maCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
-            //Crée l'objet qui va contenir la requete SQL
+            //On indique le nom de la procédure stockée à appeler avec les paramètres 
 
-            string strSQL = "insert into Utilisateur(nom, prenom, identifiant, mdp) values(@nom, @prenom, @identifiant, @mdp)";
-            SqlCommand maCommand = new SqlCommand(strSQL, cnx);
-            maCommand.Parameters.Add("nom", System.Data.SqlDbType.VarChar);
-            maCommand.Parameters.Add("prenom", System.Data.SqlDbType.VarChar);
+            maCommand.CommandText = "spInsUtilisateur";
             maCommand.Parameters.Add("identifiant", System.Data.SqlDbType.VarChar);
+            maCommand.Parameters.Add("nom", System.Data.SqlDbType.VarChar);
+            maCommand.Parameters.Add("prenom", System.Data.SqlDbType.VarChar); 
             maCommand.Parameters.Add("mdp", System.Data.SqlDbType.VarChar);
-            maCommand.Parameters[0].Value = unUtilisateur.Nom;
-            maCommand.Parameters[1].Value = unUtilisateur.Prenom;
-            maCommand.Parameters[2].Value = unUtilisateur.Identifiant;
+            maCommand.Parameters.Add("idProfilUtilisateur", System.Data.SqlDbType.Int);
+            maCommand.Parameters.Add("idService", System.Data.SqlDbType.Int);
+            maCommand.Parameters[0].Value = unUtilisateur.Identifiant;
+            maCommand.Parameters[1].Value = unUtilisateur.Nom;
+            maCommand.Parameters[2].Value = unUtilisateur.Prenom;
             maCommand.Parameters[3].Value = unUtilisateur.Mdp;
-            maCommand.CommandText = strSQL;
+            maCommand.Parameters[4].Value = unUtilisateur.UnProfilUtilisateur.Id;
+            maCommand.Parameters[5].Value = unUtilisateur.UnService.Id;
+
+            //Execution de la requete
+
+            maCommand.ExecuteNonQuery();
+
+            //Incrémentation du nombre d'ajout faite
+
             nbAjout++;
 
             return nbAjout;
+        }
+
+        //Méthode pour select un utilisateur dans la DB en fonction du identifiant et du mdp
+
+        public bool TrouveUnUtilisateur(Utilisateur unUtilisateur)
+        {
+
+            //Variable
+
+            bool trouve;
+
+            //Récup l'objet de la co à la BD et qu'on va appeler une procédure stockée avec la création de l'objet pour la requete SQL
+
+            SqlConnection cnx = Connexion.GetObjConnexion();
+            SqlCommand maCommand = new SqlCommand();
+            maCommand.Connection = cnx;
+            maCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
+            //On indique le nom de la procédure stockée à appeler avec les paramètres 
+
+            maCommand.CommandText = "spCnsUtilisateur";
+            maCommand.Parameters.Add("identifiant", System.Data.SqlDbType.VarChar);
+            maCommand.Parameters.Add("mdp", System.Data.SqlDbType.VarChar);
+            maCommand.Parameters[0].Value = unUtilisateur.Identifiant;
+            maCommand.Parameters[1].Value = unUtilisateur.Mdp;
+
+            //Execution de la requete
+
+            trouve = Convert.ToBoolean(maCommand.ExecuteScalar());
+            
+            return trouve;
         }
     }
 }

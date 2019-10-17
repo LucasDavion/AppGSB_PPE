@@ -40,5 +40,10 @@ namespace GesMecenatBO
             this.unService = unService;
             this.unProfilUtilisateur = unProfilUtilisateur;
         }
+        public Utilisateur(string identifiant, string mdp)
+        {
+            this.identifiant = identifiant;
+            this.mdp = mdp;
+        }
     }
 }
