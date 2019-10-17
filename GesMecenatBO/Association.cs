@@ -54,5 +54,6 @@ namespace GesMecenatBO
         public string NomResponsable { get => nomResponsable; set => nomResponsable = value; }
         public Mission UneMission { get => uneMission; set => uneMission = value; }
         public Pays UnPays { get => unPays; set => unPays = value; }
+        public int Id { get => id; set => id = value; }
     }
 }
