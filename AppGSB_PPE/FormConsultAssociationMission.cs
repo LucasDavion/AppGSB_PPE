@@ -20,7 +20,7 @@ namespace AppGSB_PPE
             InitializeComponent();
             List<Mission> lesMissions;
             
-            //lesMissions = MissionManager.GetInstance().GetMission();
+            lesMissions = MissionManager.GetInstance().GetMission();
 
             List<Association> lesAssociations;
             
@@ -28,7 +28,7 @@ namespace AppGSB_PPE
 
 
             dtgConsultAssociation.DataSource = lesAssociations;
-            //dtgMission.DataSource = lesMissions;
+            dtgMission.DataSource = lesMissions;
 
          
         }
