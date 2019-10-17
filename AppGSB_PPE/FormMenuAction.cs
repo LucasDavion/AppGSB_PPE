@@ -32,7 +32,6 @@ namespace AppGSB_PPE
 
         private void cbxChoixAction_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            pnlCrea.Visible = false;
             lblNomNouvAction.Visible = false;
             pnlModifSupr.Visible = true;
             lblNomActionModif.Visible = true;
@@ -46,6 +45,7 @@ namespace AppGSB_PPE
             {
                 ActionDAO.CreaAction(nouvNomAction);
                 MessageBox.Show("La création de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
             }
             else
             {
