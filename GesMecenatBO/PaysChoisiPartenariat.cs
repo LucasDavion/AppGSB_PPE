@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace GesMecenatBO
 {
-    class PaysChoisiPartenariat
+    public class PaysChoisiPartenariat
     {
         private int id;
         private int annee;
         private Pays pays;
+
+        public PaysChoisiPartenariat(int id, int annee)
+        {
+            this.id = id;
+            this.annee = annee;
+        }
 
         public PaysChoisiPartenariat(int id, int annee, Pays pays)
         {

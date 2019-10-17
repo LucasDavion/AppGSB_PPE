@@ -25,5 +25,35 @@ namespace GesMecenatBLL
 
         }
 
+        public int AjoutPays(int sonPays, int sonAnnee, out string erreur)
+        {
+            erreur = "";
+            PaysChoisiPartenariat lepaysChoisiPartenariat;
+            int ajoutPays = 0;
+
+            if (sonPays==0)
+            {
+                erreur += "\nVeuillez selectionner un pays";
+            }
+            if (sonAnnee==0)
+            {
+                erreur += "\nVeuillez saisir une année";
+            }
+            if (erreur =="")
+            {
+                lepaysChoisiPartenariat = new PaysChoisiPartenariat(sonPays, sonAnnee);
+
+                try
+                {
+                    ajoutPays = PaysChoisiDAO.GetInstance().AjoutPays(lepaysChoisiPartenariat);
+                }
+                catch(Exception err)
+                {
+                    erreur = "Erreur lors de l'ajout de pays" + err.Message;
+                }
+            }
+            return ajoutPays;
+
+        }
     }
 }
