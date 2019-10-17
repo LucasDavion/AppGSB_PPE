@@ -24,7 +24,6 @@ namespace GesMecenatDAL
 
         private MissionDAO()
         {
-
         }
 
         public List<Mission> GetMission()
