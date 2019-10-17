@@ -29,7 +29,7 @@ namespace GesMecenatBLL
         }
         public List<Mission> GetMission()
         {
-            return MissionManager.GetInstance().GetMission();
+            return MissionDAO.GetInstance().GetMission();
         }
         public int CreerMission(string mission, out string msgerr)
         {

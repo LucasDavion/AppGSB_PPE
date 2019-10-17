@@ -18,31 +18,23 @@ namespace AppGSB_PPE
         public FormConsultAssociationMission()
         {
             InitializeComponent();
-            List<Mission> lesMissions;
             
-            lesMissions = MissionManager.GetInstance().GetMission();
-
-            List<Association> lesAssociations;
-            
-            lesAssociations = AssociationManager.GetInstance().GetAssociations();
-
-
-            dtgConsultAssociation.DataSource = lesAssociations;
-            dtgMission.DataSource = lesMissions;
-
-         
         }
 
         private void btnMissions_Click(object sender, EventArgs e)
         {
-            dtgMission.Visible = true;
-            dtgConsultAssociation.Visible = false;
+            List<Mission> lesMissions;
+            lesMissions = MissionManager.GetInstance().GetMission();
+            dtgConsult.DataSource = null;
+            dtgConsult.DataSource = lesMissions;
         }
 
         private void btnAssociation_Click(object sender, EventArgs e)
         {
-            dtgMission.Visible = false;
-            dtgConsultAssociation.Visible = true;
+            List<Association> lesAssociations;
+            lesAssociations = AssociationManager.GetInstance().GetAssociations();
+            dtgConsult.DataSource = null;
+            dtgConsult.DataSource = lesAssociations;
         }
     }
 }
