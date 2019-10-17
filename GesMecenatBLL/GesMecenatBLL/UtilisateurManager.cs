@@ -77,5 +77,26 @@ namespace GesMecenatBLL
 
             return UtilisateurDAO.GetInstance().AjoutUtilisateur(unUtilisateur);
         }
+
+        public bool trouveUtilisateur(string unIdentifiant, string unMdp)
+        {
+
+            //Variables
+
+            Utilisateur unUtilisateur;
+            string mdpCrypte;
+
+            //Cryptage du mdp saisie
+
+            byte[] DataBytes = System.Text.Encoding.UTF8.GetBytes(unMdp);
+            SHA1Managed sha1 = new SHA1Managed();
+            byte[] hash = sha1.ComputeHash(DataBytes);
+            mdpCrypte = Convert.ToBase64String(hash);
+
+            //Création de l'objet utilisateur
+
+            unUtilisateur = new Utilisateur(unIdentifiant, mdpCrypte);
+            return UtilisateurDAO.GetInstance().TrouveUnUtilisateur(unUtilisateur);
+        }
     }
 }

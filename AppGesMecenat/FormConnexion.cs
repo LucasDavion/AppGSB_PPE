@@ -22,7 +22,17 @@ namespace AppGesMecenat
 
         private void btnConnexion_Click(object sender, EventArgs e)
         {
-
+            FormPanel monFormPanel;
+            monFormPanel = new FormPanel();
+            if(UtilisateurManager.GetInstance().trouveUtilisateur(txtIdentifiant.Text, txtMdp.Text) == true)
+            {
+                monFormPanel.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Utilisateur introuvable, couple identifiant/mdp introuvable");
+            }
         }
     }
 }

@@ -65,6 +65,7 @@
             // 
             this.txtMdp.Location = new System.Drawing.Point(365, 191);
             this.txtMdp.Name = "txtMdp";
+            this.txtMdp.PasswordChar = '*';
             this.txtMdp.Size = new System.Drawing.Size(100, 20);
             this.txtMdp.TabIndex = 3;
             // 
@@ -76,6 +77,7 @@
             this.btnConnexion.TabIndex = 4;
             this.btnConnexion.Text = "Connexion";
             this.btnConnexion.UseVisualStyleBackColor = true;
+            this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
             // 
             // lblMsg
             // 

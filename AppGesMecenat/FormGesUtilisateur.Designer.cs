@@ -31,6 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ajouterUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAjouterUtilisateur = new System.Windows.Forms.Panel();
+            this.cbxProfilUtilisateur = new System.Windows.Forms.ComboBox();
+            this.lblProfilUtilisateur = new System.Windows.Forms.Label();
             this.lblMsg = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.lblService = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.lblPrenom = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
-            this.lblProfilUtilisateur = new System.Windows.Forms.Label();
-            this.cbxProfilUtilisateur = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.pnlAjouterUtilisateur.SuspendLayout();
             this.SuspendLayout();
@@ -76,9 +76,26 @@
             this.pnlAjouterUtilisateur.Controls.Add(this.lblNom);
             this.pnlAjouterUtilisateur.Location = new System.Drawing.Point(36, 54);
             this.pnlAjouterUtilisateur.Name = "pnlAjouterUtilisateur";
-            this.pnlAjouterUtilisateur.Size = new System.Drawing.Size(300, 237);
+            this.pnlAjouterUtilisateur.Size = new System.Drawing.Size(300, 157);
             this.pnlAjouterUtilisateur.TabIndex = 1;
             this.pnlAjouterUtilisateur.Visible = false;
+            // 
+            // cbxProfilUtilisateur
+            // 
+            this.cbxProfilUtilisateur.FormattingEnabled = true;
+            this.cbxProfilUtilisateur.Location = new System.Drawing.Point(176, 91);
+            this.cbxProfilUtilisateur.Name = "cbxProfilUtilisateur";
+            this.cbxProfilUtilisateur.Size = new System.Drawing.Size(121, 21);
+            this.cbxProfilUtilisateur.TabIndex = 9;
+            // 
+            // lblProfilUtilisateur
+            // 
+            this.lblProfilUtilisateur.AutoSize = true;
+            this.lblProfilUtilisateur.Location = new System.Drawing.Point(68, 94);
+            this.lblProfilUtilisateur.Name = "lblProfilUtilisateur";
+            this.lblProfilUtilisateur.Size = new System.Drawing.Size(102, 13);
+            this.lblProfilUtilisateur.TabIndex = 8;
+            this.lblProfilUtilisateur.Text = "Profil de l\'utilisateur :";
             // 
             // lblMsg
             // 
@@ -90,9 +107,9 @@
             // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.Location = new System.Drawing.Point(110, 159);
+            this.btnEnregistrer.Location = new System.Drawing.Point(3, 118);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(75, 23);
+            this.btnEnregistrer.Size = new System.Drawing.Size(294, 36);
             this.btnEnregistrer.TabIndex = 6;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = true;
@@ -101,7 +118,7 @@
             // lblService
             // 
             this.lblService.AutoSize = true;
-            this.lblService.Location = new System.Drawing.Point(107, 79);
+            this.lblService.Location = new System.Drawing.Point(121, 67);
             this.lblService.Name = "lblService";
             this.lblService.Size = new System.Drawing.Size(49, 13);
             this.lblService.TabIndex = 5;
@@ -110,29 +127,29 @@
             // cbxService
             // 
             this.cbxService.FormattingEnabled = true;
-            this.cbxService.Location = new System.Drawing.Point(162, 76);
+            this.cbxService.Location = new System.Drawing.Point(176, 64);
             this.cbxService.Name = "cbxService";
             this.cbxService.Size = new System.Drawing.Size(121, 21);
             this.cbxService.TabIndex = 4;
             // 
             // txtPrenom
             // 
-            this.txtPrenom.Location = new System.Drawing.Point(164, 41);
+            this.txtPrenom.Location = new System.Drawing.Point(176, 38);
             this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(100, 20);
+            this.txtPrenom.Size = new System.Drawing.Size(121, 20);
             this.txtPrenom.TabIndex = 3;
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(164, 12);
+            this.txtNom.Location = new System.Drawing.Point(176, 12);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(100, 20);
+            this.txtNom.Size = new System.Drawing.Size(121, 20);
             this.txtNom.TabIndex = 2;
             // 
             // lblPrenom
             // 
             this.lblPrenom.AutoSize = true;
-            this.lblPrenom.Location = new System.Drawing.Point(10, 44);
+            this.lblPrenom.Location = new System.Drawing.Point(24, 41);
             this.lblPrenom.Name = "lblPrenom";
             this.lblPrenom.Size = new System.Drawing.Size(146, 13);
             this.lblPrenom.TabIndex = 1;
@@ -141,28 +158,11 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(24, 15);
+            this.lblNom.Location = new System.Drawing.Point(38, 15);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(132, 13);
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom du nouvel utilisateur :";
-            // 
-            // lblProfilUtilisateur
-            // 
-            this.lblProfilUtilisateur.AutoSize = true;
-            this.lblProfilUtilisateur.Location = new System.Drawing.Point(54, 121);
-            this.lblProfilUtilisateur.Name = "lblProfilUtilisateur";
-            this.lblProfilUtilisateur.Size = new System.Drawing.Size(102, 13);
-            this.lblProfilUtilisateur.TabIndex = 8;
-            this.lblProfilUtilisateur.Text = "Profil de l\'utilisateur :";
-            // 
-            // cbxProfilUtilisateur
-            // 
-            this.cbxProfilUtilisateur.FormattingEnabled = true;
-            this.cbxProfilUtilisateur.Location = new System.Drawing.Point(162, 118);
-            this.cbxProfilUtilisateur.Name = "cbxProfilUtilisateur";
-            this.cbxProfilUtilisateur.Size = new System.Drawing.Size(121, 21);
-            this.cbxProfilUtilisateur.TabIndex = 9;
             // 
             // FormGesUtilisateur
             // 
@@ -173,7 +173,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormGesUtilisateur";
-            this.Text = "FormGesUtilisateur";
+            this.Text = "Gestion Utilisateur";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlAjouterUtilisateur.ResumeLayout(false);

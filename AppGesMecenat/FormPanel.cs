@@ -16,5 +16,11 @@ namespace AppGesMecenat
         {
             InitializeComponent();
         }
+
+        private void gesUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGesUtilisateur monFormGesUtilisateur = new FormGesUtilisateur();
+            monFormGesUtilisateur.Show();
+        }
     }
 }

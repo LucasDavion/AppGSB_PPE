@@ -56,6 +56,7 @@
             this.gesUtilisateurToolStripMenuItem.Name = "gesUtilisateurToolStripMenuItem";
             this.gesUtilisateurToolStripMenuItem.Size = new System.Drawing.Size(140, 20);
             this.gesUtilisateurToolStripMenuItem.Text = "Gestion des utilisateurs";
+            this.gesUtilisateurToolStripMenuItem.Click += new System.EventHandler(this.gesUtilisateurToolStripMenuItem_Click);
             // 
             // FormPanel
             // 

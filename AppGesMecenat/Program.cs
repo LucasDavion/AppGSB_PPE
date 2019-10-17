@@ -16,7 +16,7 @@ namespace AppGesMecenat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormGesUtilisateur());
+            Application.Run(new FormConnexion());
         }
     }
 }
