@@ -34,14 +34,16 @@
             this.pnlCrea = new System.Windows.Forms.Panel();
             this.pnlModifSupr = new System.Windows.Forms.Panel();
             this.pnlChoixAction = new System.Windows.Forms.Panel();
+            this.lblNomActionModif = new System.Windows.Forms.Label();
             this.lblChoixAction = new System.Windows.Forms.Label();
             this.lblNomNouvAction = new System.Windows.Forms.Label();
             this.txtModifAction = new System.Windows.Forms.TextBox();
             this.cbxChoixAction = new System.Windows.Forms.ComboBox();
-            this.lblNomActionModif = new System.Windows.Forms.Label();
+            this.dtgConsultAction = new System.Windows.Forms.DataGridView();
             this.pnlCrea.SuspendLayout();
             this.pnlModifSupr.SuspendLayout();
             this.pnlChoixAction.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultAction)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCreation
@@ -76,7 +78,7 @@
             // 
             this.pnlCrea.Controls.Add(this.pnlModifSupr);
             this.pnlCrea.Controls.Add(this.btnCreation);
-            this.pnlCrea.Location = new System.Drawing.Point(15, 119);
+            this.pnlCrea.Location = new System.Drawing.Point(12, 133);
             this.pnlCrea.Name = "pnlCrea";
             this.pnlCrea.Size = new System.Drawing.Size(217, 39);
             this.pnlCrea.TabIndex = 3;
@@ -98,10 +100,20 @@
             this.pnlChoixAction.Controls.Add(this.lblNomNouvAction);
             this.pnlChoixAction.Controls.Add(this.txtModifAction);
             this.pnlChoixAction.Controls.Add(this.cbxChoixAction);
-            this.pnlChoixAction.Location = new System.Drawing.Point(15, 24);
+            this.pnlChoixAction.Location = new System.Drawing.Point(12, 12);
             this.pnlChoixAction.Name = "pnlChoixAction";
-            this.pnlChoixAction.Size = new System.Drawing.Size(217, 92);
+            this.pnlChoixAction.Size = new System.Drawing.Size(217, 118);
             this.pnlChoixAction.TabIndex = 5;
+            // 
+            // lblNomActionModif
+            // 
+            this.lblNomActionModif.AutoSize = true;
+            this.lblNomActionModif.Location = new System.Drawing.Point(3, 53);
+            this.lblNomActionModif.Name = "lblNomActionModif";
+            this.lblNomActionModif.Size = new System.Drawing.Size(170, 13);
+            this.lblNomActionModif.TabIndex = 6;
+            this.lblNomActionModif.Text = "Ecriver le nouveau nom de l\'action";
+            this.lblNomActionModif.Visible = false;
             // 
             // lblChoixAction
             // 
@@ -137,21 +149,20 @@
             this.cbxChoixAction.TabIndex = 0;
             this.cbxChoixAction.SelectionChangeCommitted += new System.EventHandler(this.cbxChoixAction_SelectionChangeCommitted);
             // 
-            // lblNomActionModif
+            // dtgConsultAction
             // 
-            this.lblNomActionModif.AutoSize = true;
-            this.lblNomActionModif.Location = new System.Drawing.Point(3, 53);
-            this.lblNomActionModif.Name = "lblNomActionModif";
-            this.lblNomActionModif.Size = new System.Drawing.Size(170, 13);
-            this.lblNomActionModif.TabIndex = 6;
-            this.lblNomActionModif.Text = "Ecriver le nouveau nom de l\'action";
-            this.lblNomActionModif.Visible = false;
+            this.dtgConsultAction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgConsultAction.Location = new System.Drawing.Point(235, 12);
+            this.dtgConsultAction.Name = "dtgConsultAction";
+            this.dtgConsultAction.Size = new System.Drawing.Size(217, 160);
+            this.dtgConsultAction.TabIndex = 6;
             // 
             // FormMenuAction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 176);
+            this.ClientSize = new System.Drawing.Size(460, 184);
+            this.Controls.Add(this.dtgConsultAction);
             this.Controls.Add(this.pnlChoixAction);
             this.Controls.Add(this.pnlCrea);
             this.Name = "FormMenuAction";
@@ -161,6 +172,7 @@
             this.pnlModifSupr.ResumeLayout(false);
             this.pnlChoixAction.ResumeLayout(false);
             this.pnlChoixAction.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgConsultAction)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,10 +186,11 @@
         private System.Windows.Forms.Panel pnlModifSupr;
         private System.Windows.Forms.Panel pnlChoixAction;
         private System.Windows.Forms.TextBox txtModifAction;
-        private System.Windows.Forms.ComboBox cbxChoixAction;
         private System.Windows.Forms.Label lblNomNouvAction;
         private System.Windows.Forms.Label lblChoixAction;
         private System.Windows.Forms.Label lblNomActionModif;
+        private System.Windows.Forms.DataGridView dtgConsultAction;
+        private System.Windows.Forms.ComboBox cbxChoixAction;
     }
 }
 

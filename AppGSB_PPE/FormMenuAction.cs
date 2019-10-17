@@ -26,6 +26,8 @@ namespace AppGSB_PPE
             this.cbxChoixAction.DataSource = ActionManager.GetInstance().GetActions();
             this.cbxChoixAction.SelectedIndex = -1;
 
+            this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
+
         }
 
         private void cbxChoixAction_SelectionChangeCommitted(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace AppGSB_PPE
             pnlModifSupr.Visible = true;
             lblNomActionModif.Visible = true;
         }
-        
+
         private void btnCreation_Click(object sender, EventArgs e)
         {
             string nouvNomAction = txtModifAction.Text;
