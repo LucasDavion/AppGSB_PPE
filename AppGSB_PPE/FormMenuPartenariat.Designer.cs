@@ -32,10 +32,6 @@
             this.menuAjoutPartenariat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsultationPartenariat = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAjoutPartenariat = new System.Windows.Forms.Panel();
-            this.pnlModifPartenariat = new System.Windows.Forms.Panel();
-            this.lblSelectAssociationConsult = new System.Windows.Forms.Label();
-            this.cbxSelectionAssociationConsult = new System.Windows.Forms.ComboBox();
-            this.dtgConsultPartenariat = new System.Windows.Forms.DataGridView();
             this.btnAjoutPartenariat = new System.Windows.Forms.Button();
             this.cbxSelectionAction = new System.Windows.Forms.ComboBox();
             this.cbxSelectionAssociation = new System.Windows.Forms.ComboBox();
@@ -44,6 +40,10 @@
             this.lblSelectionAction = new System.Windows.Forms.Label();
             this.lblSelectionAssociation = new System.Windows.Forms.Label();
             this.lblAjoutPartenariat = new System.Windows.Forms.Label();
+            this.pnlModifPartenariat = new System.Windows.Forms.Panel();
+            this.lblSelectAssociationConsult = new System.Windows.Forms.Label();
+            this.cbxSelectionAssociationConsult = new System.Windows.Forms.ComboBox();
+            this.dtgConsultPartenariat = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.pnlAjoutPartenariat.SuspendLayout();
             this.pnlModifPartenariat.SuspendLayout();
@@ -90,42 +90,6 @@
             this.pnlAjoutPartenariat.Size = new System.Drawing.Size(708, 348);
             this.pnlAjoutPartenariat.TabIndex = 1;
             this.pnlAjoutPartenariat.Visible = false;
-            // 
-            // pnlModifPartenariat
-            // 
-            this.pnlModifPartenariat.Controls.Add(this.lblSelectAssociationConsult);
-            this.pnlModifPartenariat.Controls.Add(this.cbxSelectionAssociationConsult);
-            this.pnlModifPartenariat.Controls.Add(this.dtgConsultPartenariat);
-            this.pnlModifPartenariat.Location = new System.Drawing.Point(47, 47);
-            this.pnlModifPartenariat.Name = "pnlModifPartenariat";
-            this.pnlModifPartenariat.Size = new System.Drawing.Size(708, 348);
-            this.pnlModifPartenariat.TabIndex = 8;
-            // 
-            // lblSelectAssociationConsult
-            // 
-            this.lblSelectAssociationConsult.AutoSize = true;
-            this.lblSelectAssociationConsult.Location = new System.Drawing.Point(161, 31);
-            this.lblSelectAssociationConsult.Name = "lblSelectAssociationConsult";
-            this.lblSelectAssociationConsult.Size = new System.Drawing.Size(112, 13);
-            this.lblSelectAssociationConsult.TabIndex = 2;
-            this.lblSelectAssociationConsult.Text = "Pour cette association";
-            // 
-            // cbxSelectionAssociationConsult
-            // 
-            this.cbxSelectionAssociationConsult.FormattingEnabled = true;
-            this.cbxSelectionAssociationConsult.Location = new System.Drawing.Point(279, 28);
-            this.cbxSelectionAssociationConsult.Name = "cbxSelectionAssociationConsult";
-            this.cbxSelectionAssociationConsult.Size = new System.Drawing.Size(121, 21);
-            this.cbxSelectionAssociationConsult.TabIndex = 1;
-            this.cbxSelectionAssociationConsult.SelectedIndexChanged += new System.EventHandler(this.cbxSelectionAssociationModif_SelectedIndexChanged);
-            // 
-            // dtgConsultPartenariat
-            // 
-            this.dtgConsultPartenariat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgConsultPartenariat.Location = new System.Drawing.Point(28, 83);
-            this.dtgConsultPartenariat.Name = "dtgConsultPartenariat";
-            this.dtgConsultPartenariat.Size = new System.Drawing.Size(654, 249);
-            this.dtgConsultPartenariat.TabIndex = 0;
             // 
             // btnAjoutPartenariat
             // 
@@ -196,6 +160,43 @@
             this.lblAjoutPartenariat.Size = new System.Drawing.Size(107, 13);
             this.lblAjoutPartenariat.TabIndex = 0;
             this.lblAjoutPartenariat.Text = "Ajout d\'un partenariat";
+            // 
+            // pnlModifPartenariat
+            // 
+            this.pnlModifPartenariat.Controls.Add(this.lblSelectAssociationConsult);
+            this.pnlModifPartenariat.Controls.Add(this.cbxSelectionAssociationConsult);
+            this.pnlModifPartenariat.Controls.Add(this.dtgConsultPartenariat);
+            this.pnlModifPartenariat.Location = new System.Drawing.Point(47, 47);
+            this.pnlModifPartenariat.Name = "pnlModifPartenariat";
+            this.pnlModifPartenariat.Size = new System.Drawing.Size(708, 348);
+            this.pnlModifPartenariat.TabIndex = 8;
+            // 
+            // lblSelectAssociationConsult
+            // 
+            this.lblSelectAssociationConsult.AutoSize = true;
+            this.lblSelectAssociationConsult.Location = new System.Drawing.Point(161, 31);
+            this.lblSelectAssociationConsult.Name = "lblSelectAssociationConsult";
+            this.lblSelectAssociationConsult.Size = new System.Drawing.Size(112, 13);
+            this.lblSelectAssociationConsult.TabIndex = 2;
+            this.lblSelectAssociationConsult.Text = "Pour cette association";
+            // 
+            // cbxSelectionAssociationConsult
+            // 
+            this.cbxSelectionAssociationConsult.FormattingEnabled = true;
+            this.cbxSelectionAssociationConsult.Location = new System.Drawing.Point(279, 28);
+            this.cbxSelectionAssociationConsult.Name = "cbxSelectionAssociationConsult";
+            this.cbxSelectionAssociationConsult.Size = new System.Drawing.Size(121, 21);
+            this.cbxSelectionAssociationConsult.TabIndex = 1;
+            this.cbxSelectionAssociationConsult.SelectedIndexChanged += new System.EventHandler(this.cbxSelectionAssociationModif_SelectedIndexChanged);
+            // 
+            // dtgConsultPartenariat
+            // 
+            this.dtgConsultPartenariat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgConsultPartenariat.Location = new System.Drawing.Point(28, 83);
+            this.dtgConsultPartenariat.Name = "dtgConsultPartenariat";
+            this.dtgConsultPartenariat.ReadOnly = true;
+            this.dtgConsultPartenariat.Size = new System.Drawing.Size(654, 249);
+            this.dtgConsultPartenariat.TabIndex = 0;
             // 
             // FormMenuPartenariat
             // 
