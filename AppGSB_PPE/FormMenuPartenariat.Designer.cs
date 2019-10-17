@@ -77,7 +77,6 @@
             // 
             // pnlAjoutPartenariat
             // 
-            this.pnlAjoutPartenariat.Controls.Add(this.pnlModifPartenariat);
             this.pnlAjoutPartenariat.Controls.Add(this.btnAjoutPartenariat);
             this.pnlAjoutPartenariat.Controls.Add(this.cbxSelectionAction);
             this.pnlAjoutPartenariat.Controls.Add(this.cbxSelectionAssociation);
@@ -86,7 +85,7 @@
             this.pnlAjoutPartenariat.Controls.Add(this.lblSelectionAction);
             this.pnlAjoutPartenariat.Controls.Add(this.lblSelectionAssociation);
             this.pnlAjoutPartenariat.Controls.Add(this.lblAjoutPartenariat);
-            this.pnlAjoutPartenariat.Location = new System.Drawing.Point(50, 58);
+            this.pnlAjoutPartenariat.Location = new System.Drawing.Point(47, 47);
             this.pnlAjoutPartenariat.Name = "pnlAjoutPartenariat";
             this.pnlAjoutPartenariat.Size = new System.Drawing.Size(708, 348);
             this.pnlAjoutPartenariat.TabIndex = 1;
@@ -97,11 +96,10 @@
             this.pnlModifPartenariat.Controls.Add(this.lblSelectAssociationConsult);
             this.pnlModifPartenariat.Controls.Add(this.cbxSelectionAssociationConsult);
             this.pnlModifPartenariat.Controls.Add(this.dtgConsultPartenariat);
-            this.pnlModifPartenariat.Location = new System.Drawing.Point(0, 0);
+            this.pnlModifPartenariat.Location = new System.Drawing.Point(47, 47);
             this.pnlModifPartenariat.Name = "pnlModifPartenariat";
             this.pnlModifPartenariat.Size = new System.Drawing.Size(708, 348);
             this.pnlModifPartenariat.TabIndex = 8;
-            this.pnlModifPartenariat.Visible = false;
             // 
             // lblSelectAssociationConsult
             // 
@@ -204,6 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pnlModifPartenariat);
             this.Controls.Add(this.pnlAjoutPartenariat);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

@@ -64,11 +64,8 @@ namespace GesMecenatDAL
             return lesActions;
         }
 
-        public List<Action> CreaAction()
+        static public List<Action> CreaAction(string nouvAction)
         {
-            //Declaration des variables de travail
-            string libelle;
-            Action uneAction;
 
             //On recupere l'objet responsable de la connection a la base
             SqlConnection cnx = Connexion.GetObjConnexion();
@@ -77,24 +74,23 @@ namespace GesMecenatDAL
             List<Action> lesActions = new List<Action>();
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
-            string sql;
-            sql = "select * from action";
+
+
+
+            String sql = "INSERT INTO dbo.action (libelle) VALUES (@nomAction)";
+
+            
+
             SqlCommand maCommande = new SqlCommand(sql, cnx);
+            maCommande.Parameters.AddWithValue("@nomAction", nouvAction);
             maCommande.CommandText = sql;
 
             //On execute la requette dataReader
             SqlDataReader monLecteur;
             monLecteur = maCommande.ExecuteReader();
 
-            //Pour chaque enregistrement du dateReader on cree les eregistrements 
-            while (monLecteur.Read())
-            {
-                libelle = (string)monLecteur["libelle"];
-
-                uneAction = new Action(libelle);
-                lesActions.Add(uneAction);
-            }
             monLecteur.Close();
+
 
             //On ferme la connection
             Connexion.CloseConnexion();

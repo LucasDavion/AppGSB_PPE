@@ -18,23 +18,36 @@ namespace AppGSB_PPE
         {
             InitializeComponent();
         }
-        
+
         private void FormMenuAction_Load(object sender, EventArgs e)
         {
-            this.cbxChoixAction.DisplayMember   = "libelle";
-            this.cbxChoixAction.ValueMember     = "id";
-            this.cbxChoixAction.DataSource      = ActionManager.GetInstance().GetActions();
-            this.cbxChoixAction.SelectedIndex   = -1;
+            this.cbxChoixAction.DisplayMember = "libelle";
+            this.cbxChoixAction.ValueMember = "id";
+            this.cbxChoixAction.DataSource = ActionManager.GetInstance().GetActions();
+            this.cbxChoixAction.SelectedIndex = -1;
 
         }
 
         private void cbxChoixAction_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            pnlCrea.Visible             = false;
-            lblNomNouvAction.Visible    = false;
-            pnlModifSupr.Visible        = true;
-            lblNomActionModif.Visible   = true;
+            pnlCrea.Visible = false;
+            lblNomNouvAction.Visible = false;
+            pnlModifSupr.Visible = true;
+            lblNomActionModif.Visible = true;
         }
 
+        private void btnCreation_Click(object sender, EventArgs e)
+        {
+            string nouvNomAction = txtModifAction.Text;
+
+            if (nouvNomAction != "")
+            {
+                ActionDAO.CreaAction(nouvNomAction);
+            }
+            else
+            {
+
+            }
+        }
     }
 }

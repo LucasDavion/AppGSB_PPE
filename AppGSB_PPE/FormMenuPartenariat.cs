@@ -20,11 +20,11 @@ namespace AppGSB_PPE
         {
             InitializeComponent();
             List<Association> lesAssociations= AssociationManager.GetInstance().GetAssociations();
-            this.cbxSelectionAssociation.DisplayMember = "Libelle";
+            this.cbxSelectionAssociation.DisplayMember = "NomAssociation";
             this.cbxSelectionAssociation.ValueMember = "Id";
             this.cbxSelectionAssociation.DataSource = lesAssociations;
 
-            this.cbxSelectionAssociationConsult.DisplayMember = "Libelle";
+            this.cbxSelectionAssociationConsult.DisplayMember = "NomAssociation";
             this.cbxSelectionAssociationConsult.ValueMember = "Id";
             this.cbxSelectionAssociationConsult.DataSource = lesAssociations;
 
