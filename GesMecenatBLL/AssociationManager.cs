@@ -31,12 +31,12 @@ namespace GesMecenatBLL
         {
             return AssociationDAO.GetInstance().GetAssociation();
         }
-        public int CreerAssociation(int id, string libelle, string nom, int mission, int pays, out string msgerr)
+        public int CreerAssociation(string libelle, string nom, int mission, int pays, out string msgerr)
         {
             int nbAjout = 0;
             msgerr = "";
 
-            Association uneAssociation = new Association(id, libelle, nom, mission, pays);
+            Association uneAssociation = new Association(libelle, nom, mission, pays);
 
 
             try

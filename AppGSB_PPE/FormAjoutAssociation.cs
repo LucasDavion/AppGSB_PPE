@@ -23,7 +23,7 @@ namespace AppGSB_PPE
         private void btnAjouter_Click(object sender, EventArgs e)
         {
             string msgErreur;
-
+            
             string libelle = (string)txtAsso.Text;
             string nomResponsable = (string)txtNomResponsable.Text;
             int idMission = (int)cbxMission.SelectedIndex;
