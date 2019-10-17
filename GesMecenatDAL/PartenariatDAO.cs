@@ -31,7 +31,7 @@ namespace GesMecenatDAL
         public List<Partenariat> GetPartenariat()
         {
             //déclaraion des variables
-            int id;
+            int idPartenariat;
             float budgetPrevisionnel;
             float coutReel;
             int idAssociation;
@@ -60,7 +60,7 @@ namespace GesMecenatDAL
 
             while (monLecteur.Read())
             {
-                id = (int)monLecteur["idPartenariat"];
+                idPartenariat = (int)monLecteur["idPartenariat"];
                 budgetPrevisionnel = (float)(double)monLecteur["budget"];
                 if (monLecteur["coutReel"]== DBNull.Value)
                 {
@@ -79,7 +79,7 @@ namespace GesMecenatDAL
 
                 uneAction = new Action(idAction, libelleAction);
 
-                unPartenariat = new Partenariat(id, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
+                unPartenariat = new Partenariat(idPartenariat, budgetPrevisionnel, coutReel, uneAssoctiation, uneAction);
 
                 LesPartenariats.Add(unPartenariat);
             }
