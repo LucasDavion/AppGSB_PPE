@@ -15,6 +15,12 @@ namespace GesMecenatBO
         private int mission;
         private int pays;
 
+        public Association(int id, string nomAssociation)
+        {
+            this.id = id;
+            this.nomAssociation = nomAssociation;
+        }
+
         public Association(string nomAssociation, string nomResponsable, int mission, int pays)
         {
             this.nomAssociation = nomAssociation;
