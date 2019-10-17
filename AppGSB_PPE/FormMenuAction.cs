@@ -35,7 +35,7 @@ namespace AppGSB_PPE
             pnlModifSupr.Visible = true;
             lblNomActionModif.Visible = true;
         }
-
+        
         private void btnCreation_Click(object sender, EventArgs e)
         {
             string nouvNomAction = txtModifAction.Text;
@@ -43,10 +43,11 @@ namespace AppGSB_PPE
             if (nouvNomAction != "")
             {
                 ActionDAO.CreaAction(nouvNomAction);
+                MessageBox.Show("La création de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-
+                MessageBox.Show("Le champ du nom doit etre remplie", "echec", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }
