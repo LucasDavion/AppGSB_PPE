@@ -104,7 +104,7 @@ namespace AppGSB_PPE
             foreach(Partenariat unPartenariat in lesPartenariats)
             {
                 //Si le nom de l'association correspond à celui selectionnée, on ajout dans la collection LesPartenariatsAssociations le partenariat
-                if (unPartenariat.LibelleAssociation == cbxSelectionAssociation.Text)
+                if (unPartenariat.LibelleAssociation == cbxSelectionAssociationConsult.Text)
                 {
                     LesPartenariatsAssociations.Add(unPartenariat);
                 }
