@@ -70,7 +70,7 @@ namespace GesMecenatDAL
             //On recupere l'objet responsable de la connection a la base
             SqlConnection cnx = Connexion.GetObjConnexion();
 
-            //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
+            //On cree la collection lesActions qui vas contenir toute les caracteristique des Actions enregistrer dans la base de donnée 
             List<Action> lesActions = new List<Action>();
 
 
