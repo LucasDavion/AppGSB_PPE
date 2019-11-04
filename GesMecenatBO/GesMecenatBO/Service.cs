@@ -26,5 +26,9 @@ namespace GesMecenatBO
             this.id = id;
             this.libelle = libelle;
         }
+        public Service(string libelle)
+        {
+            this.libelle = libelle;
+        }
     }
 }

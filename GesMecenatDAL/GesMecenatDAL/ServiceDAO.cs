@@ -56,7 +56,9 @@ namespace GesMecenatDAL
             SqlCommand maCommand = new SqlCommand();
             maCommand.Connection = cnx;
             maCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
             //On indique le nom de la procédure stockée à appeler
+
             maCommand.CommandText = "spCnsService";
 
             //Lecture des données retournées dans un datareader
@@ -87,6 +89,39 @@ namespace GesMecenatDAL
             //Retourne la liste
 
             return lesServices;
+        }
+
+        //Méthode pour crée un service dans la table Service
+
+        public int AjoutService(Service unService)
+        {
+
+            //Variable
+
+            int nbAjouter = 0;
+
+            //Objet de co à la BD
+
+            SqlConnection cnx = Connexion.GetObjConnexion();
+
+            //Requete SQL
+
+            SqlCommand maCommand = new SqlCommand();
+            maCommand.Connection = cnx;
+            maCommand.CommandType = System.Data.CommandType.StoredProcedure;
+
+            //On indique le nom de la procédure stockée à appeler
+
+            maCommand.CommandText = "spInsService";
+            maCommand.Parameters.Add("libelle", System.Data.SqlDbType.VarChar);
+            maCommand.Parameters[0].Value = unService.Libelle;
+
+            //Execution de la requete SQL
+
+            maCommand.ExecuteScalar();
+            nbAjouter++;
+
+            return nbAjouter;
         }
     }
 }
