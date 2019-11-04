@@ -35,22 +35,26 @@ namespace AppGSB_PPE
         private void btnValider_Click(object sender, EventArgs e)
         {
             /*
-            string msgErr;
+            string message = "";
+            string erreur;
             int nbAjout;
-            string pays = (string)cbxChoixPays.SelectedValue;
-            nbAjout = PaysManager.GetInstance().AjoutPays(pays, txtAnnee.Text, out msgErr);
+            int pays = (int)cbxChoixPays.SelectedValue;
+            
+            nbAjout = PaysChoisiPartenariatManager.GetInstance().AjoutPays(pays, txtAnnee, out erreur);
             if (nbAjout == 0)
             {
-                MessageBox.Show("0 enregistrement a été enregistré");
+                message = "Aucun pays n'a été ajouté";
             }
             else
             {
-                MessageBox.Show("Les enregistrements ont bien été ajoutés, nombre d'enregistrements : " + nbAjout);
+                message = "Le pays à bien été ajoutés";
             }
-            if (msgErr != "")
+            if (erreur != "")
             {
-                MessageBox.Show(msgErr);
+                message = erreur;
             }
+            MessageBox.Show(message);
+            txtAnnee.Text = "";
             */
         }
     }    
