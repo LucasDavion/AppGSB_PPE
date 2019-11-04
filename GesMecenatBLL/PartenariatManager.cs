@@ -29,9 +29,9 @@ namespace GesMecenatBLL
 
         }
         //Récupère la collection des partenariats
-        public List<Partenariat> GetPartenariat()
+        public List<Partenariat> GetPartenariats()
         {
-            return PartenariatDAO.GetInstance().GetPartenariat();
+            return PartenariatDAO.GetInstance().GetPartenariats();
         }
         //Création des objet pour AjoutPartenariats à l'aide des parmètres
         public int CreerPartenariat(float sonBudget, int sonIdAssociation, int sonIdAction, out string msgerr)
