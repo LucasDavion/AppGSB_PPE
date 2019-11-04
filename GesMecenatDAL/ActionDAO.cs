@@ -97,6 +97,39 @@ namespace GesMecenatDAL
             return lesActions;
         }
 
+        public List<Action> ModifAction(Action nouvNomAction)
+        {
+
+            //On recupere l'objet responsable de la connection a la base
+            SqlConnection cnx = Connexion.GetObjConnexion();
+
+            //On cree la collection lesActions qui vas contenir toute les caracteristique des Actions enregistrer dans la base de donnée 
+            List<Action> lesActions = new List<Action>();
+
+
+
+            //on récupèe l'objet responsable de la connexion à la base
+            SqlCommand maCommande;
+            maCommande = new SqlCommand();
+            maCommande.Parameters.Clear();
+            maCommande.Connection = Connexion.GetObjConnexion();
+
+            //on crée l'objet qui va contenir la requête SQL d'insert qui sera exécutée
+            maCommande.CommandText = "UPDATE action SET libelle = @nomAction";
+
+
+            maCommande.Parameters.Add("nomAction", nouvNomAction);
+            maCommande.Parameters[0].Value = nouvNomAction.Libelle;
+
+
+            //On ferme la connection
+            Connexion.CloseConnexion();
+
+
+            //On retourne la collection
+            return lesActions;
+        }
+
 
 
     }

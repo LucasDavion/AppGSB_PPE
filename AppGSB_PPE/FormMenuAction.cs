@@ -52,5 +52,21 @@ namespace AppGSB_PPE
                 MessageBox.Show("Le champ du nom doit etre remplie", "echec", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btnModification_Click(object sender, EventArgs e)
+        {
+            string modifNomAction = txtModifAction.Text;
+
+            if (modifNomAction != "")
+            {
+                ActionManager.CreaAction(modifNomAction);
+                MessageBox.Show("La création de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
+            }
+            else
+            {
+                MessageBox.Show("Le champ du nom doit etre remplie", "echec", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

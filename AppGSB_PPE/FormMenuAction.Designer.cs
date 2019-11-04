@@ -64,6 +64,7 @@
             this.btnModification.TabIndex = 1;
             this.btnModification.Text = "Modification";
             this.btnModification.UseVisualStyleBackColor = true;
+            this.btnModification.Click += new System.EventHandler(this.btnModification_Click);
             // 
             // btnSupression
             // 
@@ -151,10 +152,10 @@
             // dtgConsultAction
             // 
             this.dtgConsultAction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgConsultAction.Location = new System.Drawing.Point(235, 12);
+            this.dtgConsultAction.Location = new System.Drawing.Point(235, 22);
             this.dtgConsultAction.Name = "dtgConsultAction";
             this.dtgConsultAction.ReadOnly = true;
-            this.dtgConsultAction.Size = new System.Drawing.Size(256, 244);
+            this.dtgConsultAction.Size = new System.Drawing.Size(256, 231);
             this.dtgConsultAction.TabIndex = 6;
             // 
             // FormMenuAction
