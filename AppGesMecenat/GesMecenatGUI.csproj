@@ -57,6 +57,12 @@
     <Compile Include="FormConnexion.Designer.cs">
       <DependentUpon>FormConnexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGesService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGesService.Designer.cs">
+      <DependentUpon>FormGesService.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGesUtilisateur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormConnexion.resx">
       <DependentUpon>FormConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGesService.resx">
+      <DependentUpon>FormGesService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGesUtilisateur.resx">
       <DependentUpon>FormGesUtilisateur.cs</DependentUpon>

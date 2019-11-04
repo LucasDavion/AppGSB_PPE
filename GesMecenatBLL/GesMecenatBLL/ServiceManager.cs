@@ -39,5 +39,17 @@ namespace GesMecenatBLL
         {
             return ServiceDAO.GetInstance().GetServices();
         }
+
+        //Méthode pour crée un services
+
+        public int CreerService(string unLibelle, out string msg)
+        {
+            Service unService;
+            unService = new Service(unLibelle);
+            int nbAjouter = 0;
+            ServiceDAO.GetInstance().AjoutService(unService);
+            msg = "Le service a bien était crée";
+            return nbAjouter;
+        }
     }
 }

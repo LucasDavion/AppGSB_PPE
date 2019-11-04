@@ -50,6 +50,7 @@
             this.gesServicesToolStripMenuItem.Name = "gesServicesToolStripMenuItem";
             this.gesServicesToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
             this.gesServicesToolStripMenuItem.Text = "Gestion des services";
+            this.gesServicesToolStripMenuItem.Click += new System.EventHandler(this.gesServicesToolStripMenuItem_Click);
             // 
             // gesUtilisateurToolStripMenuItem
             // 

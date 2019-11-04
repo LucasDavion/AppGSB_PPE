@@ -22,5 +22,11 @@ namespace AppGesMecenat
             FormGesUtilisateur monFormGesUtilisateur = new FormGesUtilisateur();
             monFormGesUtilisateur.Show();
         }
+
+        private void gesServicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGesService monFormGesService = new FormGesService();
+            monFormGesService.Show();
+        }
     }
 }

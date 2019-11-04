@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mnuGesUtilisateur = new System.Windows.Forms.MenuStrip();
             this.ajouterUtilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAjouterUtilisateur = new System.Windows.Forms.Panel();
             this.cbxProfilUtilisateur = new System.Windows.Forms.ComboBox();
@@ -41,19 +41,19 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.lblPrenom = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
+            this.mnuGesUtilisateur.SuspendLayout();
             this.pnlAjouterUtilisateur.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // mnuGesUtilisateur
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuGesUtilisateur.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterUtilisateurToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnuGesUtilisateur.Location = new System.Drawing.Point(0, 0);
+            this.mnuGesUtilisateur.Name = "mnuGesUtilisateur";
+            this.mnuGesUtilisateur.Size = new System.Drawing.Size(800, 24);
+            this.mnuGesUtilisateur.TabIndex = 0;
+            this.mnuGesUtilisateur.Text = "menuStrip1";
             // 
             // ajouterUtilisateurToolStripMenuItem
             // 
@@ -170,12 +170,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlAjouterUtilisateur);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.mnuGesUtilisateur);
+            this.MainMenuStrip = this.mnuGesUtilisateur;
             this.Name = "FormGesUtilisateur";
             this.Text = "Gestion Utilisateur";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.mnuGesUtilisateur.ResumeLayout(false);
+            this.mnuGesUtilisateur.PerformLayout();
             this.pnlAjouterUtilisateur.ResumeLayout(false);
             this.pnlAjouterUtilisateur.PerformLayout();
             this.ResumeLayout(false);
@@ -185,7 +185,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip mnuGesUtilisateur;
         private System.Windows.Forms.ToolStripMenuItem ajouterUtilisateurToolStripMenuItem;
         private System.Windows.Forms.Panel pnlAjouterUtilisateur;
         private System.Windows.Forms.TextBox txtPrenom;

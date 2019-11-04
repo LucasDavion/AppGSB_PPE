@@ -18,3 +18,4 @@ C:\Users\dubief\Desktop\AppGesMecenat\AppGesMecenat\obj\Debug\AppGesMecenat.exe
 C:\Users\dubief\Desktop\AppGesMecenat\AppGesMecenat\obj\Debug\AppGesMecenat.pdb
 C:\Users\dubief\Desktop\AppGesMecenat\AppGesMecenat\obj\Debug\AppGesMecenat.FormGesUtilisateur.resources
 C:\Users\dubief\Desktop\AppGesMecenat\AppGesMecenat\obj\Debug\AppGesMecenat.FormPanel.resources
+C:\Users\dubief\Desktop\AppGesMecenat\AppGesMecenat\obj\Debug\AppGesMecenat.FormGesService.resources
