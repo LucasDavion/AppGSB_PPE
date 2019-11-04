@@ -64,38 +64,38 @@ namespace GesMecenatDAL
             return lesActions;
         }
 
-         public List<Action> CreaAction(Action nouvAction)
-        {
+        // public List<Action> CreaAction(Action nouvAction)
+        //{
 
-            //On recupere l'objet responsable de la connection a la base
-            SqlConnection cnx = Connexion.GetObjConnexion();
+        //    //On recupere l'objet responsable de la connection a la base
+        //    SqlConnection cnx = Connexion.GetObjConnexion();
 
-            //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
-            List<Action> lesActions = new List<Action>();
+        //    //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
+        //    List<Action> lesActions = new List<Action>();
 
            
 
-            //on récupèe l'objet responsable de la connexion à la base
-            SqlCommand maCommande;
-            maCommande = new SqlCommand();
-            maCommande.Parameters.Clear();
-            maCommande.Connection = Connexion.GetObjConnexion();
+        //    //on récupèe l'objet responsable de la connexion à la base
+        //    SqlCommand maCommande;
+        //    maCommande = new SqlCommand();
+        //    maCommande.Parameters.Clear();
+        //    maCommande.Connection = Connexion.GetObjConnexion();
 
-            //on crée l'objet qui va contenir la requête SQL d'insert qui sera exécutée
-            maCommande.CommandText = "INSERT INTO action (libelle) VALUES (@nomAction)";
-
-
-            maCommande.Parameters.Add("nomAction", nouvAction);
-            maCommande.Parameters[0].Value = uneEntreprise.Nom;
+        //    //on crée l'objet qui va contenir la requête SQL d'insert qui sera exécutée
+        //    maCommande.CommandText = "INSERT INTO action (libelle) VALUES (@nomAction)";
 
 
-            //On ferme la connection
-            Connexion.CloseConnexion();
+        //    maCommande.Parameters.Add("nomAction", nouvAction);
+        //    maCommande.Parameters[0].Value = uneEntreprise.Nom;
 
 
-            //On retourne la collection
-            return lesActions;
-        }
+        //    //On ferme la connection
+        //    Connexion.CloseConnexion();
+
+
+        //    //On retourne la collection
+        //    return lesActions;
+        //}
 
 
 
