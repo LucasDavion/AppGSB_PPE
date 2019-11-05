@@ -57,7 +57,7 @@
             this.menuConsultationPartenariat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(576, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -87,15 +87,15 @@
             this.pnlAjoutPartenariat.Controls.Add(this.lblAjoutPartenariat);
             this.pnlAjoutPartenariat.Location = new System.Drawing.Point(47, 47);
             this.pnlAjoutPartenariat.Name = "pnlAjoutPartenariat";
-            this.pnlAjoutPartenariat.Size = new System.Drawing.Size(708, 348);
+            this.pnlAjoutPartenariat.Size = new System.Drawing.Size(481, 348);
             this.pnlAjoutPartenariat.TabIndex = 1;
             this.pnlAjoutPartenariat.Visible = false;
             // 
             // btnAjoutPartenariat
             // 
-            this.btnAjoutPartenariat.Location = new System.Drawing.Point(325, 223);
+            this.btnAjoutPartenariat.Location = new System.Drawing.Point(193, 197);
             this.btnAjoutPartenariat.Name = "btnAjoutPartenariat";
-            this.btnAjoutPartenariat.Size = new System.Drawing.Size(75, 23);
+            this.btnAjoutPartenariat.Size = new System.Drawing.Size(121, 23);
             this.btnAjoutPartenariat.TabIndex = 7;
             this.btnAjoutPartenariat.Text = "Valider";
             this.btnAjoutPartenariat.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             // cbxSelectionAction
             // 
             this.cbxSelectionAction.FormattingEnabled = true;
-            this.cbxSelectionAction.Location = new System.Drawing.Point(215, 125);
+            this.cbxSelectionAction.Location = new System.Drawing.Point(193, 104);
             this.cbxSelectionAction.Name = "cbxSelectionAction";
             this.cbxSelectionAction.Size = new System.Drawing.Size(121, 21);
             this.cbxSelectionAction.TabIndex = 6;
@@ -112,7 +112,7 @@
             // cbxSelectionAssociation
             // 
             this.cbxSelectionAssociation.FormattingEnabled = true;
-            this.cbxSelectionAssociation.Location = new System.Drawing.Point(239, 80);
+            this.cbxSelectionAssociation.Location = new System.Drawing.Point(193, 56);
             this.cbxSelectionAssociation.Name = "cbxSelectionAssociation";
             this.cbxSelectionAssociation.Size = new System.Drawing.Size(121, 21);
             this.cbxSelectionAssociation.TabIndex = 5;
@@ -120,15 +120,15 @@
             // 
             // txtBudgetPrevisionnel
             // 
-            this.txtBudgetPrevisionnel.Location = new System.Drawing.Point(267, 169);
+            this.txtBudgetPrevisionnel.Location = new System.Drawing.Point(193, 154);
             this.txtBudgetPrevisionnel.Name = "txtBudgetPrevisionnel";
-            this.txtBudgetPrevisionnel.Size = new System.Drawing.Size(100, 20);
+            this.txtBudgetPrevisionnel.Size = new System.Drawing.Size(121, 20);
             this.txtBudgetPrevisionnel.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(82, 172);
+            this.label3.Location = new System.Drawing.Point(8, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 13);
             this.label3.TabIndex = 3;
@@ -137,7 +137,7 @@
             // lblSelectionAction
             // 
             this.lblSelectionAction.AutoSize = true;
-            this.lblSelectionAction.Location = new System.Drawing.Point(82, 128);
+            this.lblSelectionAction.Location = new System.Drawing.Point(39, 107);
             this.lblSelectionAction.Name = "lblSelectionAction";
             this.lblSelectionAction.Size = new System.Drawing.Size(127, 13);
             this.lblSelectionAction.TabIndex = 2;
@@ -146,7 +146,7 @@
             // lblSelectionAssociation
             // 
             this.lblSelectionAssociation.AutoSize = true;
-            this.lblSelectionAssociation.Location = new System.Drawing.Point(82, 83);
+            this.lblSelectionAssociation.Location = new System.Drawing.Point(15, 59);
             this.lblSelectionAssociation.Name = "lblSelectionAssociation";
             this.lblSelectionAssociation.Size = new System.Drawing.Size(151, 13);
             this.lblSelectionAssociation.TabIndex = 1;
@@ -155,7 +155,7 @@
             // lblAjoutPartenariat
             // 
             this.lblAjoutPartenariat.AutoSize = true;
-            this.lblAjoutPartenariat.Location = new System.Drawing.Point(311, 18);
+            this.lblAjoutPartenariat.Location = new System.Drawing.Point(207, 18);
             this.lblAjoutPartenariat.Name = "lblAjoutPartenariat";
             this.lblAjoutPartenariat.Size = new System.Drawing.Size(107, 13);
             this.lblAjoutPartenariat.TabIndex = 0;
@@ -168,13 +168,13 @@
             this.pnlModifPartenariat.Controls.Add(this.dtgConsultPartenariat);
             this.pnlModifPartenariat.Location = new System.Drawing.Point(47, 47);
             this.pnlModifPartenariat.Name = "pnlModifPartenariat";
-            this.pnlModifPartenariat.Size = new System.Drawing.Size(708, 348);
+            this.pnlModifPartenariat.Size = new System.Drawing.Size(481, 348);
             this.pnlModifPartenariat.TabIndex = 8;
             // 
             // lblSelectAssociationConsult
             // 
             this.lblSelectAssociationConsult.AutoSize = true;
-            this.lblSelectAssociationConsult.Location = new System.Drawing.Point(207, 31);
+            this.lblSelectAssociationConsult.Location = new System.Drawing.Point(54, 31);
             this.lblSelectAssociationConsult.Name = "lblSelectAssociationConsult";
             this.lblSelectAssociationConsult.Size = new System.Drawing.Size(112, 13);
             this.lblSelectAssociationConsult.TabIndex = 2;
@@ -183,7 +183,7 @@
             // cbxSelectionAssociationConsult
             // 
             this.cbxSelectionAssociationConsult.FormattingEnabled = true;
-            this.cbxSelectionAssociationConsult.Location = new System.Drawing.Point(325, 28);
+            this.cbxSelectionAssociationConsult.Location = new System.Drawing.Point(172, 28);
             this.cbxSelectionAssociationConsult.Name = "cbxSelectionAssociationConsult";
             this.cbxSelectionAssociationConsult.Size = new System.Drawing.Size(121, 21);
             this.cbxSelectionAssociationConsult.TabIndex = 1;
@@ -192,7 +192,7 @@
             // dtgConsultPartenariat
             // 
             this.dtgConsultPartenariat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgConsultPartenariat.Location = new System.Drawing.Point(138, 83);
+            this.dtgConsultPartenariat.Location = new System.Drawing.Point(18, 75);
             this.dtgConsultPartenariat.Name = "dtgConsultPartenariat";
             this.dtgConsultPartenariat.ReadOnly = true;
             this.dtgConsultPartenariat.Size = new System.Drawing.Size(440, 235);
@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(576, 450);
             this.Controls.Add(this.pnlModifPartenariat);
             this.Controls.Add(this.pnlAjoutPartenariat);
             this.Controls.Add(this.menuStrip1);
