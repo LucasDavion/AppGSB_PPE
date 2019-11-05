@@ -58,7 +58,7 @@
             this.btnValiderMission.Name = "btnValiderMission";
             this.btnValiderMission.Size = new System.Drawing.Size(75, 23);
             this.btnValiderMission.TabIndex = 1;
-            this.btnValiderMission.Text = "Valider";
+            this.btnValiderMission.Text = "Ajouter";
             this.btnValiderMission.UseVisualStyleBackColor = true;
             this.btnValiderMission.Click += new System.EventHandler(this.btnValiderMission_Click);
             // 
