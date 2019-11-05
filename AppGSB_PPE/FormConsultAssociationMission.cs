@@ -35,6 +35,9 @@ namespace AppGSB_PPE
             lesAssociations = AssociationManager.GetInstance().GetAssociations();
             dtgConsult.DataSource = null;
             dtgConsult.DataSource = lesAssociations;
+            dtgConsult.Columns["Id"].Visible = false;
+            dtgConsult.Columns["UneMission"].Visible = false;
+            dtgConsult.Columns["UnPays"].Visible = false;
         }
     }
 }
