@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -37,7 +38,7 @@ namespace GesMecenatDAL
 
             //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
             string sql;
-            sql = "select * from action order by id";
+            sql = "spCnsAcion";
             SqlCommand maCommande = new SqlCommand(sql, cnx);
             maCommande.CommandText = sql;
 
@@ -85,8 +86,13 @@ namespace GesMecenatDAL
             maCommande.CommandText = "INSERT INTO action (libelle) VALUES (@nomAction)";
 
 
-            maCommande.Parameters.Add("nomAction", nouvAction);
+            maCommande.Parameters.Add("nomAction", SqlDbType.VarChar);
             maCommande.Parameters[0].Value = nouvAction.Libelle;
+            
+            maCommande.ExecuteNonQuery();
+
+
+
 
 
             //On ferme la connection
@@ -115,12 +121,16 @@ namespace GesMecenatDAL
             maCommande.Connection = Connexion.GetObjConnexion();
 
             //on crée l'objet qui va contenir la requête SQL d'insert qui sera exécutée
-            maCommande.CommandText = "UPDATE action SET libelle = @nomAction";
+            maCommande.CommandText = "UPDATE action SET libelle = @nouvNomAction WHERE libelle = @nomAction";
 
 
-            maCommande.Parameters.Add("nomAction", nouvNomAction);
-            maCommande.Parameters[0].Value = nouvNomAction.Libelle;
+            maCommande.Parameters.Add("nouvNomAction", nouvNomAction);
+            maCommande.Parameters[0].Value = nouvNomAction.NouvLibelle;
 
+            maCommande.Parameters.Add("NomAction", nouvNomAction);
+            maCommande.Parameters[1].Value = nouvNomAction.Libelle;
+
+            maCommande.ExecuteNonQuery();
 
             //On ferme la connection
             Connexion.CloseConnexion();

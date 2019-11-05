@@ -56,10 +56,11 @@ namespace AppGSB_PPE
         private void btnModification_Click(object sender, EventArgs e)
         {
             string modifNomAction = txtModifAction.Text;
+            string nomAction      = cbxChoixAction.Text;
 
             if (modifNomAction != "")
             {
-                ActionManager.CreaAction(modifNomAction);
+                ActionManager.ModifAction(modifNomAction, nomAction);
                 MessageBox.Show("La création de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
             }
