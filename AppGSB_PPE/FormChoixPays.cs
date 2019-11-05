@@ -34,13 +34,13 @@ namespace AppGSB_PPE
 
         private void btnValider_Click(object sender, EventArgs e)
         {
-            /*
+            
             string message = "";
             string erreur;
             int nbAjout;
             int pays = (int)cbxChoixPays.SelectedValue;
             
-            nbAjout = PaysChoisiPartenariatManager.GetInstance().AjoutPays(pays, txtAnnee, out erreur);
+            nbAjout = PaysChoisiPartenariatManager.GetInstance().AjoutPays(pays, txtAnnee.Text, out erreur);
             if (nbAjout == 0)
             {
                 message = "Aucun pays n'a été ajouté";
@@ -55,7 +55,7 @@ namespace AppGSB_PPE
             }
             MessageBox.Show(message);
             txtAnnee.Text = "";
-            */
+            
         }
     }    
 }

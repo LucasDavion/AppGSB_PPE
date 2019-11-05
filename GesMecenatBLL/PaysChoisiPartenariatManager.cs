@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GesMecenatBO;
 using GesMecenatDAL;
 
+
 namespace GesMecenatBLL
 {
     public class PaysChoisiPartenariatManager
@@ -25,19 +26,22 @@ namespace GesMecenatBLL
 
         }
 
-        public int AjoutPays(int sonPays, int sonAnnee, out string erreur)
+        public int AjoutPays(int sonPays, string lAnnee, out string erreur)
         {
+            int uneDate = System.DateTime.Now.Year;
             erreur = "";
             PaysChoisiPartenariat lepaysChoisiPartenariat;
             int ajoutPays = 0;
+            int sonAnnee;
+            int.TryParse(lAnnee, out sonAnnee);
 
             if (sonPays==0)
             {
                 erreur += "\nVeuillez selectionner un pays";
             }
-            if (sonAnnee==0)
+            if (sonAnnee<uneDate)
             {
-                erreur += "\nVeuillez saisir une année";
+                erreur += "\nVeuillez saisir une année à jour";
             }
             if (erreur =="")
             {
