@@ -39,7 +39,7 @@ namespace GesMecenatBLL
             {
                 erreur += "\nVeuillez selectionner un pays";
             }
-            if (sonAnnee<uneDate)
+            if (sonAnnee<uneDate || sonAnnee>3000)
             {
                 erreur += "\nVeuillez saisir une année à jour";
             }
