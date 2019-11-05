@@ -25,11 +25,13 @@ namespace GesMecenatBLL
 
         }
 
-        public int AjoutPays(int sonPays, int sonAnnee, out string erreur)
+        public int AjoutPays(int sonPays, string lAnnee, out string erreur)
         {
             erreur = "";
             PaysChoisiPartenariat lepaysChoisiPartenariat;
             int ajoutPays = 0;
+            int sonAnnee;
+            int.TryParse(lAnnee, out sonAnnee);
 
             if (sonPays==0)
             {
