@@ -32,16 +32,16 @@ namespace GesMecenatDAL
             //Declaration des variables de travail
             int id;
             string libelle;
-            //string mission;
+            
             Mission uneMission;
 
             //On recupere l'objet responsable de la connection a la base
             SqlConnection cnx = Connexion.GetObjConnexion();
 
-            //On cree la collection lesClients qui vas contenir toute les caracteristique des cleints enregistrer dans la base de donnée 
+            //On cree la collection lesMissions qui vas contenir toute les caracteristique des missions enregistrer dans la base de donnée 
             List<Mission> lesMissions = new List<Mission>();
 
-            //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de tous les client 
+            //On cree l'objet de type SqlCommand qui vas contenir la requete SQL permettant d'obtenir toutes les caracteristiques de toutes les missions 
             string sql;
             sql = "spCnsMission";
             SqlCommand maCommande = new SqlCommand(sql, cnx);
@@ -72,7 +72,7 @@ namespace GesMecenatDAL
         }
 
 
-        //La methode ajoutClient ajoute un client a la base de donnée
+        //La methode AjouteMission ajoute une mission a la base de donnée
         public int AjoutMission(Mission uneMission)
         {
             int nbEnreg = 0;
@@ -84,6 +84,8 @@ namespace GesMecenatDAL
             {
                 //On recupere l'objet responsable de la connection a la base
                 SqlConnection cnx = Connexion.GetObjConnexion();
+
+                //recuperation des données
                 sql = "spInsMission";
                 SqlCommand maCommande = new SqlCommand(sql, cnx);
 
