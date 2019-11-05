@@ -50,10 +50,13 @@ namespace GesMecenatBO
             this.unPays = unPays;
         }
 
+        public int Id { get => id; set => id = value; }
         public string NomAssociation { get => nomAssociation; set => nomAssociation = value; }
         public string NomResponsable { get => nomResponsable; set => nomResponsable = value; }
         public Mission UneMission { get => uneMission; set => uneMission = value; }
         public Pays UnPays { get => unPays; set => unPays = value; }
-        public int Id { get => id; set => id = value; }
+        public string LibelleMission { get => uneMission.Libelle; }
+        public string LibellePays { get => unPays.Libelle; }
+        
     }
 }
