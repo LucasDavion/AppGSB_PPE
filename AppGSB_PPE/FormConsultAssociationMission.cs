@@ -15,30 +15,62 @@ namespace AppGSB_PPE
 {
     public partial class FormConsultAssociationMission : Form
     {
+        List<Association> lesAssociations;
+        List<Mission> lesMissions;
+        
+
         public FormConsultAssociationMission()
         {
             InitializeComponent();
-            
+            List<Pays> lesPays = PaysManager.GetInstance().GetPays();
+
+            lesAssociations = AssociationManager.GetInstance().GetAssociations();
+            dtgConsultAssociation.DataSource = null;
+            dtgConsultAssociation.DataSource = lesAssociations;
+
+            lesMissions = MissionManager.GetInstance().GetMission();
+            dtgConsultMissions.DataSource = null;
+            dtgConsultMissions.DataSource = lesMissions;
+
+            cbxPays.DisplayMember = "Libelle";
+            cbxPays.ValueMember = "Id";
+            cbxPays.DataSource = lesPays;
+            cbxPays.Visible = false;
+            dtgConsultAssociation.Visible = false;
+            dtgConsultMissions.Visible = false;
         }
 
         private void btnMissions_Click(object sender, EventArgs e)
         {
-            List<Mission> lesMissions;
-            lesMissions = MissionManager.GetInstance().GetMission();
-            dtgConsult.DataSource = null;
-            dtgConsult.DataSource = lesMissions;
-            dtgConsult.Columns["Id"].Visible = false;
+            dtgConsultAssociation.Visible = false;
+            dtgConsultMissions.Visible = true;
+            dtgConsultMissions.Columns["Id"].Visible = false;
+            lblRecherche.Visible = false;
+            cbxPays.Visible = false;
         }
 
         private void btnAssociation_Click(object sender, EventArgs e)
         {
-            List<Association> lesAssociations;
-            lesAssociations = AssociationManager.GetInstance().GetAssociations();
-            dtgConsult.DataSource = null;
-            dtgConsult.DataSource = lesAssociations;
-            dtgConsult.Columns["Id"].Visible = false;
-            dtgConsult.Columns["UneMission"].Visible = false;
-            dtgConsult.Columns["UnPays"].Visible = false;
+            dtgConsultMissions.Visible = false;
+            dtgConsultAssociation.Visible = true;
+            dtgConsultAssociation.Columns["Id"].Visible = false;
+            dtgConsultAssociation.Columns["UneMission"].Visible = false;
+            dtgConsultAssociation.Columns["UnPays"].Visible = false;
+            lblRecherche.Visible = true;
+            cbxPays.Visible = true;
+        }
+
+        private void cbxPays_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<Association> lesPaysAssociation = new List<Association>();
+            foreach (Association uneAssociation in lesAssociations)
+            {
+                if (uneAssociation.LibellePays == cbxPays.Text)
+                {
+                    lesPaysAssociation.Add(uneAssociation);
+                }
+            }
+            dtgConsultAssociation.DataSource = lesPaysAssociation;
         }
     }
 }
