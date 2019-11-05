@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChoixPays));
             this.lblPays = new System.Windows.Forms.Label();
             this.pnlChoixPays = new System.Windows.Forms.Panel();
+            this.txtAnnee = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbxChoixPays = new System.Windows.Forms.ComboBox();
             this.btnValider = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtAnnee = new System.Windows.Forms.TextBox();
             this.pnlChoixPays.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,22 @@
             this.pnlChoixPays.Size = new System.Drawing.Size(200, 149);
             this.pnlChoixPays.TabIndex = 1;
             // 
+            // txtAnnee
+            // 
+            this.txtAnnee.Location = new System.Drawing.Point(70, 72);
+            this.txtAnnee.Name = "txtAnnee";
+            this.txtAnnee.Size = new System.Drawing.Size(93, 20);
+            this.txtAnnee.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Année";
+            // 
             // cbxChoixPays
             // 
             this.cbxChoixPays.FormattingEnabled = true;
@@ -76,28 +93,13 @@
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Année";
-            // 
-            // txtAnnee
-            // 
-            this.txtAnnee.Location = new System.Drawing.Point(70, 72);
-            this.txtAnnee.Name = "txtAnnee";
-            this.txtAnnee.Size = new System.Drawing.Size(93, 20);
-            this.txtAnnee.TabIndex = 4;
-            // 
             // FormChoixPays
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 243);
             this.Controls.Add(this.pnlChoixPays);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormChoixPays";
             this.Text = "FormChoixPays";
             this.pnlChoixPays.ResumeLayout(false);

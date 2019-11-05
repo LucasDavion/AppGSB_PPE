@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultAssociationMission));
             this.dtgConsultAssociation = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbxPays = new System.Windows.Forms.ComboBox();
+            this.lblRecherche = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAssociation = new System.Windows.Forms.Button();
             this.btnMissions = new System.Windows.Forms.Button();
-            this.lblRecherche = new System.Windows.Forms.Label();
-            this.cbxPays = new System.Windows.Forms.ComboBox();
             this.dtgConsultMissions = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultAssociation)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,6 +63,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(619, 132);
             this.panel1.TabIndex = 2;
+            // 
+            // cbxPays
+            // 
+            this.cbxPays.FormattingEnabled = true;
+            this.cbxPays.Location = new System.Drawing.Point(319, 102);
+            this.cbxPays.Name = "cbxPays";
+            this.cbxPays.Size = new System.Drawing.Size(121, 21);
+            this.cbxPays.TabIndex = 6;
+            this.cbxPays.Visible = false;
+            this.cbxPays.SelectedIndexChanged += new System.EventHandler(this.cbxPays_SelectedIndexChanged);
+            // 
+            // lblRecherche
+            // 
+            this.lblRecherche.AutoSize = true;
+            this.lblRecherche.Location = new System.Drawing.Point(209, 105);
+            this.lblRecherche.Name = "lblRecherche";
+            this.lblRecherche.Size = new System.Drawing.Size(106, 13);
+            this.lblRecherche.TabIndex = 4;
+            this.lblRecherche.Text = "Rechercher par pays";
+            this.lblRecherche.Visible = false;
             // 
             // label1
             // 
@@ -92,26 +113,6 @@
             this.btnMissions.UseVisualStyleBackColor = true;
             this.btnMissions.Click += new System.EventHandler(this.btnMissions_Click);
             // 
-            // lblRecherche
-            // 
-            this.lblRecherche.AutoSize = true;
-            this.lblRecherche.Location = new System.Drawing.Point(209, 105);
-            this.lblRecherche.Name = "lblRecherche";
-            this.lblRecherche.Size = new System.Drawing.Size(106, 13);
-            this.lblRecherche.TabIndex = 4;
-            this.lblRecherche.Text = "Rechercher par pays";
-            this.lblRecherche.Visible = false;
-            // 
-            // cbxPays
-            // 
-            this.cbxPays.FormattingEnabled = true;
-            this.cbxPays.Location = new System.Drawing.Point(319, 102);
-            this.cbxPays.Name = "cbxPays";
-            this.cbxPays.Size = new System.Drawing.Size(121, 21);
-            this.cbxPays.TabIndex = 6;
-            this.cbxPays.Visible = false;
-            this.cbxPays.SelectedIndexChanged += new System.EventHandler(this.cbxPays_SelectedIndexChanged);
-            // 
             // dtgConsultMissions
             // 
             this.dtgConsultMissions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -129,6 +130,7 @@
             this.Controls.Add(this.dtgConsultMissions);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgConsultAssociation);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormConsultAssociationMission";
             this.Text = "FormConsultAssociation";
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultAssociation)).EndInit();
