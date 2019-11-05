@@ -48,7 +48,7 @@
             this.dtgConsultAssociation.Location = new System.Drawing.Point(12, 157);
             this.dtgConsultAssociation.Name = "dtgConsultAssociation";
             this.dtgConsultAssociation.ReadOnly = true;
-            this.dtgConsultAssociation.Size = new System.Drawing.Size(776, 281);
+            this.dtgConsultAssociation.Size = new System.Drawing.Size(619, 281);
             this.dtgConsultAssociation.TabIndex = 0;
             // 
             // panel1
@@ -60,13 +60,13 @@
             this.panel1.Controls.Add(this.btnMissions);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 132);
+            this.panel1.Size = new System.Drawing.Size(619, 132);
             this.panel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(332, 10);
+            this.label1.Location = new System.Drawing.Point(270, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             // btnAssociation
             // 
-            this.btnAssociation.Location = new System.Drawing.Point(392, 37);
+            this.btnAssociation.Location = new System.Drawing.Point(330, 41);
             this.btnAssociation.Name = "btnAssociation";
             this.btnAssociation.Size = new System.Drawing.Size(124, 42);
             this.btnAssociation.TabIndex = 1;
@@ -84,7 +84,7 @@
             // 
             // btnMissions
             // 
-            this.btnMissions.Location = new System.Drawing.Point(262, 37);
+            this.btnMissions.Location = new System.Drawing.Point(200, 41);
             this.btnMissions.Name = "btnMissions";
             this.btnMissions.Size = new System.Drawing.Size(124, 42);
             this.btnMissions.TabIndex = 0;
@@ -95,7 +95,7 @@
             // lblRecherche
             // 
             this.lblRecherche.AutoSize = true;
-            this.lblRecherche.Location = new System.Drawing.Point(271, 101);
+            this.lblRecherche.Location = new System.Drawing.Point(209, 105);
             this.lblRecherche.Name = "lblRecherche";
             this.lblRecherche.Size = new System.Drawing.Size(106, 13);
             this.lblRecherche.TabIndex = 4;
@@ -105,7 +105,7 @@
             // cbxPays
             // 
             this.cbxPays.FormattingEnabled = true;
-            this.cbxPays.Location = new System.Drawing.Point(381, 98);
+            this.cbxPays.Location = new System.Drawing.Point(319, 102);
             this.cbxPays.Name = "cbxPays";
             this.cbxPays.Size = new System.Drawing.Size(121, 21);
             this.cbxPays.TabIndex = 6;
@@ -118,14 +118,14 @@
             this.dtgConsultMissions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgConsultMissions.Location = new System.Drawing.Point(12, 157);
             this.dtgConsultMissions.Name = "dtgConsultMissions";
-            this.dtgConsultMissions.Size = new System.Drawing.Size(776, 281);
+            this.dtgConsultMissions.Size = new System.Drawing.Size(619, 281);
             this.dtgConsultMissions.TabIndex = 3;
             // 
             // FormConsultAssociationMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(641, 450);
             this.Controls.Add(this.dtgConsultMissions);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgConsultAssociation);
