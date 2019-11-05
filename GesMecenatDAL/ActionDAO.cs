@@ -74,7 +74,8 @@ namespace GesMecenatDAL
             //On cree la collection lesActions qui vas contenir toute les caracteristique des Actions enregistrer dans la base de donnée 
             List<Action> lesActions = new List<Action>();
 
-
+            string sql;
+            sql = "spInsAction";
 
             //on récupèe l'objet responsable de la connexion à la base
             SqlCommand maCommande;
@@ -82,8 +83,9 @@ namespace GesMecenatDAL
             maCommande.Parameters.Clear();
             maCommande.Connection = Connexion.GetObjConnexion();
 
-            //on crée l'objet qui va contenir la requête SQL d'insert qui sera exécutée
-            maCommande.CommandText = "INSERT INTO action (libelle) VALUES (@nomAction)";
+            //on crée l'objet qui va contenir la requête SQL d'insert qui sera exécutée*
+            maCommande.CommandType = CommandType.StoredProcedure;
+            maCommande.CommandText = sql;
 
 
             maCommande.Parameters.Add("nomAction", SqlDbType.VarChar);
@@ -120,8 +122,12 @@ namespace GesMecenatDAL
             maCommande.Parameters.Clear();
             maCommande.Connection = Connexion.GetObjConnexion();
 
+            string sql;
+            sql = "spUpdAction";
+
             //on crée l'objet qui va contenir la requête SQL d'insert qui sera exécutée
-            maCommande.CommandText = "UPDATE action SET libelle = @nouvNomAction WHERE libelle = @nomAction";
+            maCommande.CommandType = CommandType.StoredProcedure;
+            maCommande.CommandText = sql;
 
 
             maCommande.Parameters.Add("nouvNomAction", nouvNomAction);

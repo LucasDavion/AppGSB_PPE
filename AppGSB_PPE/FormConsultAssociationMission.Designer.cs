@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAssociation = new System.Windows.Forms.Button();
             this.btnMissions = new System.Windows.Forms.Button();
+            this.lblRecherche = new System.Windows.Forms.Label();
+            this.cbxPays = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsult)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,18 +50,20 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbxPays);
+            this.panel1.Controls.Add(this.lblRecherche);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnAssociation);
             this.panel1.Controls.Add(this.btnMissions);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 114);
+            this.panel1.Size = new System.Drawing.Size(776, 132);
             this.panel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(319, 19);
+            this.label1.Location = new System.Drawing.Point(332, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 2;
@@ -67,7 +71,7 @@
             // 
             // btnAssociation
             // 
-            this.btnAssociation.Location = new System.Drawing.Point(392, 58);
+            this.btnAssociation.Location = new System.Drawing.Point(392, 37);
             this.btnAssociation.Name = "btnAssociation";
             this.btnAssociation.Size = new System.Drawing.Size(124, 42);
             this.btnAssociation.TabIndex = 1;
@@ -77,13 +81,32 @@
             // 
             // btnMissions
             // 
-            this.btnMissions.Location = new System.Drawing.Point(262, 58);
+            this.btnMissions.Location = new System.Drawing.Point(262, 37);
             this.btnMissions.Name = "btnMissions";
             this.btnMissions.Size = new System.Drawing.Size(124, 42);
             this.btnMissions.TabIndex = 0;
             this.btnMissions.Text = "Missions";
             this.btnMissions.UseVisualStyleBackColor = true;
             this.btnMissions.Click += new System.EventHandler(this.btnMissions_Click);
+            // 
+            // lblRecherche
+            // 
+            this.lblRecherche.AutoSize = true;
+            this.lblRecherche.Location = new System.Drawing.Point(271, 101);
+            this.lblRecherche.Name = "lblRecherche";
+            this.lblRecherche.Size = new System.Drawing.Size(106, 13);
+            this.lblRecherche.TabIndex = 4;
+            this.lblRecherche.Text = "Rechercher par pays";
+            this.lblRecherche.Visible = false;
+            // 
+            // cbxPays
+            // 
+            this.cbxPays.FormattingEnabled = true;
+            this.cbxPays.Location = new System.Drawing.Point(381, 98);
+            this.cbxPays.Name = "cbxPays";
+            this.cbxPays.Size = new System.Drawing.Size(121, 21);
+            this.cbxPays.TabIndex = 6;
+            this.cbxPays.Visible = false;
             // 
             // FormConsultAssociationMission
             // 
@@ -108,5 +131,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAssociation;
         private System.Windows.Forms.Button btnMissions;
+        private System.Windows.Forms.ComboBox cbxPays;
+        private System.Windows.Forms.Label lblRecherche;
     }
 }
