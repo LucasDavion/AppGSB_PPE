@@ -23,7 +23,7 @@ namespace AppGSB_PPE
         {
             InitializeComponent();
             List<Pays> lesPays = PaysManager.GetInstance().GetPays();
-
+            //lesPays.Add(300,"Tous");
             lesAssociations = AssociationManager.GetInstance().GetAssociations();
             dtgConsultAssociation.DataSource = null;
             dtgConsultAssociation.DataSource = lesAssociations;
@@ -35,6 +35,7 @@ namespace AppGSB_PPE
             cbxPays.DisplayMember = "Libelle";
             cbxPays.ValueMember = "Id";
             cbxPays.DataSource = lesPays;
+
             cbxPays.Visible = false;
             dtgConsultAssociation.Visible = false;
             dtgConsultMissions.Visible = false;
@@ -58,6 +59,7 @@ namespace AppGSB_PPE
             dtgConsultAssociation.Columns["UnPays"].Visible = false;
             lblRecherche.Visible = true;
             cbxPays.Visible = true;
+            dtgConsultAssociation.DataSource = lesAssociations;
         }
 
         private void cbxPays_SelectedIndexChanged(object sender, EventArgs e)
