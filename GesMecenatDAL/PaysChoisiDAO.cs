@@ -35,12 +35,14 @@ namespace GesMecenatDAL
             SqlConnection cnx = Connexion.GetObjConnexion();
 
             //requete
-            string sqlr = "insert into paysChoisiPartenariat values(@pays)";
+            string sqlr = "insert into paysChoisiPartenariat (idPays,annee) values(@pays, @annee)";
 
             SqlCommand maCommand = new SqlCommand(sqlr, cnx);
             maCommand.CommandText = sqlr;
             maCommand.Parameters.Add("pays", SqlDbType.VarChar);
-            maCommand.Parameters[0].Value = unPaysChoisiPartenariat.Pays;
+            maCommand.Parameters[0].Value = unPaysChoisiPartenariat.Id;
+            maCommand.Parameters.Add("annee", SqlDbType.Int);
+            maCommand.Parameters[1].Value = unPaysChoisiPartenariat.Annee;
 
             nbEnregs = maCommand.ExecuteNonQuery();
 
