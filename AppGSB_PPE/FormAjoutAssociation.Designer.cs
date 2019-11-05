@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAjoutAssociation));
             this.lblNomAsso = new System.Windows.Forms.Label();
             this.lblMission = new System.Windows.Forms.Label();
             this.txtAsso = new System.Windows.Forms.TextBox();
             this.btnAjouter = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbxMission = new System.Windows.Forms.ComboBox();
-            this.cbxPays = new System.Windows.Forms.ComboBox();
-            this.lblNomResponsable = new System.Windows.Forms.Label();
             this.txtNomResponsable = new System.Windows.Forms.TextBox();
+            this.lblNomResponsable = new System.Windows.Forms.Label();
+            this.cbxPays = new System.Windows.Forms.ComboBox();
+            this.cbxMission = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,21 +91,12 @@
             this.panel1.Size = new System.Drawing.Size(329, 233);
             this.panel1.TabIndex = 5;
             // 
-            // cbxMission
+            // txtNomResponsable
             // 
-            this.cbxMission.FormattingEnabled = true;
-            this.cbxMission.Location = new System.Drawing.Point(137, 75);
-            this.cbxMission.Name = "cbxMission";
-            this.cbxMission.Size = new System.Drawing.Size(161, 21);
-            this.cbxMission.TabIndex = 5;
-            // 
-            // cbxPays
-            // 
-            this.cbxPays.FormattingEnabled = true;
-            this.cbxPays.Location = new System.Drawing.Point(137, 151);
-            this.cbxPays.Name = "cbxPays";
-            this.cbxPays.Size = new System.Drawing.Size(161, 21);
-            this.cbxPays.TabIndex = 6;
+            this.txtNomResponsable.Location = new System.Drawing.Point(137, 116);
+            this.txtNomResponsable.Name = "txtNomResponsable";
+            this.txtNomResponsable.Size = new System.Drawing.Size(161, 20);
+            this.txtNomResponsable.TabIndex = 8;
             // 
             // lblNomResponsable
             // 
@@ -115,12 +107,21 @@
             this.lblNomResponsable.TabIndex = 7;
             this.lblNomResponsable.Text = "Nom responsable :";
             // 
-            // txtNomResponsable
+            // cbxPays
             // 
-            this.txtNomResponsable.Location = new System.Drawing.Point(137, 116);
-            this.txtNomResponsable.Name = "txtNomResponsable";
-            this.txtNomResponsable.Size = new System.Drawing.Size(161, 20);
-            this.txtNomResponsable.TabIndex = 8;
+            this.cbxPays.FormattingEnabled = true;
+            this.cbxPays.Location = new System.Drawing.Point(137, 151);
+            this.cbxPays.Name = "cbxPays";
+            this.cbxPays.Size = new System.Drawing.Size(161, 21);
+            this.cbxPays.TabIndex = 6;
+            // 
+            // cbxMission
+            // 
+            this.cbxMission.FormattingEnabled = true;
+            this.cbxMission.Location = new System.Drawing.Point(137, 75);
+            this.cbxMission.Name = "cbxMission";
+            this.cbxMission.Size = new System.Drawing.Size(161, 21);
+            this.cbxMission.TabIndex = 5;
             // 
             // FormAjoutAssociation
             // 
@@ -128,6 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(353, 258);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAjoutAssociation";
             this.Text = "FormAjoutAssociation";
             this.panel1.ResumeLayout(false);

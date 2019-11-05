@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChoixPays));
             this.lblPays = new System.Windows.Forms.Label();
             this.pnlChoixPays = new System.Windows.Forms.Panel();
             this.txtAnnee = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxChoixPays = new System.Windows.Forms.ComboBox();
             this.btnValider = new System.Windows.Forms.Button();
+
             this.dtgConsultPays = new System.Windows.Forms.DataGridView();
             this.btnConsultPays = new System.Windows.Forms.Button();
+
             this.pnlChoixPays.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultPays)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +98,7 @@
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
+
             // dtgConsultPays
             // 
             this.dtgConsultPays.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -121,6 +125,7 @@
             this.Controls.Add(this.btnConsultPays);
             this.Controls.Add(this.dtgConsultPays);
             this.Controls.Add(this.pnlChoixPays);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormChoixPays";
             this.Text = "FormChoixPays";
             this.pnlChoixPays.ResumeLayout(false);

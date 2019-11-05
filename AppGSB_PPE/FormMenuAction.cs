@@ -46,6 +46,9 @@ namespace AppGSB_PPE
                 ActionManager.CreaAction(nouvNomAction);
                 MessageBox.Show("La création de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
+
+                this.cbxChoixAction.DataSource = ActionManager.GetInstance().GetActions();
+                this.cbxChoixAction.SelectedIndex = -1;
             }
             else
             {
@@ -61,8 +64,11 @@ namespace AppGSB_PPE
             if (modifNomAction != "")
             {
                 ActionManager.ModifAction(modifNomAction, nomAction);
-                MessageBox.Show("La création de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("La Modification de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
+
+                this.cbxChoixAction.DataSource = ActionManager.GetInstance().GetActions();
+                this.cbxChoixAction.SelectedIndex = -1;
             }
             else
             {

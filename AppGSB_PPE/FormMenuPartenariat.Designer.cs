@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuPartenariat));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuAjoutPartenariat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConsultationPartenariat = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,9 +53,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuAjoutPartenariat,
-            this.menuConsultationPartenariat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(576, 24);
@@ -206,6 +204,7 @@
             this.Controls.Add(this.pnlModifPartenariat);
             this.Controls.Add(this.pnlAjoutPartenariat);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenuPartenariat";
             this.Text = "Gestion des partenariats";

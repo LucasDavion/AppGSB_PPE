@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAjoutMission));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtMission = new System.Windows.Forms.TextBox();
             this.btnValiderMission = new System.Windows.Forms.Button();
@@ -77,6 +78,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 99);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAjoutMission";
             this.Text = "FormAjoutMission";
             this.panel1.ResumeLayout(false);

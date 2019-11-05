@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuAction));
             this.btnCreation = new System.Windows.Forms.Button();
             this.btnModification = new System.Windows.Forms.Button();
             this.btnSupression = new System.Windows.Forms.Button();
@@ -167,6 +168,7 @@
             this.Controls.Add(this.dtgConsultAction);
             this.Controls.Add(this.pnlChoixAction);
             this.Controls.Add(this.pnlCrea);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenuAction";
             this.Text = "Gestion des action";
             this.Load += new System.EventHandler(this.FormMenuAction_Load);
