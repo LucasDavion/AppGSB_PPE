@@ -25,6 +25,10 @@ namespace GesMecenatBLL
         {
 
         }
+        public List<PaysChoisiPartenariat> GetPays()
+        {
+            return PaysChoisiDAO.GetInstance().GetPaysChoisi();
+        }
 
         public int AjoutPays(int sonPays, string lAnnee, out string erreur)
         {

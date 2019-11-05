@@ -57,5 +57,10 @@ namespace AppGSB_PPE
             txtAnnee.Text = "";
             
         }
+
+        private void btnConsultPays_Click(object sender, EventArgs e)
+        {
+            this.dtgConsultPays.DataSource = PaysChoisiPartenariatManager.GetInstance().GetPays();
+        }
     }    
 }

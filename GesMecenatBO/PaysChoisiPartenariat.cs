@@ -10,12 +10,18 @@ namespace GesMecenatBO
     {
         private int idPays;
         private int annee;
+        private string paysChoisi;
         private Pays pays;
 
         public PaysChoisiPartenariat(int id, int annee)
         {
             this.idPays = id;
             this.annee = annee;
+        }
+        public PaysChoisiPartenariat(int annee, string paysChoisi)
+        {
+            this.idPays = annee;
+            this.PaysChoisi = paysChoisi;
         }
 
         public PaysChoisiPartenariat(int id, int annee, Pays pays)
@@ -28,5 +34,6 @@ namespace GesMecenatBO
         public int Id { get => idPays; set => idPays = value; }
         public int Annee { get => annee; set => annee = value; }
         public Pays Pays { get => pays; set => pays = value; }
+        public string PaysChoisi { get => paysChoisi; set => paysChoisi = value; }
     }
 }
