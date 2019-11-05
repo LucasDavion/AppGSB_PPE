@@ -27,6 +27,7 @@ namespace AppGSB_PPE
             lesMissions = MissionManager.GetInstance().GetMission();
             dtgConsult.DataSource = null;
             dtgConsult.DataSource = lesMissions;
+            dtgConsult.Columns["Id"].Visible = false;
         }
 
         private void btnAssociation_Click(object sender, EventArgs e)
