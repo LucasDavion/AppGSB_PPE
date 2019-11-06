@@ -47,6 +47,9 @@ namespace AppGSB_PPE
             dtgConsultPartenariat.Columns["id"].Visible = false;
             dtgConsultPartenariat.Columns["uneAssociation"].Visible = false;
             dtgConsultPartenariat.Columns["uneAction"].Visible = false;
+            dtgConsultPartenariat.Columns["LibelleAssociation"].HeaderText = "Nom de l'association";
+            dtgConsultPartenariat.Columns["LibelleAction"].HeaderText = "Nom de l'action";
+            dtgConsultPartenariat.Columns["CoutReel"].HeaderText = "Cout réél";
         }
 
         private void menuAjoutPartenariat_Click(object sender, EventArgs e)
@@ -82,6 +85,7 @@ namespace AppGSB_PPE
             {
                 //Si non on signal à l'utilisateur que ses enrgistrements ont été pris en compte
                 MessageBox.Show("Les enregistrements on bien été ajoutés, nombre d'enregistrements : " + nbAjout);
+                txtBudgetPrevisionnel.Text = "";
             }
             if (msgerr != "")
             {
@@ -111,6 +115,11 @@ namespace AppGSB_PPE
             }
             //On renseigne donc la nouvelle source de donnée
             dtgConsultPartenariat.DataSource = LesPartenariatsAssociations;
+        }
+
+        private void FormMenuPartenariat_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
