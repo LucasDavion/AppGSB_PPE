@@ -27,6 +27,7 @@ namespace AppGSB_PPE
             this.cbxChoixAction.SelectedIndex = -1;
 
             this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
+            this.dtgConsultAction.Columns["id"].Visible = false;
 
         }
 
@@ -46,6 +47,8 @@ namespace AppGSB_PPE
                 ActionManager.CreaAction(nouvNomAction);
                 MessageBox.Show("La création de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
+
+                this.txtModifAction.Text = "";
 
                 this.cbxChoixAction.DataSource = ActionManager.GetInstance().GetActions();
                 this.cbxChoixAction.SelectedIndex = -1;

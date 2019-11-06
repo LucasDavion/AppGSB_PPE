@@ -45,8 +45,9 @@ namespace GesMecenatDAL
             string sql;
             sql = "spCnsMission";
             SqlCommand maCommande = new SqlCommand(sql, cnx);
+            
             maCommande.CommandText = sql;
-
+            maCommande.CommandType = CommandType.StoredProcedure;
             //On execute la requette dataReader
             SqlDataReader monLecteur;
             monLecteur = maCommande.ExecuteReader();
@@ -88,7 +89,7 @@ namespace GesMecenatDAL
                 //recuperation des données
                 sql = "spInsMission";
                 SqlCommand maCommande = new SqlCommand(sql, cnx);
-
+                maCommande.CommandType = CommandType.StoredProcedure;
                 maCommande.Parameters.Add("libelle", SqlDbType.VarChar);
                 maCommande.Parameters[0].Value = uneMission.Libelle;
 

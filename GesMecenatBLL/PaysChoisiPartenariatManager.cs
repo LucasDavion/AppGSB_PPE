@@ -30,7 +30,7 @@ namespace GesMecenatBLL
             return PaysChoisiDAO.GetInstance().GetPaysChoisi();
         }
 
-        public int AjoutPays(int sonPays, string lAnnee, out string erreur)
+        public int AjoutPays(int idPays, string lAnnee, out string erreur)
         {
             int uneDate = System.DateTime.Now.Year;
             erreur = "";
@@ -39,7 +39,7 @@ namespace GesMecenatBLL
             int sonAnnee;
             int.TryParse(lAnnee, out sonAnnee);
 
-            if (sonPays==0)
+            if (idPays==0)
             {
                 erreur += "\nVeuillez selectionner un pays";
             }
@@ -49,7 +49,9 @@ namespace GesMecenatBLL
             }
             if (erreur =="")
             {
-                lepaysChoisiPartenariat = new PaysChoisiPartenariat(sonPays, sonAnnee);
+                Pays lePays;
+                lePays = new Pays(idPays);
+                lepaysChoisiPartenariat = new PaysChoisiPartenariat(lePays, sonAnnee);
 
                 try
                 {
