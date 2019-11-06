@@ -73,8 +73,10 @@ namespace AppGesMecenat
             dtgGesUtilisateur.DataSource = lesUtilisateurs;
             dtgGesUtilisateur.Columns["id"].Visible = false;
             dtgGesUtilisateur.Columns["mdp"].Visible = false;
-            //dtgGesUtilisateur.Columns["unService.libelle"]
-            //dtgGesUtilisateur.Columns["unProfilUtilisateur"
+            dtgGesUtilisateur.Columns["unService"].Visible = false;
+            dtgGesUtilisateur.Columns["unProfilUtilisateur"].Visible = false;
+            dtgGesUtilisateur.Columns["GetLibelleService"].HeaderText = "Service";
+            dtgGesUtilisateur.Columns["GetLibelleProfilUtilisateur"].HeaderText = "Profil";
         }
     }
 }
