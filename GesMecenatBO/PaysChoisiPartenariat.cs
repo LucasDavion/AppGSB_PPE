@@ -8,32 +8,22 @@ namespace GesMecenatBO
 {
     public class PaysChoisiPartenariat
     {
-        private int idPays;
+        
         private int annee;
-        private string paysChoisi;
         private Pays pays;
 
-        public PaysChoisiPartenariat(int id, int annee)
+        public PaysChoisiPartenariat(Pays unPays, int annee)
         {
-            this.idPays = id;
+            this.pays = unPays;
             this.annee = annee;
         }
-        public PaysChoisiPartenariat(int annee, string paysChoisi)
-        {
-            this.idPays = annee;
-            this.PaysChoisi = paysChoisi;
-        }
+        
 
-        public PaysChoisiPartenariat(int id, int annee, Pays pays)
-        {
-            this.Id = id;
-            this.Annee = annee;
-            this.Pays = pays;
-        }
 
-        public int Id { get => idPays; set => idPays = value; }
+        
         public int Annee { get => annee; set => annee = value; }
         public Pays Pays { get => pays; set => pays = value; }
-        public string PaysChoisi { get => paysChoisi; set => paysChoisi = value; }
+        public string LibellePaysChoisi { get => pays.Libelle; set =>  pays.Libelle= value; }
+        public int IdPaysChoisi { get => pays.Id; set => pays.Id = value; }
     }
 }

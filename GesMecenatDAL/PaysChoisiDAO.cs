@@ -36,7 +36,7 @@ namespace GesMecenatDAL
             SqlCommand maCommand = new SqlCommand(sqlr, cnx);
             maCommand.CommandText = sqlr;
             maCommand.Parameters.Add("pays", SqlDbType.VarChar);
-            maCommand.Parameters[0].Value = unPaysChoisiPartenariat.Id;
+            maCommand.Parameters[0].Value = unPaysChoisiPartenariat.IdPaysChoisi;
             maCommand.Parameters.Add("annee", SqlDbType.Int);
             maCommand.Parameters[1].Value = unPaysChoisiPartenariat.Annee;
 
@@ -51,9 +51,10 @@ namespace GesMecenatDAL
         {
 
             //Declaration des variables de travail
-            string pays;
+            Pays unPays;
+            string libellePays;
             int annee;
-            PaysChoisiPartenariat unPays;
+            PaysChoisiPartenariat unPaysChoisi;
 
             //On recupere l'objet responsable de la connection a la base
             SqlConnection cnx = Connexion.GetObjConnexion();
@@ -78,10 +79,12 @@ namespace GesMecenatDAL
             {
                 
                 annee = (int)monLecteur["annee"];
-                pays = (string)monLecteur["nom_fr_fr"];
+                libellePays = (string)monLecteur["nom"];
 
-                unPays = new PaysChoisiPartenariat(annee, pays);
-                lesPaysChoisi.Add(unPays);
+                unPays = new Pays(libellePays);
+
+                unPaysChoisi = new PaysChoisiPartenariat(unPays, annee);
+                lesPaysChoisi.Add(unPaysChoisi);
             }
             monLecteur.Close();
 

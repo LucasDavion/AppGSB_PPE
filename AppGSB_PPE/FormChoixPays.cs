@@ -47,7 +47,7 @@ namespace AppGSB_PPE
             }
             else
             {
-                message = "Le pays à bien été ajoutés";
+                message = "Le pays a bien été ajouté" ;
             }
             if (erreur != "")
             {
@@ -61,6 +61,8 @@ namespace AppGSB_PPE
         private void btnConsultPays_Click(object sender, EventArgs e)
         {
             this.dtgConsultPays.DataSource = PaysChoisiPartenariatManager.GetInstance().GetPays();
+            dtgConsultPays.Columns["Pays"].Visible = false;
+            dtgConsultPays.Columns["IdPaysChoisi"].Visible = false;
         }
     }    
 }
