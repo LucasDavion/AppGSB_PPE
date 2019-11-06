@@ -62,6 +62,7 @@ namespace AppGSB_PPE
             dtgConsultAssociation.Columns["NomResponsable"].HeaderText = "Nom du responsable";
             dtgConsultAssociation.Columns["LibelleMission"].HeaderText = "Mission";
             dtgConsultAssociation.Columns["LibellePays"].HeaderText = "Pays";
+            
             lblRecherche.Visible = true;
             cbxPays.Visible = true;
             dtgConsultAssociation.DataSource = lesAssociations;
