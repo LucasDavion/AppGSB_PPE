@@ -47,6 +47,9 @@ namespace AppGSB_PPE
             dtgConsultPartenariat.Columns["id"].Visible = false;
             dtgConsultPartenariat.Columns["uneAssociation"].Visible = false;
             dtgConsultPartenariat.Columns["uneAction"].Visible = false;
+            dtgConsultPartenariat.Columns["LibelleAssociation"].HeaderText = "Nom de l'association";
+            dtgConsultPartenariat.Columns["LibelleAction"].HeaderText = "Nom de l'action";
+            dtgConsultPartenariat.Columns["CoutReel"].HeaderText = "Cout réél";
         }
 
         private void menuAjoutPartenariat_Click(object sender, EventArgs e)
@@ -111,6 +114,11 @@ namespace AppGSB_PPE
             }
             //On renseigne donc la nouvelle source de donnée
             dtgConsultPartenariat.DataSource = LesPartenariatsAssociations;
+        }
+
+        private void FormMenuPartenariat_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

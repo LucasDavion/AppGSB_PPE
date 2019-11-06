@@ -207,6 +207,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenuPartenariat";
             this.Text = "Gestion des partenariats";
+            this.Load += new System.EventHandler(this.FormMenuPartenariat_Load);
             this.pnlAjoutPartenariat.ResumeLayout(false);
             this.pnlAjoutPartenariat.PerformLayout();
             this.pnlModifPartenariat.ResumeLayout(false);
