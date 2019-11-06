@@ -51,7 +51,7 @@ namespace GesMecenatDAL
             while (monLecteur.Read())
             {
                 id = (int)monLecteur["id"];
-                libelle = (string)monLecteur["nom_fr_fr"];
+                libelle = (string)monLecteur["nom"];
 
                 unPays = new Pays(id, libelle);
                 lesPays.Add(unPays);
