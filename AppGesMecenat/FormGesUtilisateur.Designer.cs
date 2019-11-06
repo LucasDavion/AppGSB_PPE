@@ -41,8 +41,12 @@
             this.txtNom = new System.Windows.Forms.TextBox();
             this.lblPrenom = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
+            this.dtgGesUtilisateur = new System.Windows.Forms.DataGridView();
+            this.lblTitreConsult = new System.Windows.Forms.Label();
+            this.btnActualiser = new System.Windows.Forms.Button();
             this.mnuGesUtilisateur.SuspendLayout();
             this.pnlAjouterUtilisateur.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGesUtilisateur)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuGesUtilisateur
@@ -74,7 +78,7 @@
             this.pnlAjouterUtilisateur.Controls.Add(this.txtNom);
             this.pnlAjouterUtilisateur.Controls.Add(this.lblPrenom);
             this.pnlAjouterUtilisateur.Controls.Add(this.lblNom);
-            this.pnlAjouterUtilisateur.Location = new System.Drawing.Point(36, 54);
+            this.pnlAjouterUtilisateur.Location = new System.Drawing.Point(12, 54);
             this.pnlAjouterUtilisateur.Name = "pnlAjouterUtilisateur";
             this.pnlAjouterUtilisateur.Size = new System.Drawing.Size(300, 157);
             this.pnlAjouterUtilisateur.TabIndex = 1;
@@ -164,11 +168,42 @@
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom du nouvel utilisateur :";
             // 
+            // dtgGesUtilisateur
+            // 
+            this.dtgGesUtilisateur.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgGesUtilisateur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgGesUtilisateur.Location = new System.Drawing.Point(318, 70);
+            this.dtgGesUtilisateur.Name = "dtgGesUtilisateur";
+            this.dtgGesUtilisateur.Size = new System.Drawing.Size(470, 249);
+            this.dtgGesUtilisateur.TabIndex = 2;
+            // 
+            // lblTitreConsult
+            // 
+            this.lblTitreConsult.AutoSize = true;
+            this.lblTitreConsult.Location = new System.Drawing.Point(318, 54);
+            this.lblTitreConsult.Name = "lblTitreConsult";
+            this.lblTitreConsult.Size = new System.Drawing.Size(137, 13);
+            this.lblTitreConsult.TabIndex = 3;
+            this.lblTitreConsult.Text = "Consultation des utilisateurs";
+            // 
+            // btnActualiser
+            // 
+            this.btnActualiser.Location = new System.Drawing.Point(519, 325);
+            this.btnActualiser.Name = "btnActualiser";
+            this.btnActualiser.Size = new System.Drawing.Size(75, 23);
+            this.btnActualiser.TabIndex = 4;
+            this.btnActualiser.Text = "Actualiser";
+            this.btnActualiser.UseVisualStyleBackColor = true;
+            this.btnActualiser.Click += new System.EventHandler(this.btnActualiser_Click);
+            // 
             // FormGesUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnActualiser);
+            this.Controls.Add(this.lblTitreConsult);
+            this.Controls.Add(this.dtgGesUtilisateur);
             this.Controls.Add(this.pnlAjouterUtilisateur);
             this.Controls.Add(this.mnuGesUtilisateur);
             this.MainMenuStrip = this.mnuGesUtilisateur;
@@ -178,6 +213,7 @@
             this.mnuGesUtilisateur.PerformLayout();
             this.pnlAjouterUtilisateur.ResumeLayout(false);
             this.pnlAjouterUtilisateur.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGesUtilisateur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +234,8 @@
         private System.Windows.Forms.Label lblMsg;
         private System.Windows.Forms.ComboBox cbxProfilUtilisateur;
         private System.Windows.Forms.Label lblProfilUtilisateur;
+        private System.Windows.Forms.DataGridView dtgGesUtilisateur;
+        private System.Windows.Forms.Label lblTitreConsult;
+        private System.Windows.Forms.Button btnActualiser;
     }
 }

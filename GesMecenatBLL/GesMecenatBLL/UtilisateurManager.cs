@@ -78,6 +78,8 @@ namespace GesMecenatBLL
             return UtilisateurDAO.GetInstance().AjoutUtilisateur(unUtilisateur);
         }
 
+        //Appel à la couche DAL pour cherché un utilisateur
+
         public bool trouveUtilisateur(string unIdentifiant, string unMdp)
         {
 
@@ -97,6 +99,13 @@ namespace GesMecenatBLL
 
             unUtilisateur = new Utilisateur(unIdentifiant, mdpCrypte);
             return UtilisateurDAO.GetInstance().TrouveUnUtilisateur(unUtilisateur);
+        }
+
+        //Appel à la couche DAL pour recup tout les utilisateurs
+
+        public List<Utilisateur> GetUtilisateurs()
+        {
+            return UtilisateurDAO.GetInstance().GetUtilisateurs();
         }
     }
 }

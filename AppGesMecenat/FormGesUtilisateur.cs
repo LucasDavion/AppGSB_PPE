@@ -32,6 +32,20 @@ namespace AppGesMecenat
             this.cbxProfilUtilisateur.DisplayMember = "Libelle";
             this.cbxProfilUtilisateur.ValueMember = "Id";
             this.cbxProfilUtilisateur.SelectedIndex = -1;
+
+            //List qui va contenir les utilisateurs
+
+            List<Utilisateur> lesUtilisateurs = UtilisateurManager.GetInstance().GetUtilisateurs();
+
+            //Initialisation de la datagrid qui va affiché les utilisateur
+
+            dtgGesUtilisateur.DataSource = lesUtilisateurs;
+            dtgGesUtilisateur.Columns["id"].Visible = false;
+            dtgGesUtilisateur.Columns["mdp"].Visible = false;
+            dtgGesUtilisateur.Columns["unService"].Visible = false;
+            dtgGesUtilisateur.Columns["unProfilUtilisateur"].Visible = false;
+            dtgGesUtilisateur.Columns["GetLibelleService"].HeaderText = "Service";
+            dtgGesUtilisateur.Columns["GetLibelleProfilUtilisateur"].HeaderText = "Profil";
         }
 
         private void ajouterUtilisateurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,6 +59,22 @@ namespace AppGesMecenat
             int idProfilUtilisateur = (int)cbxProfilUtilisateur.SelectedValue;
             UtilisateurManager.GetInstance().CreerUtilisateur(txtNom.Text, txtPrenom.Text, idService, cbxService.Text, idProfilUtilisateur, cbxProfilUtilisateur.Text, out string msg);
             lblMsg.Text = msg;
+        }
+
+        private void btnActualiser_Click(object sender, EventArgs e)
+        {
+
+            //List qui va contenir les utilisateurs
+
+            List<Utilisateur> lesUtilisateurs = UtilisateurManager.GetInstance().GetUtilisateurs();
+
+            //Initialisation de la datagrid qui va affiché les utilisateur
+
+            dtgGesUtilisateur.DataSource = lesUtilisateurs;
+            dtgGesUtilisateur.Columns["id"].Visible = false;
+            dtgGesUtilisateur.Columns["mdp"].Visible = false;
+            //dtgGesUtilisateur.Columns["unService.libelle"]
+            //dtgGesUtilisateur.Columns["unProfilUtilisateur"
         }
     }
 }
