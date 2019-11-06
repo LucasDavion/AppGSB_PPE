@@ -54,7 +54,7 @@
             // 
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(576, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(578, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -188,18 +188,19 @@
             // 
             // dtgConsultPartenariat
             // 
+            this.dtgConsultPartenariat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgConsultPartenariat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgConsultPartenariat.Location = new System.Drawing.Point(18, 75);
+            this.dtgConsultPartenariat.Location = new System.Drawing.Point(11, 75);
             this.dtgConsultPartenariat.Name = "dtgConsultPartenariat";
             this.dtgConsultPartenariat.ReadOnly = true;
-            this.dtgConsultPartenariat.Size = new System.Drawing.Size(440, 235);
+            this.dtgConsultPartenariat.Size = new System.Drawing.Size(454, 235);
             this.dtgConsultPartenariat.TabIndex = 0;
             // 
             // FormMenuPartenariat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 414);
+            this.ClientSize = new System.Drawing.Size(578, 414);
             this.Controls.Add(this.pnlModifPartenariat);
             this.Controls.Add(this.pnlAjoutPartenariat);
             this.Controls.Add(this.menuStrip1);
