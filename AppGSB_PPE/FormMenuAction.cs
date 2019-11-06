@@ -47,6 +47,8 @@ namespace AppGSB_PPE
                 MessageBox.Show("La création de l'action a bien était effectuer", "succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
 
+                this.txtModifAction.Text = "";
+
                 this.cbxChoixAction.DataSource = ActionManager.GetInstance().GetActions();
                 this.cbxChoixAction.SelectedIndex = -1;
             }
