@@ -35,10 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbxChoixPays = new System.Windows.Forms.ComboBox();
             this.btnValider = new System.Windows.Forms.Button();
-
             this.dtgConsultPays = new System.Windows.Forms.DataGridView();
             this.btnConsultPays = new System.Windows.Forms.Button();
-
             this.pnlChoixPays.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultPays)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +96,6 @@
             this.btnValider.UseVisualStyleBackColor = true;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
-
             // dtgConsultPays
             // 
             this.dtgConsultPays.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

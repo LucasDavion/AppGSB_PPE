@@ -45,7 +45,6 @@
             this.lblSelectAssociationConsult = new System.Windows.Forms.Label();
             this.cbxSelectionAssociationConsult = new System.Windows.Forms.ComboBox();
             this.dtgConsultPartenariat = new System.Windows.Forms.DataGridView();
-            this.menuStrip1.SuspendLayout();
             this.pnlAjoutPartenariat.SuspendLayout();
             this.pnlModifPartenariat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgConsultPartenariat)).BeginInit();
@@ -208,8 +207,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenuPartenariat";
             this.Text = "Gestion des partenariats";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.pnlAjoutPartenariat.ResumeLayout(false);
             this.pnlAjoutPartenariat.PerformLayout();
             this.pnlModifPartenariat.ResumeLayout(false);

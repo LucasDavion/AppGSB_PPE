@@ -41,10 +41,5 @@ namespace GesMecenatBLL
         {
             ActionDAO.GetInstance().CreaAction(new Action(nouvelleAction));
         }
-
-        static public void ModifAction(string modifAction, string nomAction)
-        {
-            ActionDAO.GetInstance().ModifAction(new Action(modifAction, nomAction));
-        }
     }
 }
