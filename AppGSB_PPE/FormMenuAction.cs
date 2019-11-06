@@ -27,6 +27,7 @@ namespace AppGSB_PPE
             this.cbxChoixAction.SelectedIndex = -1;
 
             this.dtgConsultAction.DataSource = ActionManager.GetInstance().GetActions();
+            this.dtgConsultAction.Columns["id"].Visible = false;
 
         }
 

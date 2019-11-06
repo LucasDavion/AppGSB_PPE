@@ -151,6 +151,8 @@
             // 
             // dtgConsultAction
             // 
+            this.dtgConsultAction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgConsultAction.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgConsultAction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgConsultAction.Location = new System.Drawing.Point(235, 22);
             this.dtgConsultAction.Name = "dtgConsultAction";
