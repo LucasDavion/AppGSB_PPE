@@ -23,7 +23,7 @@ namespace AppGSB_PPE
         {
             InitializeComponent();
             List<Pays> lesPays = PaysManager.GetInstance().GetPays();
-            //lesPays.Add(300,"Tous");
+            
             lesAssociations = AssociationManager.GetInstance().GetAssociations();
             dtgConsultAssociation.DataSource = null;
             dtgConsultAssociation.DataSource = lesAssociations;
@@ -48,6 +48,7 @@ namespace AppGSB_PPE
             dtgConsultMissions.Columns["Id"].Visible = false;
             lblRecherche.Visible = false;
             cbxPays.Visible = false;
+            dtgConsultAssociation.Columns["Libelle"].HeaderText = "Mission";
         }
 
         private void btnAssociation_Click(object sender, EventArgs e)
@@ -57,6 +58,10 @@ namespace AppGSB_PPE
             dtgConsultAssociation.Columns["Id"].Visible = false;
             dtgConsultAssociation.Columns["UneMission"].Visible = false;
             dtgConsultAssociation.Columns["UnPays"].Visible = false;
+            dtgConsultAssociation.Columns["NomAssociation"].HeaderText = "Nom de l'association";
+            dtgConsultAssociation.Columns["NomResponsable"].HeaderText = "Nom du responsable";
+            dtgConsultAssociation.Columns["LibelleMission"].HeaderText = "Mission";
+            dtgConsultAssociation.Columns["LibellePays"].HeaderText = "Pays";
             lblRecherche.Visible = true;
             cbxPays.Visible = true;
             dtgConsultAssociation.DataSource = lesAssociations;

@@ -68,8 +68,8 @@
             this.ajouterUneMissionToolStripMenuItem1,
             this.consulterLesAssociationToolStripMenuItem});
             this.ajouterUneMissionToolStripMenuItem.Name = "ajouterUneMissionToolStripMenuItem";
-            this.ajouterUneMissionToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.ajouterUneMissionToolStripMenuItem.Text = "Associations";
+            this.ajouterUneMissionToolStripMenuItem.Size = new System.Drawing.Size(142, 20);
+            this.ajouterUneMissionToolStripMenuItem.Text = "Missions / Associations";
             // 
             // ajouterUneAssociationToolStripMenuItem1
             // 
@@ -89,7 +89,7 @@
             // 
             this.consulterLesAssociationToolStripMenuItem.Name = "consulterLesAssociationToolStripMenuItem";
             this.consulterLesAssociationToolStripMenuItem.Size = new System.Drawing.Size(288, 22);
-            this.consulterLesAssociationToolStripMenuItem.Text = "Consulter les associations et les missions";
+            this.consulterLesAssociationToolStripMenuItem.Text = "Consulter les missions et les associations";
             this.consulterLesAssociationToolStripMenuItem.Click += new System.EventHandler(this.consulterLesAssociationToolStripMenuItem_Click);
             // 
             // actionToolStripMenuItem
