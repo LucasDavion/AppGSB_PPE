@@ -45,6 +45,7 @@
             // dtgConsultAssociation
             // 
             this.dtgConsultAssociation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgConsultAssociation.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dtgConsultAssociation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgConsultAssociation.Location = new System.Drawing.Point(12, 157);
             this.dtgConsultAssociation.Name = "dtgConsultAssociation";
@@ -116,6 +117,7 @@
             // dtgConsultMissions
             // 
             this.dtgConsultMissions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgConsultMissions.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dtgConsultMissions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgConsultMissions.Location = new System.Drawing.Point(12, 157);
             this.dtgConsultMissions.Name = "dtgConsultMissions";

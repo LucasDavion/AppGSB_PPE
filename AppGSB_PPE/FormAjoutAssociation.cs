@@ -55,5 +55,10 @@ namespace AppGSB_PPE
                 MessageBox.Show(msgErreur, "Probleme");
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.lblNomResponsable = new System.Windows.Forms.Label();
             this.cbxPays = new System.Windows.Forms.ComboBox();
             this.cbxMission = new System.Windows.Forms.ComboBox();
+            this.lblPays = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +79,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblPays);
             this.panel1.Controls.Add(this.txtNomResponsable);
             this.panel1.Controls.Add(this.lblNomResponsable);
             this.panel1.Controls.Add(this.cbxPays);
@@ -123,6 +125,16 @@
             this.cbxMission.Size = new System.Drawing.Size(161, 21);
             this.cbxMission.TabIndex = 5;
             // 
+            // lblPays
+            // 
+            this.lblPays.AutoSize = true;
+            this.lblPays.Location = new System.Drawing.Point(95, 154);
+            this.lblPays.Name = "lblPays";
+            this.lblPays.Size = new System.Drawing.Size(36, 13);
+            this.lblPays.TabIndex = 9;
+            this.lblPays.Text = "Pays :";
+            this.lblPays.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FormAjoutAssociation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,5 +161,6 @@
         private System.Windows.Forms.TextBox txtNomResponsable;
         private System.Windows.Forms.Label lblNomResponsable;
         private System.Windows.Forms.ComboBox cbxPays;
+        private System.Windows.Forms.Label lblPays;
     }
 }
