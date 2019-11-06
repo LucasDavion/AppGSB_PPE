@@ -48,7 +48,7 @@ namespace AppGSB_PPE
             dtgConsultMissions.Columns["Id"].Visible = false;
             lblRecherche.Visible = false;
             cbxPays.Visible = false;
-            dtgConsultAssociation.Columns["Libelle"].HeaderText = "Mission";
+            dtgConsultMissions.Columns["Libelle"].HeaderText = "Mission";
         }
 
         private void btnAssociation_Click(object sender, EventArgs e)
