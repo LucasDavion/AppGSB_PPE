@@ -100,7 +100,7 @@ namespace GesMecenatDAL
                 SqlConnection cnx = Connexion.GetObjConnexion();
                 sql = "spInsAssociation";
                 SqlCommand maCommande = new SqlCommand(sql, cnx);
-
+                maCommande.CommandType = CommandType.StoredProcedure;
                 maCommande.Parameters.Add("libelle", SqlDbType.VarChar);
                 maCommande.Parameters[0].Value = uneAssociation.NomAssociation;
                 maCommande.Parameters.Add("nomRespon", SqlDbType.VarChar);
