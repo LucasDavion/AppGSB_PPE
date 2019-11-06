@@ -85,6 +85,7 @@ namespace AppGSB_PPE
             {
                 //Si non on signal à l'utilisateur que ses enrgistrements ont été pris en compte
                 MessageBox.Show("Les enregistrements on bien été ajoutés, nombre d'enregistrements : " + nbAjout);
+                txtBudgetPrevisionnel.Text = "";
             }
             if (msgerr != "")
             {
