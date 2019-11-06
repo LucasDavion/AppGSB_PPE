@@ -65,7 +65,6 @@
             this.btnModification.TabIndex = 1;
             this.btnModification.Text = "Modification";
             this.btnModification.UseVisualStyleBackColor = true;
-            this.btnModification.Click += new System.EventHandler(this.btnModification_Click);
             // 
             // btnSupression
             // 

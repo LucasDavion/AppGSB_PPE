@@ -10,16 +10,9 @@ namespace GesMecenatBO
     {
         private int id;
         private string libelle;
-        private string nouvLibelle;
 
         public Action(string libelle)
         {
-            this.libelle = libelle;
-        }
-
-        public Action(string nouvLibelle, string libelle)
-        {
-            this.nouvLibelle = nouvLibelle;
             this.libelle = libelle;
         }
 
@@ -36,6 +29,5 @@ namespace GesMecenatBO
 
         public int Id { get => id; set => id = value; }
         public string Libelle { get => libelle; set => libelle = value; }
-        public string NouvLibelle { get => nouvLibelle; set => nouvLibelle = value; }
     }
 }
