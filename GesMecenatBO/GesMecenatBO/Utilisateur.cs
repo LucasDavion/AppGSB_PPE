@@ -28,7 +28,8 @@ namespace GesMecenatBO
         public string Identifiant { get => identifiant; set => identifiant = value; }
         public Service UnService { get => unService; set => unService = value; }
         public ProfilUtilisateur UnProfilUtilisateur { get => unProfilUtilisateur; set => unProfilUtilisateur = value; }
-
+        public string GetLibelleService { get => unService.Libelle; }
+        public string GetLibelleProfilUtilisateur { get => unProfilUtilisateur.Libelle; }
         //Constructeur
 
         public Utilisateur(string nom, string prenom ,string identifiant, string mdp, Service unService, ProfilUtilisateur unProfilUtilisateur)
@@ -44,6 +45,16 @@ namespace GesMecenatBO
         {
             this.identifiant = identifiant;
             this.mdp = mdp;
+        }
+        public Utilisateur(int id, string nom, string prenom, string identifiant, string mdp, Service unService, ProfilUtilisateur unProfilUtilisateur)
+        {
+            this.id = id;
+            this.nom = nom;
+            this.prenom = prenom;
+            this.identifiant = identifiant;
+            this.mdp = mdp;
+            this.unService = unService;
+            this.unProfilUtilisateur = unProfilUtilisateur;
         }
     }
 }

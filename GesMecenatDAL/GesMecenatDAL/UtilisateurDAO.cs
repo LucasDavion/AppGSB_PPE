@@ -39,24 +39,34 @@ namespace GesMecenatDAL
             //Variable
 
             Utilisateur unUtilisateur;
+            Service unService;
+            ProfilUtilisateur unProfilUtilisateur;
             string nomUtilisateur;
             string prenomUtilisateur;
             string identifiantUtilisateur;
             string mdpUtilisateur;
+            string libelleService;
+            string libelleProfilUtilisateur;
+            int idProfilUtilisateur;
+            int idService;
+            int idUtilisateur;
 
             //List qui sera retourné
 
             List<Utilisateur> lesUtilisateurs = new List<Utilisateur>();
 
-            //Objet de co à la BD
+            //Récup l'objet de la co à la BD et qu'on va appeler une procédure stockée avec la création de l'objet pour la requete SQL
 
             SqlConnection cnx = Connexion.GetObjConnexion();
+            SqlCommand maCommand = new SqlCommand();
+            SqlCommand maCommandService = new SqlCommand();
+            SqlCommand maCommandProfilUtilisateur = new SqlCommand();
+            maCommand.Connection = cnx;
+            maCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
             //Requete SQL
 
-            string strSQL = "Select nom, prenom, identifiant, mdp From Utilisateur";
-            SqlCommand maCommand = new SqlCommand(strSQL, cnx);
-            maCommand.CommandText = strSQL;
+            maCommand.CommandText = "spCnsToutUtilisateurs";
 
             //Lecture des données retournées dans un datareader
 
@@ -68,16 +78,29 @@ namespace GesMecenatDAL
 
                 //recup donnée utilisateur
 
+                idUtilisateur = (int)monLecteur["id"];
                 nomUtilisateur = (string)monLecteur["nom"];
                 prenomUtilisateur = (string)monLecteur["prenom"];
                 identifiantUtilisateur = (string)monLecteur["identifiant"];
                 mdpUtilisateur = (string)monLecteur["mdp"];
+                idProfilUtilisateur = (int)monLecteur["id_profilUtilisateur"];
+                idService = (int)monLecteur["id_service"];
+                libelleService = (string)monLecteur["serviceLibelle"];
+                libelleProfilUtilisateur = (string)monLecteur["profilUtilisateurLibelle"];
+
+                //Création de l'objet Service
+
+                unService = new Service(idService, libelleService);
+
+                //Création de l'objet Service
+
+                unProfilUtilisateur = new ProfilUtilisateur(idProfilUtilisateur, libelleProfilUtilisateur);
 
                 //Création de l'objet utilisateur
 
-                //unUtilisateur = new Utilisateur(nomUtilisateur, prenomUtilisateur, identifiantUtilisateur, mdpUtilisateur);
+                unUtilisateur = new Utilisateur(idUtilisateur, nomUtilisateur, prenomUtilisateur, identifiantUtilisateur, mdpUtilisateur,unService, unProfilUtilisateur);
 
-                //lesUtilisateurs.Add(unUtilisateur);
+                lesUtilisateurs.Add(unUtilisateur);
             }
 
             //Fermeture des lecteur et connexion
